@@ -1,0 +1,102 @@
+[gd_scene load_steps=5 format=3 uid="uid://iyb0x4jsmjmq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.686275, 0.529412, 0.247059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgs1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbjne"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.686275, 0.529412, 0.247059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2bhn"]
+
+[node name="Early_UI" type="Node2D"]
+
+[node name="TextBox" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -179.0
+offset_right = -310.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="TextBox/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_jyoj1")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBox/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_pgs1o")
+
+[node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "this  area contains the dialogue from npcs, events, or other things
+"
+
+[node name="Label2" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
+layout_mode = 2
+text = "It can hold multiple dialogues at once, but it is anoying to figure out"
+
+[node name="Label3" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "The grey part shows the writable area, and is easily removed in the code."
+
+[node name="Inventory" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="Inventory"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -304.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Inventory/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cbjne")
+
+[node name="MarginContainer" type="MarginContainer" parent="Inventory/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="Inventory/MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_a2bhn")
+
+[node name="Label" type="Label" parent="Inventory/MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "this is the inventory"
+
+[node name="Label2" type="Label" parent="Inventory/MarginContainer/MarginContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+text = "it will contain images of the objects the player picks up"
+autowrap_mode = 2
