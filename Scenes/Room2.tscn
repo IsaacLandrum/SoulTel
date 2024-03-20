@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://bygysvll0dksj"]
+
+[ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_djn6c"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 530.0
+offset_bottom = 80.0
+text = "ROOM 2"
+
+[node name="Interactable" parent="." instance=ExtResource("1_djn6c")]
+position = Vector2(143, 270)
