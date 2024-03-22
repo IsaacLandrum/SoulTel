@@ -5,9 +5,9 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 530.0
-offset_bottom = 80.0
+offset_right = 503.0
+offset_bottom = 50.0
 text = "ROOM 2"
 
 [node name="Interactable" parent="." instance=ExtResource("1_djn6c")]
-position = Vector2(143, 270)
+position = Vector2(102, 292)

@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdywgqgu0ed41"]
+[gd_scene load_steps=3 format=3 uid="uid://cdywgqgu0ed41"]
 
 [ext_resource type="Script" path="res://Scripts/interactable.gd" id="1_n6j3e"]
-[ext_resource type="Script" path="res://Scripts/collision.gd" id="2_2vr17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdte"]
 size = Vector2(40, 40)
@@ -16,4 +15,6 @@ offset_bottom = 40.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect"]
 position = Vector2(20, 20)
 shape = SubResource("RectangleShape2D_ymdte")
-script = ExtResource("2_2vr17")
+
+[connection signal="mouse_entered" from="ColorRect" to="." method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="ColorRect" to="." method="_on_object_mouse_exited"]

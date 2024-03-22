@@ -5,6 +5,8 @@ extends CollisionShape2D
 func _ready():
 	pass # Replace with function body.
 
+func _mouse_enter():
+	print("Hover!")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
