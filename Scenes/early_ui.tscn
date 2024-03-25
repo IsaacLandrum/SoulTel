@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=6 format=3 uid="uid://iyb0x4jsmjmq"]
+
+[ext_resource type="PackedScene" uid="uid://73jm5qjy52vq" path="res://Scenes/dalogue_box.tscn" id="1_1oedf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
 bg_color = Color(0, 0, 0, 1)
@@ -100,3 +102,25 @@ custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 text = "it will contain images of the objects the player picks up"
 autowrap_mode = 2
+
+[node name="Dialogue Box" parent="." instance=ExtResource("1_1oedf")]
+
+[node name="Panel" parent="Dialogue Box/dbox" index="0"]
+offset_left = -3.0
+offset_top = -193.0
+offset_right = -7.0
+offset_bottom = -13.0
+
+[node name="Dialogue" parent="Dialogue Box/dbox/Panel" index="0"]
+offset_left = 2.0
+
+[node name="Responses" parent="Dialogue Box/dbox" index="1"]
+visible = false
+
+[node name="ResponsesMenu" parent="Dialogue Box/dbox/Responses" index="0"]
+visible = false
+
+[node name="ResponseExample" parent="Dialogue Box/dbox/Responses/ResponsesMenu" index="0"]
+visible = false
+
+[editable path="Dialogue Box"]

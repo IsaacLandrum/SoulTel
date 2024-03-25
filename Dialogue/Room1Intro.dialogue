@@ -1,0 +1,16 @@
+
+~ take
+Nathan: [[Hi|Hello|Howdy]], this is  the take dialogue.
+=> END
+~ Talk
+Nathan: [[Hi|Hello|Howdy]], this is  the take dialogue.
+=> END
+~ Examine
+Nathan: [[Hi|Hello|Howdy]], this  is the take dialogue.
+=> END
+~ Use
+Nathan: [[Hi|Hello|Howdy]], this is  the take dialogue.
+=> END
+~ Traverse
+Nathan: [[Hi|Hello|Howdy]], this is  the take dialogue.
+=> END

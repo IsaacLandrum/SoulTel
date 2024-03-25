@@ -11,6 +11,7 @@ func _input(event):
 		print("click")
 		interact("TODO") #takes action based on what action is selected
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+		DialogueManager.show_dialogue_balloon(load("res://Dialogue/Room1Intro.dialogue"),"take")
 
 
 func interact(action):

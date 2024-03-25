@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://5c3pr6dgp6rr"
+path="res://.godot/imported/Room1Intro.dialogue-e0b8058a2c06a5c42c1358d39a533598.tres"
+
+[deps]
+
+source_file="res://Dialogue/Room1Intro.dialogue"
+dest_files=["res://.godot/imported/Room1Intro.dialogue-e0b8058a2c06a5c42c1358d39a533598.tres"]
+
+[params]
+
+defaults=true
