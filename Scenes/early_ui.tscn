@@ -50,19 +50,19 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_pgs1o")
 
 [node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
+custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_vertical = 0
 text = "this  area contains the dialogue from npcs, events, or other things
-"
+each peice of dialoge will need it's own box, they cannot be combined in the current setup.
 
-[node name="Label2" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
-layout_mode = 2
-text = "It can hold multiple dialogues at once, but it is anoying to figure out"
 
-[node name="Label3" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-text = "The grey part shows the writable area, and is easily removed in the code."
+
+
+The grey part is the writable inventory. it can hold a maximum of seven lines"
+autowrap_mode = 2
+max_lines_visible = 7
+visible_ratio = -0.00628931
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 
@@ -91,12 +91,10 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_a2bhn")
 
 [node name="Label" type="Label" parent="Inventory/MarginContainer/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-text = "this is the inventory"
-
-[node name="Label2" type="Label" parent="Inventory/MarginContainer/MarginContainer"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
-text = "it will contain images of the objects the player picks up"
+size_flags_vertical = 0
+text = "this is the inventory
+
+it will contain images of the objects the player picks up"
 autowrap_mode = 2
