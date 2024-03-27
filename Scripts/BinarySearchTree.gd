@@ -209,16 +209,15 @@ func delete(key):
 	
 	marker.free()
 	
-func clear():
-	InternalClear(root)
-	root = null
-	
-func InternalClear(deleter):
+func clear(deleter=root, start=true):
 	if(deleter.lhs != null):
-		InternalClear(deleter.lhs)
+		clear(deleter.lhs, false)
 	if(deleter.rhs != null):
-		InternalClear(deleter.rhs)
+		clear(deleter.rhs, false)
 	deleter.free
+	
+	if(start):
+		root=null
 
 #---------------testing----------------
 func _run():
