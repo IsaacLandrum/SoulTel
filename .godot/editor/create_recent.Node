@@ -1,3 +1,6 @@
+Label
+Panel
+MarginContainer
 TextEdit
 CollisionShape2D
 ColorRect

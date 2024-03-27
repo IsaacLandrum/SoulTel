@@ -8,7 +8,7 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color(0.686275, 0.529412, 0.247059, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pgs1o"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6xsf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbjne"]
 bg_color = Color(0, 0, 0, 1)
@@ -38,21 +38,20 @@ grow_vertical = 0
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jyoj1")
 
-[node name="MarginContainer" type="MarginContainer" parent="TextBox/MarginContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="TextBox/MarginContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer"]
+[node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer2"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pgs1o")
+theme_override_styles/panel = SubResource("StyleBoxFlat_v6xsf")
 
-[node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer"]
+[node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer2"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
-size_flags_vertical = 0
 text = "this  area contains the dialogue from npcs, events, or other things
 each peice of dialoge will need it's own box, they cannot be combined in the current setup.
 
@@ -62,7 +61,6 @@ each peice of dialoge will need it's own box, they cannot be combined in the cur
 The grey part is the writable inventory. it can hold a maximum of seven lines"
 autowrap_mode = 2
 max_lines_visible = 7
-visible_ratio = -0.00628931
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 
@@ -87,6 +85,7 @@ theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
 [node name="Panel" type="Panel" parent="Inventory/MarginContainer/MarginContainer"]
+visibility_layer = 2
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_a2bhn")
 
