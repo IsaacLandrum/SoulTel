@@ -1,0 +1,2 @@
+000000 "Error: you shouldn't see this, it's the default dialogue"
+000001 "It's a pot"
