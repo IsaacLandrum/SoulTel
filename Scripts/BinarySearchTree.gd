@@ -2,6 +2,7 @@
 
 class_name BinarySearchTree
 #extends EditorScript
+extends Object
 
 var root
 
@@ -105,6 +106,17 @@ func maximumElement():
 	
 	return checker
 
+func internalMaximumElement(node):
+	var checker = node
+
+	if(checker == null):
+		return "error1"
+
+	while(checker.rhs != null):
+		checker = checker.rhs
+	
+	return checker
+
 #returns next node for in order traversal
 func Successor(currentNode):
 	var checker = currentNode
@@ -165,8 +177,50 @@ func traverse():
 
 	return output
 
+func delete(key):
+	var marker = InSearch(key)
+	
+	if(marker.lhs==null and marker.rhs==null):
+		if(marker.parent.lhs == marker):
+			marker.parent.lhs = null
+		else:
+			marker.parent.rhs = null
+	elif(marker.lhs!=null and marker.rhs==null):
+		marker.rhs.parent = marker.parent
+		if(marker.parent.lhs == marker):
+			marker.parent.lhs = marker.rhs
+		else:
+			marker.parent.rhs = marker.rhs
+	elif(marker.lhs==null and marker.rhs!=null):
+		marker.rhs.parent = marker.parent
+		if(marker.parent.lhs == marker):
+			marker.parent.lhs = marker.rhs
+		else:
+			marker.parent.rhs = marker.rhs
+	else:
+		marker.lhs.parent = marker.parent
+		marker.rhs.parent = internalMaximumElement(marker.lhs)
+		marker.rhs.parent.rhs = marker.rhs
+		
+		if(marker.parent.lhs == marker):
+			marker.parent.lhs = marker.lhs
+		else:
+			marker.parent.rhs = marker.lhs
+	
+	marker.free()
+	
+func clear():
+	InternalClear(root)
+	root = null
+	
+func InternalClear(deleter):
+	if(deleter.lhs != null):
+		InternalClear(deleter.lhs)
+	if(deleter.rhs != null):
+		InternalClear(deleter.rhs)
+	deleter.free
 
-#testing
+#---------------testing----------------
 func _run():
 	#Binary Search Tree part 1
 	#the example from class

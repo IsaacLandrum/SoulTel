@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 #Dialoge holder
-var Rm_dialoge = []
+var dialogueTree = load("res://Scripts/BinarySearchTree.gd")
 
 #the filepath constants and variables
 const filePath1 = "res://Dialogue/Room_"
@@ -19,7 +19,7 @@ func _process(delta):
 #loads the dialogue for the room and puts it in a binary tree
 #called every time the room changes
 func Load_Room_Dialogue(roomID):
-	Rm_dialoge.clear()
+	dialogueTree.clear()
 	filePath2 = (roomID as String)
 	var Input_path = filePath1 + filePath2 + filePath3
 	var FileReader = FileAccess.open(Input_path, FileAccess.READ)
