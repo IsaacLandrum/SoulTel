@@ -1,7 +1,11 @@
+TextureRect
+Control
+Container
+CanvasLayer
+MarginContainer
+Sprite2D
 Label
 Panel
-MarginContainer
 TextEdit
 CollisionShape2D
 ColorRect
-Sprite2D
