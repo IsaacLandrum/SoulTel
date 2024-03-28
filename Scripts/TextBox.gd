@@ -50,7 +50,8 @@ func Load_Room_Dialogue(roomID):
 
 #changes the dipslayed dialogue in the text-box
 func change_displayed_dialogue(newKey):
-	var newDialoge = dialogueTree.Search(newKey)
+	var ID = filePath2+newKey+"00"
+	var newDialoge = dialogueTree.Search(ID.to_int())
 	display.text = newDialoge
 
 #handles the text

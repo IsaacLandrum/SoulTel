@@ -11,3 +11,4 @@ text = "ROOM 2"
 
 [node name="Interactable" parent="." instance=ExtResource("1_djn6c")]
 position = Vector2(102, 292)
+CharacterID = "01"

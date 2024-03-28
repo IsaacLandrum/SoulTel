@@ -11,9 +11,7 @@ offset_bottom = 59.0
 text = "ROOM 1"
 
 [node name="Interactable" parent="." instance=ExtResource("1_h5xoy")]
-position = Vector2(324, 161)
+position = Vector2(191, 161)
+CharacterID = "02"
 
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
-
-[node name="Interactable2" parent="." instance=ExtResource("1_h5xoy")]
-position = Vector2(452, 226)

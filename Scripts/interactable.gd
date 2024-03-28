@@ -1,7 +1,8 @@
 extends Node
 
+@export var CharacterID: String
+
 var isHovering = false
-var CharacterID = null
 
 #connection to other node/script
 var dialoge_connection
@@ -32,7 +33,7 @@ func interact(action):
 	if (action == "TALK"):
 		pass#TALK 
 	if (action == "EXAMINE"):
-		DialogOut.emit(000000)	#emits the error signal to the dialoge
+		DialogOut.emit(CharacterID)	#emits the error signal to the dialoge
 		pass#examine
 	if (action == "USE"):
 		pass#USE 	
