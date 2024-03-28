@@ -1,15 +1,28 @@
 extends Node
 
 var isHovering = false
+var CharacterID = null
+
+#connection to other node/script
+var dialoge_connection
+
+#signals
+signal DialogOut(DialogeID)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	dialoge_connection = get_node("/root/Node2D/Early_UI/TextBox")
+	print(get_path())
+
+
 func _input(event):
    # Mouse in viewport coordinates.
 	if Input.is_action_pressed("mouse_click") && isHovering:
 		print("click")
 		interact("TODO") #takes action based on what action is selected
+		
+		#debug, testing dialoge system
+		interact("EXAMINE")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
@@ -19,7 +32,8 @@ func interact(action):
 	if (action == "TALK"):
 		pass#TALK 
 	if (action == "EXAMINE"):
-		pass#EXAMINE 
+		DialogOut.emit(000000)	#emits the error signal to the dialoge
+		pass#examine
 	if (action == "USE"):
 		pass#USE 	
 	if (action == "MOVE"):

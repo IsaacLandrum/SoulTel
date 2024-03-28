@@ -2,7 +2,9 @@
 
 class_name BinarySearchTree
 #extends EditorScript
-extends Object
+extends Resource
+
+@export var out: BinarySearchTree
 
 var root
 
@@ -81,6 +83,9 @@ func Search(key):
 			checker = checker.lhs
 		elif(key > checker.key):
 			checker = checker.rhs
+	
+	if(checker==null):
+		return null
 	
 	return checker.data
 
@@ -210,11 +215,13 @@ func delete(key):
 	marker.free()
 	
 func clear(deleter=root, start=true):
+	if(deleter==null):
+		return
 	if(deleter.lhs != null):
 		clear(deleter.lhs, false)
 	if(deleter.rhs != null):
 		clear(deleter.rhs, false)
-	deleter.free
+	deleter.free()
 	
 	if(start):
 		root=null

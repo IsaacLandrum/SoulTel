@@ -1,2 +1,4 @@
 000000 "Error: you shouldn't see this, it's the default dialogue"
+000002 "you clicked on box number 1!"
+000003 "you clicked on box number 2!"
 000001 "It's a pot"

@@ -7,3 +7,4 @@ res://Dialogue/README.txt
 res://Dialogue/Room_00.txt
 res://Scripts/new_script.gd
 res://Scripts/BinarySearchTree.gd
+res://Scripts/interactable.gd
