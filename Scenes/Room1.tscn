@@ -13,5 +13,7 @@ text = "ROOM 1"
 [node name="Interactable" parent="." instance=ExtResource("1_h5xoy")]
 position = Vector2(191, 161)
 CharacterID = "02"
+canTraverse = true
+traverse_path = "res://Scenes/Room2.tscn"
 
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
