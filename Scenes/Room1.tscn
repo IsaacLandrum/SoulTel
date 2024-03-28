@@ -38,5 +38,12 @@ color = Color(1, 1, 1, 0.32549)
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
 position = Vector2(0, -1)
 
+[node name="MarginContainer" parent="Early_UI/TextBox" index="5"]
+offset_left = -1.0
+offset_right = -240.0
+
+[node name="Inventory" parent="Early_UI" index="1"]
+layer = -1
+
 [editable path="Interactable"]
 [editable path="Early_UI"]

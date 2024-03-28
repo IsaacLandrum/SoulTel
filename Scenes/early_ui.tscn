@@ -1,12 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=15 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
 [ext_resource type="Texture2D" uid="uid://qg6cuvfkf4aj" path="res://Assets/UI/sidepanleborder.png" id="2_8p7yv"]
 [ext_resource type="Texture2D" uid="uid://ciqhktfwvkmo6" path="res://Assets/UI/sidepanel.png" id="2_x1jid"]
 [ext_resource type="Texture2D" uid="uid://b4c3vlr0l4nbp" path="res://Assets/UI/watch.png" id="3_adbjm"]
+[ext_resource type="Texture2D" uid="uid://0hsajh7cyoj" path="res://Assets/UI/backgradient.png" id="3_l6rei"]
 [ext_resource type="Texture2D" uid="uid://bnthdd172ijpy" path="res://Assets/UI/items box.png" id="4_4yrhr"]
+[ext_resource type="Texture2D" uid="uid://xtk52t6s7xfr" path="res://Assets/UI/textbox.png" id="4_nj16y"]
+[ext_resource type="Texture2D" uid="uid://b5w32aaa437ji" path="res://Assets/UI/detailleft.png" id="5_l6mn0"]
 [ext_resource type="Texture2D" uid="uid://d25bbhiv67s7p" path="res://Assets/UI/pfp temp.jpg" id="5_yo2sw"]
 [ext_resource type="Texture2D" uid="uid://c8hve0be40eae" path="res://Assets/sculpting/UI_design.png" id="5_yp6hw"]
+[ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
@@ -22,9 +26,51 @@ border_color = Color(0.686275, 0.529412, 0.247059, 1)
 [node name="Early_UI" type="Node2D"]
 
 [node name="TextBox" type="CanvasLayer" parent="."]
+layer = 0
 script = ExtResource("1_16yjp")
 
+[node name="ReferenceBackground" type="TextureRect" parent="TextBox"]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("5_yp6hw")
+expand_mode = 1
+
+[node name="BackGradient" type="TextureRect" parent="TextBox"]
+offset_left = 2.0
+offset_top = 461.0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("3_l6rei")
+expand_mode = 1
+
+[node name="Text Box Background" type="TextureRect" parent="TextBox"]
+z_as_relative = false
+offset_left = 75.0
+offset_top = 484.0
+offset_right = 797.0
+offset_bottom = 635.0
+texture = ExtResource("4_nj16y")
+expand_mode = 1
+
+[node name="DetailLeft" type="TextureRect" parent="TextBox"]
+offset_left = 1.0
+offset_top = 463.0
+offset_right = 139.0
+offset_bottom = 646.0
+texture = ExtResource("5_l6mn0")
+expand_mode = 1
+
+[node name="DetailRight" type="TextureRect" parent="TextBox"]
+offset_left = 738.0
+offset_top = 459.0
+offset_right = 969.0
+offset_bottom = 649.0
+texture = ExtResource("6_151yf")
+expand_mode = 1
+
 [node name="MarginContainer" type="MarginContainer" parent="TextBox"]
+visible = false
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -66,10 +112,10 @@ max_lines_visible = 7
 [node name="Inventory" type="CanvasLayer" parent="."]
 
 [node name="border container" type="MarginContainer" parent="Inventory"]
-offset_left = 914.0
-offset_top = -4.0
-offset_right = 921.0
-offset_bottom = 442.0
+offset_left = 918.0
+offset_top = -1.0
+offset_right = 923.0
+offset_bottom = 317.0
 scale = Vector2(1.40334, 1.45797)
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/border container"]
@@ -96,18 +142,6 @@ expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Inventory/MarginContainer"]
 layout_mode = 2
-
-[node name="Watch Container" type="MarginContainer" parent="Inventory"]
-offset_left = 882.0
-offset_top = 393.0
-offset_right = 1170.0
-offset_bottom = 641.0
-scale = Vector2(0.971543, 0.95057)
-
-[node name="Sprite2D" type="Sprite2D" parent="Inventory/Watch Container"]
-position = Vector2(134.837, 112.564)
-scale = Vector2(0.624431, 0.6307)
-texture = ExtResource("3_adbjm")
 
 [node name="InventoryContainer" type="MarginContainer" parent="Inventory"]
 offset_left = 922.0
@@ -165,9 +199,17 @@ layout_mode = 2
 texture = ExtResource("6_mq00r")
 expand_mode = 1
 
-[node name="ReferenceBackground" type="TextureRect" parent="."]
-visible = false
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("5_yp6hw")
-expand_mode = 1
+[node name="Action Wheel" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Watch Container" type="MarginContainer" parent="Action Wheel"]
+offset_left = 882.0
+offset_top = 393.0
+offset_right = 1170.0
+offset_bottom = 641.0
+scale = Vector2(0.971543, 0.95057)
+
+[node name="Sprite2D" type="Sprite2D" parent="Action Wheel/Watch Container"]
+position = Vector2(134.837, 112.564)
+scale = Vector2(0.624431, 0.6307)
+texture = ExtResource("3_adbjm")
