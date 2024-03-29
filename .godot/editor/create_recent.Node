@@ -1,3 +1,5 @@
+Polygon2D
+ColorRect
 CollisionPolygon2D
 Area2D
 Control
@@ -10,5 +12,3 @@ Sprite2D
 Label
 Panel
 TextEdit
-CollisionShape2D
-ColorRect
