@@ -1,7 +1,8 @@
 extends Node
 
 @export var CharacterID: String
-
+@export var canTraverse: bool = false
+@export var traverse_path: String
 var isHovering = false
 
 #connection to other node/script
@@ -23,7 +24,7 @@ func _input(event):
 		interact("TODO") #takes action based on what action is selected
 		
 		#debug, testing dialoge system
-		interact("EXAMINE")
+		interact("MOVE")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 
@@ -37,8 +38,8 @@ func interact(action):
 		pass#examine
 	if (action == "USE"):
 		pass#USE 	
-	if (action == "MOVE"):
-		pass#MOVE 
+	if (action == "MOVE" && canTraverse):
+		get_tree().change_scene_to_file(traverse_path)
 
 func _on_object_mouse_entered():
 	isHovering = true # Replace with function body.
