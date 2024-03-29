@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/Room1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SoundManager="*res://Scripts/SoundManager.gd"
+
 [display]
 
 window/dpi/allow_hidpi=false

@@ -7,3 +7,4 @@ func _ready():
 func _on_talk_clicked(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Talk Selected")
+		SoundManager.play_click_sound()
