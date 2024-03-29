@@ -1,9 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://cx5uef2gxhuli"]
+[gd_scene load_steps=4 format=3 uid="uid://cx5uef2gxhuli"]
 
+[ext_resource type="Texture2D" uid="uid://dfkqc67q5k2tw" path="res://Assets/room 1/room entrance.jpg" id="1_fnuci"]
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_h5xoy"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_gj1gp"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="background" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="TextureRect" type="TextureRect" parent="background"]
+clip_contents = true
+layout_mode = 0
+offset_right = 914.0
+offset_bottom = 467.0
+texture = ExtResource("1_fnuci")
+expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_right = 391.0
@@ -11,9 +26,26 @@ offset_bottom = 59.0
 text = "ROOM 1"
 
 [node name="Interactable" parent="." instance=ExtResource("1_h5xoy")]
-position = Vector2(191, 161)
+position = Vector2(354, 131)
+scale = Vector2(4, 6)
 CharacterID = "02"
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 
+[node name="ColorRect" parent="Interactable" index="0"]
+offset_left = 1.0
+offset_right = 39.0
+color = Color(1, 1, 1, 0.32549)
+
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
+position = Vector2(0, -1)
+
+[node name="MarginContainer" parent="Early_UI/TextBox" index="5"]
+offset_left = -1.0
+offset_right = -240.0
+
+[node name="Inventory" parent="Early_UI" index="1"]
+layer = -1
+
+[editable path="Interactable"]
+[editable path="Early_UI"]
