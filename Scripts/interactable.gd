@@ -1,6 +1,8 @@
 extends Node
 
 @export var CharacterID: String
+@export var canTraverse: bool = false
+@export var traverse_path: String
 
 var isHovering = false
 
@@ -9,6 +11,8 @@ var dialoge_connection
 
 #signals
 signal DialogOut(DialogeID)
+
+var currentAction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,28 +24,30 @@ func _input(event):
    # Mouse in viewport coordinates.
 	if Input.is_action_pressed("mouse_click") && isHovering:
 		print("click")
-		interact("TODO") #takes action based on what action is selected
-		
-		#debug, testing dialoge system
-		interact("EXAMINE")
+		interact() #takes action based on what action is selected
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
+func setCurrentAction(action):
+	currentAction = action
 
-func interact(action):
-	if (action == "TAKE"):
+func interact():
+	if (currentAction == "TAKE"):
 		pass#TAKE
-	if (action == "TALK"):
+	elif (currentAction == "TALK"):
 		pass#TALK 
-	if (action == "EXAMINE"):
+	elif (currentAction == "EXAMINE"):
 		DialogOut.emit(CharacterID)	#emits the error signal to the dialoge
 		pass#examine
-	if (action == "USE"):
+	elif (currentAction == "USE"):
 		pass#USE 	
-	if (action == "MOVE"):
-		pass#MOVE 
+	elif (currentAction == "TRAVERSE" && canTraverse):
+		get_tree().change_scene_to_file(traverse_path)
 
 func _on_object_mouse_entered():
 	isHovering = true # Replace with function body.
 
 func _on_object_mouse_exited():
 	isHovering = false # Replace with function body.
+
+func _on_action(message):
+	print(message)
