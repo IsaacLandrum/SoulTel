@@ -33,13 +33,14 @@ text = "Outside Hotel"
 script = ExtResource("3_kud8m")
 
 [node name="ColorRect" parent="Doorman" index="0"]
-offset_left = 589.0
-offset_top = 177.0
-offset_right = 686.0
-offset_bottom = 407.0
+offset_left = 95.0
+offset_top = 37.0
+offset_right = 248.0
+offset_bottom = 475.0
+color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" parent="Doorman/ColorRect" index="0"]
-position = Vector2(49, 115.5)
+position = Vector2(76, 216)
 
 [node name="Interactable" parent="." instance=ExtResource("1_h5xoy")]
 position = Vector2(354, 131)

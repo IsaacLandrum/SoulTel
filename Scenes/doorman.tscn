@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://cx1m7wtquih6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y7woc"]
-size = Vector2(98, 231)
+size = Vector2(150, 423.5)
 
 [node name="Doorman" type="Node2D"]
 
