@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://cx5uef2gxhuli"]
 
-[ext_resource type="Texture2D" uid="uid://dfkqc67q5k2tw" path="res://Assets/room 1/room entrance.jpg" id="1_fnuci"]
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_h5xoy"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_mggkj"]
+[ext_resource type="Texture2D" uid="uid://cjrgyvnmk8tvo" path="res://Assets/room 1/door man and door.png" id="2_1814g"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_gj1gp"]
 [ext_resource type="Script" path="res://Scripts/doorman.gd" id="3_kud8m"]
 [ext_resource type="PackedScene" uid="uid://cx1m7wtquih6e" path="res://Scenes/doorman.tscn" id="3_rhsla"]
@@ -21,7 +21,7 @@ clip_contents = true
 layout_mode = 0
 offset_right = 914.0
 offset_bottom = 467.0
-texture = ExtResource("1_fnuci")
+texture = ExtResource("2_1814g")
 expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
