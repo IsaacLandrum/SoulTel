@@ -8,4 +8,10 @@ func _ready():
 
 func _on_take_clicked(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		emit_signal("action", "TAKE")
+		emit_signal("action", "TAKE")		
+
+#Following section handles on hover effect		
+func _on_mouse_entered():
+	$TakeHover.show()
+func _on_mouse_exited():
+	$TakeHover.hide()
