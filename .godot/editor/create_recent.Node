@@ -1,7 +1,14 @@
+CollisionPolygon2D
+Area2D
+Control
+RichTextLabel
+CanvasLayer
+TextureRect
+Container
+MarginContainer
+Sprite2D
 Label
 Panel
-MarginContainer
 TextEdit
 CollisionShape2D
 ColorRect
-Sprite2D

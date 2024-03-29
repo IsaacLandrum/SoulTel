@@ -16,9 +16,9 @@ const filePath3 = ".txt"
 func _ready():
 	const dialogueTree_Blueprint = preload("res://Scripts/BinarySearchTree.gd")
 	dialogueTree = dialogueTree_Blueprint.new()
-	display = get_node("MarginContainer/MarginContainer2/Label")
+	display = get_node("TextBoxBackground/RichTextLabel")
 	sigSender = get_node("/root/Node2D/Interactable")
-	sigSender.connect("DialogOut", change_displayed_dialogue)
+	#sigSender.connect("DialogOut", change_displayed_dialogue)
 	debug = "00"
 	Load_Room_Dialogue(debug)
 
