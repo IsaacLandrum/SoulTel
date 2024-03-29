@@ -34,13 +34,19 @@ func interact():
 	if (currentAction == "TAKE"):
 		pass#TAKE
 	elif (currentAction == "TALK"):
+		print("TALKING")
+		DialogOut.emit(CharacterID)	#emits the error signal to the dialoge
+		
 		pass#TALK 
 	elif (currentAction == "EXAMINE"):
-		DialogOut.emit(CharacterID)	#emits the error signal to the dialoge
+		
 		pass#examine
 	elif (currentAction == "USE"):
 		pass#USE 	
 	elif (currentAction == "TRAVERSE" && canTraverse):
+		print("Traversing")
+		
+		SoundManager.play_lobby_music()
 		get_tree().change_scene_to_file(traverse_path)
 
 func _on_object_mouse_entered():

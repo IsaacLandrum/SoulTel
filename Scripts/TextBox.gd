@@ -18,7 +18,7 @@ func _ready():
 	dialogueTree = dialogueTree_Blueprint.new()
 	display = get_node("TextBoxBackground/RichTextLabel")
 	sigSender = get_node("/root/Node2D/Interactable")
-	#sigSender.connect("DialogOut", change_displayed_dialogue)
+	sigSender.connect("DialogOut", change_displayed_dialogue)
 	debug = "00"
 	Load_Room_Dialogue(debug)
 

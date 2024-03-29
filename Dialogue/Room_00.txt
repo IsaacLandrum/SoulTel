@@ -1,4 +1,4 @@
 000000 "Error: you shouldn't see this, it's the default dialogue"
-000200 "you clicked on box number 1!"
+000200 "You can't talk to a door!"
 000300 "you clicked on box number 2!"
 000100 "It's a pot"

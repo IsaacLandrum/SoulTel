@@ -1,14 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://bygysvll0dksj"]
+[gd_scene load_steps=4 format=3 uid="uid://bygysvll0dksj"]
 
+[ext_resource type="Script" path="res://Scripts/Room2.gd" id="1_4jsff"]
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_djn6c"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_4jsff")
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_right = 503.0
 offset_bottom = 50.0
-text = "ROOM 2"
+text = "Lobby"
 
 [node name="Interactable" parent="." instance=ExtResource("1_djn6c")]
 position = Vector2(328, 176)
