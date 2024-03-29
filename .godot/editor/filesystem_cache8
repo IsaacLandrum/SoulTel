@@ -1,33 +1,33 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1711606293
-icon.svg::CompressedTexture2D::4856783290559592931::1711306750::1711307080::1::::<><>::
-::res://Assets/::1711608283
-::res://Assets/room 1/::1711608289
-room entrance.jpg::CompressedTexture2D::7531826768707213624::1711608289::1711608290::1::::<><>::
-::res://Assets/sculpting/::1711607970
-pfp temp.jpg::CompressedTexture2D::8709786466914554225::1711607970::1711607953::1::::<><>::
-UI_design.png::CompressedTexture2D::7104807366593445228::1711606035::1711606035::1::::<><>::
-::res://Assets/UI/::1711607989
-backgradient.png::CompressedTexture2D::52066621355305077::1711604457::1711604457::1::::<><>::
-detailleft.png::CompressedTexture2D::4539250595696172394::1711604450::1711604450::1::::<><>::
-detailright.png::CompressedTexture2D::8971119948961143468::1711604397::1711604397::1::::<><>::
-items box.png::CompressedTexture2D::3338529403871042986::1711604397::1711604397::1::::<><>::
-pfp temp.jpg::CompressedTexture2D::9116355045733378471::1711607989::1711607989::1::::<><>::
-portrait.png::CompressedTexture2D::3609255431782243606::1711604397::1711604397::1::::<><>::
-sidepanel.png::CompressedTexture2D::5367826044139556427::1711604191::1711604244::1::::<><>::
-sidepanleborder.png::CompressedTexture2D::1137294646245113125::1711604397::1711604397::1::::<><>::
-textbox.png::CompressedTexture2D::1654228773662266583::1711604397::1711604397::1::::<><>::
-watch.png::CompressedTexture2D::4427764087343890397::1711604397::1711604397::1::::<><>::
-::res://Dialogue/::1711603627
-README.txt::TextFile::-1::1711603627::0::1::::<><>::
-Room_00.txt::TextFile::-1::1711603627::0::1::::<><>::
-::res://Scenes/::1711608241
-early_ui.tscn::PackedScene::611162430311919276::1711608225::0::1::::<><>::res://Scripts/TextBox.gd<>uid://ciqhktfwvkmo6::::res://Assets/UI/sidepanel.png<>uid://b4c3vlr0l4nbp::::res://Assets/UI/watch.png<>uid://bnthdd172ijpy::::res://Assets/UI/items box.png<>uid://d25bbhiv67s7p::::res://Assets/UI/pfp temp.jpg<>uid://c8hve0be40eae::::res://Assets/sculpting/UI_design.png<>uid://brol56sug3oa5::::res://Assets/UI/portrait.png
-interactable.tscn::PackedScene::5034300303586732848::1711606256::0::1::::<><>::res://Scripts/interactable.gd
-Room1.tscn::PackedScene::6450337891343805942::1711608241::0::1::::<><>::uid://cdywgqgu0ed41::::res://Scenes/interactable.tscn<>uid://iyb0x4jsmjmq::::res://Scenes/early_ui.tscn
-Room2.tscn::PackedScene::4084829670163449949::1711606256::0::1::::<><>::uid://cdywgqgu0ed41::::res://Scenes/interactable.tscn
-::res://Scripts/::1711606064
-BinarySearchTree.gd::GDScript::-1::1711606064::0::1::::BinarySearchTree<>Resource<>::
-collision.gd::GDScript::-1::1711306750::0::1::::<>CollisionShape2D<>::
-interactable.gd::GDScript::-1::1711603627::0::1::::<>Node<>::
-TextBox.gd::GDScript::-1::1711603627::0::1::::<>CanvasLayer<>::
+::res://::1711671142
+icon.svg::CompressedTexture2D::4856783290559592931::1710953126::1711671143::1::::<><>::
+::res://Assets/::1711665019
+::res://Assets/room 1/::1711663692
+room entrance.jpg::CompressedTexture2D::7531826768707213624::1711663692::1711663692::1::::<><>::
+::res://Assets/sculpting/::1711665019
+pfp temp.jpg::CompressedTexture2D::8709786466914554225::1711663692::1711663692::1::::<><>::
+UI_design.png::CompressedTexture2D::7104807366593445228::1711663692::1711663692::1::::<><>::
+::res://Assets/UI/::1711663692
+backgradient.png::CompressedTexture2D::52066621355305077::1711663692::1711663692::1::::<><>::
+detailleft.png::CompressedTexture2D::4539250595696172394::1711663692::1711663692::1::::<><>::
+detailright.png::CompressedTexture2D::8971119948961143468::1711663692::1711663692::1::::<><>::
+items box.png::CompressedTexture2D::3338529403871042986::1711663692::1711663692::1::::<><>::
+pfp temp.jpg::CompressedTexture2D::9116355045733378471::1711663692::1711663692::1::::<><>::
+portrait.png::CompressedTexture2D::3609255431782243606::1711663692::1711663692::1::::<><>::
+sidepanel.png::CompressedTexture2D::5367826044139556427::1711663692::1711663692::1::::<><>::
+sidepanleborder.png::CompressedTexture2D::1137294646245113125::1711663692::1711663692::1::::<><>::
+textbox.png::CompressedTexture2D::1654228773662266583::1711663692::1711663692::1::::<><>::
+watch.png::CompressedTexture2D::4427764087343890397::1711663692::1711663692::1::::<><>::
+::res://Dialogue/::1711670932
+README.txt::TextFile::-1::1711663559::0::1::::<><>::
+Room_00.txt::TextFile::-1::1711670932::0::1::::<><>::
+::res://Scenes/::1711671059
+early_ui.tscn::PackedScene::611162430311919276::1711671059::0::1::::<><>::res://Scripts/TextBox.gd<>uid://qg6cuvfkf4aj::::res://Assets/UI/sidepanleborder.png<>uid://ciqhktfwvkmo6::::res://Assets/UI/sidepanel.png<>uid://b4c3vlr0l4nbp::::res://Assets/UI/watch.png<>uid://0hsajh7cyoj::::res://Assets/UI/backgradient.png<>uid://bnthdd172ijpy::::res://Assets/UI/items box.png<>uid://xtk52t6s7xfr::::res://Assets/UI/textbox.png<>uid://b5w32aaa437ji::::res://Assets/UI/detailleft.png<>uid://d25bbhiv67s7p::::res://Assets/UI/pfp temp.jpg<>uid://c8hve0be40eae::::res://Assets/sculpting/UI_design.png<>uid://d02xbgkh3g677::::res://Assets/UI/detailright.png<>uid://brol56sug3oa5::::res://Assets/UI/portrait.png
+interactable.tscn::PackedScene::5034300303586732848::1711671025::0::1::::<><>::res://Scripts/interactable.gd
+Room1.tscn::PackedScene::6450337891343805942::1711671025::0::1::::<><>::uid://dfkqc67q5k2tw::::res://Assets/room 1/room entrance.jpg<>uid://cdywgqgu0ed41::::res://Scenes/interactable.tscn<>uid://iyb0x4jsmjmq::::res://Scenes/early_ui.tscn
+Room2.tscn::PackedScene::4084829670163449949::1711671025::0::1::::<><>::uid://cdywgqgu0ed41::::res://Scenes/interactable.tscn
+::res://Scripts/::1711671127
+BinarySearchTree.gd::GDScript::-1::1711663559::0::1::::BinarySearchTree<>Resource<>::
+collision.gd::GDScript::-1::1711556008::0::1::::<>CollisionShape2D<>::
+interactable.gd::GDScript::-1::1711663559::0::1::::<>Node<>::
+TextBox.gd::GDScript::-1::1711670932::0::1::::<>CanvasLayer<>::
