@@ -25,9 +25,9 @@ texture = ExtResource("1_fnuci")
 expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 391.0
-offset_bottom = 59.0
-text = "ROOM 1"
+offset_right = 122.0
+offset_bottom = 40.0
+text = "Outside Hotel"
 
 [node name="Doorman" parent="." instance=ExtResource("3_rhsla")]
 script = ExtResource("3_kud8m")
