@@ -29,6 +29,8 @@ text = "ROOM 1"
 position = Vector2(354, 131)
 scale = Vector2(4, 6)
 CharacterID = "02"
+canTraverse = true
+traverse_path = "res://Scenes/Room2.tscn"
 
 [node name="ColorRect" parent="Interactable" index="0"]
 offset_left = 1.0
