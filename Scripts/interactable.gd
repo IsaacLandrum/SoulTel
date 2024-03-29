@@ -25,9 +25,6 @@ func _input(event):
 	if Input.is_action_pressed("mouse_click") && isHovering:
 		print("click")
 		interact() #takes action based on what action is selected
-		
-		#debug, testing dialoge system
-		#interact("MOVE")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func setCurrentAction(action):

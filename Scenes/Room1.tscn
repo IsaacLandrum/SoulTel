@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cx5uef2gxhuli"]
+[gd_scene load_steps=7 format=3 uid="uid://cx5uef2gxhuli"]
 
 [ext_resource type="Texture2D" uid="uid://dfkqc67q5k2tw" path="res://Assets/room 1/room entrance.jpg" id="1_fnuci"]
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_h5xoy"]
-[ext_resource type="Script" path="res://Scenes/main.gd" id="1_mggkj"]
+[ext_resource type="Script" path="res://Scripts/main.gd" id="1_mggkj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_gj1gp"]
+[ext_resource type="Script" path="res://Scripts/doorman.gd" id="3_kud8m"]
+[ext_resource type="PackedScene" uid="uid://cx1m7wtquih6e" path="res://Scenes/doorman.tscn" id="3_rhsla"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mggkj")
@@ -27,6 +29,18 @@ offset_right = 391.0
 offset_bottom = 59.0
 text = "ROOM 1"
 
+[node name="Doorman" parent="." instance=ExtResource("3_rhsla")]
+script = ExtResource("3_kud8m")
+
+[node name="ColorRect" parent="Doorman" index="0"]
+offset_left = 589.0
+offset_top = 177.0
+offset_right = 686.0
+offset_bottom = 407.0
+
+[node name="CollisionShape2D" parent="Doorman/ColorRect" index="0"]
+position = Vector2(49, 115.5)
+
 [node name="Interactable" parent="." instance=ExtResource("1_h5xoy")]
 position = Vector2(354, 131)
 scale = Vector2(4, 6)
@@ -38,6 +52,9 @@ traverse_path = "res://Scenes/Room2.tscn"
 offset_left = 1.0
 offset_right = 39.0
 color = Color(1, 1, 1, 0.32549)
+
+[node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
+position = Vector2(19.625, 19.9167)
 
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
 offset_top = -1.0
@@ -74,12 +91,17 @@ position = Vector2(932, 515)
 color = Color(1, 1, 0.270588, 0.12549)
 polygon = PackedVector2Array(0, 0, -69, 1, -59, 61, -30, 96, 22, 44)
 
+[node name="Examine" parent="Early_UI/Action Wheel" index="5"]
+position = Vector2(-1.45508, 3.10199)
+
 [node name="ExamineHover" type="Polygon2D" parent="Early_UI/Action Wheel/Examine" index="1"]
 visible = false
 position = Vector2(958, 562)
 color = Color(1, 1, 0.270588, 0.12549)
 polygon = PackedVector2Array(0, 0, -49, 50, -29, 67, 40, 84, 58, 77, 51, 16)
 
+[connection signal="mouse_entered" from="Doorman/ColorRect" to="Doorman" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Doorman/ColorRect" to="Doorman" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Early_UI/Action Wheel/Traverse" to="Early_UI/Action Wheel/Traverse" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Early_UI/Action Wheel/Traverse" to="Early_UI/Action Wheel/Traverse" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Early_UI/Action Wheel/Talk" to="Early_UI/Action Wheel/Talk" method="_on_mouse_entered"]
@@ -91,5 +113,6 @@ polygon = PackedVector2Array(0, 0, -49, 50, -29, 67, 40, 84, 58, 77, 51, 16)
 [connection signal="mouse_entered" from="Early_UI/Action Wheel/Examine" to="Early_UI/Action Wheel/Examine" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Early_UI/Action Wheel/Examine" to="Early_UI/Action Wheel/Examine" method="_on_mouse_exited"]
 
+[editable path="Doorman"]
 [editable path="Interactable"]
 [editable path="Early_UI"]

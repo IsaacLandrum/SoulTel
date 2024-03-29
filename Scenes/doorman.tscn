@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx1m7wtquih6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7woc"]
+size = Vector2(98, 231)
+
+[node name="Doorman" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 99.0
+offset_bottom = 231.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect"]
+position = Vector2(48, 114)
+shape = SubResource("RectangleShape2D_y7woc")

@@ -6,6 +6,9 @@ extends Node2D
 @onready var Take = $"Early_UI/Action Wheel/Take"
 @onready var Examine = $"Early_UI/Action Wheel/Examine"
 @onready var Interactable = $Interactable
+@onready var Doorman = $Doorman
+
+var doormanComplete = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,6 +17,8 @@ func _ready():
 	Use.connect("action", _on_action)
 	Take.connect("action", _on_action)
 	Examine.connect("action", _on_action)
+	
+	Doorman.connect("doorman_complete", _on_doorman_complete)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -21,4 +26,9 @@ func _process(delta):
 	pass
 
 func _on_action(action):
-	Interactable.setCurrentAction(action)
+	if doormanComplete:
+		Interactable.setCurrentAction(action)
+	Doorman.setCurrentAction(action)
+
+func _on_doorman_complete():
+	doormanComplete = true
