@@ -1,6 +1,1 @@
-res://Scenes/early_ui.tscn
-res://Scripts/BinarySearchTree.gd
-res://Scenes/interactable.tscn
 res://Scenes/Room1.tscn
-res://Scenes/Room2.tscn
-res://Scripts/interactable.gd
