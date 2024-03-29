@@ -8,6 +8,8 @@ func _ready():
 
 func _on_traverse_clicked(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		print("Traverse Selected")
+		SoundManager.play_click_sound()
 		emit_signal("action", "TRAVERSE")
 
 
