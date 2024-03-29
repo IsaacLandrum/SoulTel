@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=20 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
 [ext_resource type="Texture2D" uid="uid://qg6cuvfkf4aj" path="res://Assets/UI/sidepanleborder.png" id="2_8p7yv"]
@@ -13,6 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
 [ext_resource type="Script" path="res://Scripts/Actions/Traverse.gd" id="13_paq7k"]
+[ext_resource type="Script" path="res://Scripts/Actions/Talk.gd" id="14_8xvhn"]
+[ext_resource type="Script" path="res://Scripts/Actions/Use.gd" id="15_717pr"]
+[ext_resource type="Script" path="res://Scripts/Actions/Take.gd" id="16_utkvd"]
+[ext_resource type="Script" path="res://Scripts/Actions/Examine.gd" id="17_a4vhy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
 bg_color = Color(0, 0, 0, 1)
@@ -230,4 +234,32 @@ script = ExtResource("13_paq7k")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Traverse"]
 polygon = PackedVector2Array(1105, 392, 1053, 439, 1002, 425, 1001, 360, 1061, 364)
 
+[node name="Talk" type="Area2D" parent="Action Wheel"]
+script = ExtResource("14_8xvhn")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Talk"]
+polygon = PackedVector2Array(992, 361, 995, 420, 951, 450, 901, 397, 942, 371)
+
+[node name="Use" type="Area2D" parent="Action Wheel"]
+script = ExtResource("15_717pr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Use"]
+polygon = PackedVector2Array(896, 411, 944, 454, 950, 468, 936, 508, 864, 508, 867, 454)
+
+[node name="Take" type="Area2D" parent="Action Wheel"]
+script = ExtResource("16_utkvd")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Take"]
+polygon = PackedVector2Array(932, 515, 866, 516, 874, 575, 902, 606, 954, 554)
+
+[node name="Examine" type="Area2D" parent="Action Wheel"]
+script = ExtResource("17_a4vhy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Examine"]
+polygon = PackedVector2Array(957, 561, 912, 613, 931, 629, 998, 646, 1016, 639, 1009, 578)
+
 [connection signal="input_event" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_traverse_clicked"]
+[connection signal="input_event" from="Action Wheel/Talk" to="Action Wheel/Talk" method="_on_talk_clicked"]
+[connection signal="input_event" from="Action Wheel/Use" to="Action Wheel/Use" method="_on_use_clicked"]
+[connection signal="input_event" from="Action Wheel/Take" to="Action Wheel/Take" method="_on_take_clicked"]
+[connection signal="input_event" from="Action Wheel/Examine" to="Action Wheel/Examine" method="_on_examine_clicked"]

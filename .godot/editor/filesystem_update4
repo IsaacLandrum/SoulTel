@@ -5,3 +5,7 @@ res://Scenes/Room1.tscn
 res://Scenes/Room2.tscn
 res://Scripts/TextBox.gd
 res://Scripts/Actions/Traverse.gd
+res://Scripts/Actions/Talk.gd
+res://Scripts/Actions/Use.gd
+res://Scripts/Actions/Take.gd
+res://Scripts/Actions/Examine.gd
