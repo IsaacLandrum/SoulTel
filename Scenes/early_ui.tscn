@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=16 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
 [ext_resource type="Texture2D" uid="uid://qg6cuvfkf4aj" path="res://Assets/UI/sidepanleborder.png" id="2_8p7yv"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c8hve0be40eae" path="res://Assets/sculpting/UI_design.png" id="5_yp6hw"]
 [ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
+[ext_resource type="Script" path="res://Scripts/Actions/Traverse.gd" id="13_paq7k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
 bg_color = Color(0, 0, 0, 1)
@@ -23,7 +24,9 @@ border_color = Color(0.686275, 0.529412, 0.247059, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6xsf"]
 
-[node name="Early_UI" type="Node2D"]
+[node name="Early_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 
 [node name="TextBox" type="CanvasLayer" parent="."]
 layer = 0
@@ -220,3 +223,11 @@ scale = Vector2(0.971543, 0.95057)
 position = Vector2(134.837, 112.564)
 scale = Vector2(0.624431, 0.6307)
 texture = ExtResource("3_adbjm")
+
+[node name="Traverse" type="Area2D" parent="Action Wheel"]
+script = ExtResource("13_paq7k")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Traverse"]
+polygon = PackedVector2Array(1105, 392, 1053, 439, 1002, 425, 1001, 360, 1061, 364)
+
+[connection signal="input_event" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_traverse_clicked"]

@@ -1,7 +1,9 @@
+CollisionPolygon2D
+Area2D
+Control
 RichTextLabel
 CanvasLayer
 TextureRect
-Control
 Container
 MarginContainer
 Sprite2D
