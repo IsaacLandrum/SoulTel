@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bygysvll0dksj"]
+[gd_scene load_steps=9 format=3 uid="uid://bygysvll0dksj"]
 
 [ext_resource type="Script" path="res://Scripts/Room2.gd" id="1_4jsff"]
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_djn6c"]
 [ext_resource type="Texture2D" uid="uid://cruvtd2nbytsi" path="res://Assets/room2/Officelines colors.png" id="2_lkt2f"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
+[ext_resource type="Script" path="res://Scripts/Door_To_Lobby.gd" id="5_3lgbo"]
 [ext_resource type="PackedScene" uid="uid://deiov7kmmd2y6" path="res://Scenes/key.tscn" id="5_53uud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlqkr"]
 size = Vector2(223.883, 303.171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jldyf"]
+size = Vector2(199, 155)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4jsff")
@@ -51,20 +55,30 @@ offset_right = -240.0
 [node name="Inventory" parent="Early_UI" index="1"]
 layer = -1
 
-[node name="Interactable2" parent="." instance=ExtResource("1_djn6c")]
-position = Vector2(761, 181)
-
-[node name="ColorRect" parent="Interactable2" index="0"]
-color = Color(1, 1, 1, 0)
-
-[node name="CollisionShape2D" parent="Interactable2/ColorRect" index="0"]
-position = Vector2(32, 22)
-
 [node name="Interactable3" parent="." instance=ExtResource("1_djn6c")]
 
 [node name="Key" parent="." instance=ExtResource("5_53uud")]
 position = Vector2(500, 362)
 
+[node name="Door_To_Lobby" type="Node2D" parent="."]
+position = Vector2(746, 176)
+script = ExtResource("5_3lgbo")
+
+[node name="ColorRect" type="ColorRect" parent="Door_To_Lobby"]
+offset_left = -52.0
+offset_top = -25.0
+offset_right = 146.0
+offset_bottom = 128.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_To_Lobby/ColorRect"]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(98.5, 77.5)
+shape = SubResource("RectangleShape2D_jldyf")
+
+[connection signal="mouse_entered" from="Door_To_Lobby/ColorRect" to="Door_To_Lobby" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Door_To_Lobby/ColorRect" to="Door_To_Lobby" method="_on_object_mouse_exited"]
+
 [editable path="Interactable"]
 [editable path="Early_UI"]
-[editable path="Interactable2"]
