@@ -3,7 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/interactable.gd" id="1_n6j3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdte"]
+<<<<<<< Updated upstream
 size = Vector2(60.983, 66.9012)
+=======
+size = Vector2(27.8965, 38.7038)
+>>>>>>> Stashed changes
 
 [node name="Interactable" type="Node2D"]
 script = ExtResource("1_n6j3e")
@@ -11,6 +15,7 @@ script = ExtResource("1_n6j3e")
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+color = Color(0.823529, 1, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect"]
 position = Vector2(20, 20)

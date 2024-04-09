@@ -1,8 +1,26 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://bygysvll0dksj"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://bygysvll0dksj"]
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_djn6c"]
+<<<<<<< Updated upstream
+=======
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
+[ext_resource type="Texture2D" uid="uid://cpk8i8u5iqa5i" path="res://Assets/room 2/Officelines.png" id="4_epc6o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlqkr"]
+size = Vector2(223.883, 303.171)
+>>>>>>> Stashed changes
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 917.0
+offset_bottom = 476.0
+texture = ExtResource("4_epc6o")
+expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_right = 503.0
@@ -10,5 +28,47 @@ offset_bottom = 50.0
 text = "ROOM 2"
 
 [node name="Interactable" parent="." instance=ExtResource("1_djn6c")]
+<<<<<<< Updated upstream
 position = Vector2(102, 292)
 CharacterID = "01"
+=======
+modulate = Color(0.717647, 1, 1, 1)
+position = Vector2(249, 168)
+CharacterID = "01"
+
+[node name="ColorRect" parent="Interactable" index="0"]
+offset_right = 37.0
+offset_bottom = 41.0
+color = Color(1, 1, 1, 0.0156863)
+
+[node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
+position = Vector2(44.2448, 56.7819)
+rotation = -1.73502
+scale = Vector2(0.999999, 0.999999)
+shape = SubResource("RectangleShape2D_jlqkr")
+debug_color = Color(0, 0.6, 0.701961, 0.498039)
+
+[node name="Early_UI" parent="." instance=ExtResource("2_omolg")]
+offset_top = -1.0
+offset_bottom = -1.0
+
+[node name="MarginContainer" parent="Early_UI/TextBox" index="5"]
+offset_left = -1.0
+offset_right = -240.0
+
+[node name="Inventory" parent="Early_UI" index="1"]
+layer = -1
+
+[node name="Interactable2" parent="." instance=ExtResource("1_djn6c")]
+position = Vector2(761, 181)
+
+[node name="ColorRect" parent="Interactable2" index="0"]
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" parent="Interactable2/ColorRect" index="0"]
+position = Vector2(32, 22)
+
+[editable path="Interactable"]
+[editable path="Early_UI"]
+[editable path="Interactable2"]
+>>>>>>> Stashed changes

@@ -21,10 +21,15 @@ func _input(event):
    # Mouse in viewport coordinates.
 	if Input.is_action_pressed("mouse_click") && isHovering:
 		print("click")
+<<<<<<< Updated upstream
 		interact("TODO") #takes action based on what action is selected
 		
 		#debug, testing dialoge system
 		interact("MOVE")
+=======
+		interact()
+		 #takes action based on what action is selected
+>>>>>>> Stashed changes
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 

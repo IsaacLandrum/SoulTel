@@ -1,0 +1,81 @@
+[gd_scene load_steps=4 format=3 uid="uid://rsfovv0gqe4v"]
+
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
+[ext_resource type="Texture2D" uid="uid://dsbay5inrgmup" path="res://Assets/room 2/desk clerk.png" id="1_khkhq"]
+[ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="3_41ge5"]
+
+[node name="Room2-deskZoom" type="Node2D"]
+
+[node name="BG with clerk" type="TextureRect" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(917, 476)
+offset_left = 2.0
+offset_right = 919.0
+offset_bottom = 476.0
+scale = Vector2(0.994948, 1.4152)
+texture = ExtResource("1_khkhq")
+expand_mode = 1
+
+[node name="Early_UI" parent="." instance=ExtResource("1_36hng")]
+
+[node name="desk clerk" parent="." instance=ExtResource("3_41ge5")]
+position = Vector2(390, 25)
+scale = Vector2(1.83467, 4.73931)
+
+[node name="ColorRect" parent="desk clerk" index="0"]
+scale = Vector2(0.92, 1)
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" parent="desk clerk/ColorRect" index="0"]
+position = Vector2(11.2566, 39.4572)
+scale = Vector2(1, 1.14348)
+
+[node name="Desk" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = 357.0
+offset_right = 918.0
+offset_bottom = 397.0
+scale = Vector2(1, 2.82884)
+color = Color(0.443137, 0.141176, 0.0313726, 1)
+
+[node name="Label" type="Label" parent="Desk"]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 7.26744
+offset_right = 438.0
+offset_bottom = 30.2674
+scale = Vector2(2.30113, 0.632342)
+text = "Desk "
+
+[node name="Bell" parent="." instance=ExtResource("3_41ge5")]
+position = Vector2(592, 335)
+
+[node name="ColorRect" parent="Bell" index="0"]
+offset_left = -18.0
+offset_top = -20.0
+offset_right = 22.0
+offset_bottom = 20.0
+scale = Vector2(0.931525, 1.0853)
+color = Color(1, 1, 0.176471, 1)
+
+[node name="CollisionShape2D" parent="Bell/ColorRect" index="0"]
+position = Vector2(19.4705, 18.6771)
+scale = Vector2(1.65041, -1.22724)
+
+[node name="key" parent="." instance=ExtResource("3_41ge5")]
+position = Vector2(451, 199)
+scale = Vector2(1.06357, 0.468217)
+
+[node name="ColorRect" parent="key" index="0"]
+offset_top = 10.0
+offset_bottom = 38.0
+scale = Vector2(1.04922, 0.803377)
+color = Color(1, 0.745098, 0, 1)
+
+[node name="CollisionShape2D" parent="key/ColorRect" index="0"]
+position = Vector2(19.6799, 13.9571)
+scale = Vector2(1.46314, 0.838737)
+
+[editable path="desk clerk"]
+[editable path="Bell"]
+[editable path="key"]
