@@ -16,6 +16,11 @@ scale = Vector2(0.994948, 1.4152)
 texture = ExtResource("1_khkhq")
 expand_mode = 1
 
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 503.0
+offset_bottom = 50.0
+text = "ROOM 2 DESK ZOOM"
+
 [node name="Early_UI" parent="." instance=ExtResource("1_36hng")]
 
 [node name="desk clerk" parent="." instance=ExtResource("3_41ge5")]

@@ -3,11 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/interactable.gd" id="1_n6j3e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdte"]
-<<<<<<< Updated upstream
-size = Vector2(60.983, 66.9012)
-=======
 size = Vector2(27.8965, 38.7038)
->>>>>>> Stashed changes
 
 [node name="Interactable" type="Node2D"]
 script = ExtResource("1_n6j3e")

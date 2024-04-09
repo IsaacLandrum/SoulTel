@@ -37,12 +37,9 @@ offset_left = 1.0
 offset_right = 39.0
 color = Color(1, 1, 1, 0)
 
-<<<<<<< Updated upstream
-=======
 [node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
 position = Vector2(19.25, 19.9167)
 
->>>>>>> Stashed changes
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
 offset_top = -1.0
 offset_bottom = -1.0
