@@ -1,14 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bygysvll0dksj"]
+[gd_scene load_steps=8 format=3 uid="uid://bygysvll0dksj"]
 
-[ext_resource type="Script" path="res://Scripts/Room2.gd" id="1_4jsff"]
-[ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_djn6c"]
+[ext_resource type="Script" path="res://Scripts/Office/Room2.gd" id="1_4jsff"]
 [ext_resource type="Texture2D" uid="uid://cruvtd2nbytsi" path="res://Assets/room2/Officelines colors.png" id="2_lkt2f"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
-[ext_resource type="Script" path="res://Scripts/Door_To_Lobby.gd" id="5_3lgbo"]
+[ext_resource type="Script" path="res://Scripts/Office/Door_To_Lobby.gd" id="5_3lgbo"]
 [ext_resource type="PackedScene" uid="uid://deiov7kmmd2y6" path="res://Scenes/key.tscn" id="5_53uud"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlqkr"]
-size = Vector2(223.883, 303.171)
+[ext_resource type="Script" path="res://Scripts/Office/Desk_Zoom.gd" id="6_v5mvt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jldyf"]
 size = Vector2(199, 155)
@@ -27,23 +24,6 @@ offset_right = 65.0
 offset_bottom = 38.0
 text = "Lobby"
 
-[node name="Interactable" parent="." instance=ExtResource("1_djn6c")]
-modulate = Color(0.717647, 1, 1, 1)
-position = Vector2(249, 168)
-CharacterID = "01"
-
-[node name="ColorRect" parent="Interactable" index="0"]
-offset_right = 37.0
-offset_bottom = 41.0
-color = Color(1, 1, 1, 0.0156863)
-
-[node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
-position = Vector2(44.2448, 56.7819)
-rotation = -1.73502
-scale = Vector2(0.999999, 0.999999)
-shape = SubResource("RectangleShape2D_jlqkr")
-debug_color = Color(0, 0.6, 0.701961, 0.498039)
-
 [node name="Early_UI" parent="." instance=ExtResource("2_omolg")]
 offset_top = -1.0
 offset_bottom = -1.0
@@ -54,8 +34,6 @@ offset_right = -240.0
 
 [node name="Inventory" parent="Early_UI" index="1"]
 layer = -1
-
-[node name="Interactable3" parent="." instance=ExtResource("1_djn6c")]
 
 [node name="Key" parent="." instance=ExtResource("5_53uud")]
 position = Vector2(500, 362)
@@ -77,8 +55,23 @@ visibility_layer = 1023
 position = Vector2(98.5, 77.5)
 shape = SubResource("RectangleShape2D_jldyf")
 
+[node name="Desk_Zoom" type="Node2D" parent="."]
+script = ExtResource("6_v5mvt")
+
+[node name="ColorRect" type="ColorRect" parent="Desk_Zoom"]
+offset_left = 104.0
+offset_top = 147.0
+offset_right = 551.0
+offset_bottom = 407.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Desk_Zoom/ColorRect"]
+position = Vector2(46, 127)
+polygon = PackedVector2Array(10, 90, 255, 127, 331, 46, 314, 24, 310, -77, -10, -86)
+
 [connection signal="mouse_entered" from="Door_To_Lobby/ColorRect" to="Door_To_Lobby" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Door_To_Lobby/ColorRect" to="Door_To_Lobby" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Desk_Zoom/ColorRect" to="Desk_Zoom" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Desk_Zoom/ColorRect" to="Desk_Zoom" method="_on_object_mouse_exited"]
 
-[editable path="Interactable"]
 [editable path="Early_UI"]

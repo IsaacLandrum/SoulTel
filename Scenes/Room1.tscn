@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://cx5uef2gxhuli"]
 
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_h5xoy"]
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_mggkj"]
+[ext_resource type="Script" path="res://Scripts/Room1/main.gd" id="1_mggkj"]
 [ext_resource type="Texture2D" uid="uid://cjrgyvnmk8tvo" path="res://Assets/room 1/door man and door.png" id="2_1814g"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_gj1gp"]
-[ext_resource type="Script" path="res://Scripts/doorman.gd" id="3_kud8m"]
+[ext_resource type="Script" path="res://Scripts/Room1/doorman.gd" id="3_kud8m"]
 [ext_resource type="PackedScene" uid="uid://cx1m7wtquih6e" path="res://Scenes/doorman.tscn" id="3_rhsla"]
 [ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="7_yfrb0"]
 
