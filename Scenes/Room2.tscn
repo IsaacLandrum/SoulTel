@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dc1nem25dtvks"]
+[gd_scene load_steps=6 format=3 uid="uid://bygysvll0dksj"]
 
 [ext_resource type="Script" path="res://Scripts/Room2.gd" id="1_4jsff"]
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_djn6c"]
+[ext_resource type="Texture2D" uid="uid://cruvtd2nbytsi" path="res://Assets/room 2/Officelines colors.png" id="2_lkt2f"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
-[ext_resource type="Texture2D" uid="uid://cpk8i8u5iqa5i" path="res://Assets/room 2/Officelines.png" id="4_epc6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlqkr"]
 size = Vector2(223.883, 303.171)
@@ -14,7 +14,7 @@ script = ExtResource("1_4jsff")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 917.0
 offset_bottom = 476.0
-texture = ExtResource("4_epc6o")
+texture = ExtResource("2_lkt2f")
 expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]

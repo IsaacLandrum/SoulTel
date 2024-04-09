@@ -56,9 +56,6 @@ offset_right = 39.0
 color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
-position = Vector2(19.25, 19.9167)
-
-[node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
 position = Vector2(19.625, 19.9167)
 
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
