@@ -1,8 +1,47 @@
-[gd_scene format=3 uid="uid://bf7bryyno0cxu"]
+[gd_scene load_steps=4 format=3 uid="uid://bf7bryyno0cxu"]
+
+[ext_resource type="Texture2D" uid="uid://bfws00kfvh1ll" path="res://Assets/room 3/lobbycolors.png" id="1_xr8ux"]
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_au5j6"]
+[ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="3_nxhdk"]
 
 [node name="Room3" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 25.0
+offset_top = -2.0
+offset_right = 942.0
+offset_bottom = 474.0
+texture = ExtResource("1_xr8ux")
+expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
 offset_right = 503.0
 offset_bottom = 50.0
 text = "ROOM 3"
+
+[node name="Early_UI" parent="." instance=ExtResource("2_au5j6")]
+
+[node name="Interactable" parent="." instance=ExtResource("3_nxhdk")]
+position = Vector2(827, 323)
+scale = Vector2(1.80085, 2.92589)
+
+[node name="ColorRect" parent="Interactable" index="0"]
+color = Color(0.823529, 1, 1, 0)
+
+[node name="Interactable2" parent="." instance=ExtResource("3_nxhdk")]
+position = Vector2(770, 332)
+scale = Vector2(1.15183, 2.16)
+
+[node name="ColorRect" parent="Interactable2" index="0"]
+color = Color(0.823529, 1, 1, 0)
+
+[node name="Interactable3" parent="." instance=ExtResource("3_nxhdk")]
+position = Vector2(84, 312)
+scale = Vector2(1.52992, 2.24)
+
+[node name="ColorRect" parent="Interactable3" index="0"]
+color = Color(0.823529, 1, 1, 0)
+
+[editable path="Interactable"]
+[editable path="Interactable2"]
+[editable path="Interactable3"]
