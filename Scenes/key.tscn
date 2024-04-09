@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://deiov7kmmd2y6"]
+
+[ext_resource type="Script" path="res://Scripts/Office/key.gd" id="1_w5n2g"]
+[ext_resource type="Texture2D" uid="uid://123kk4r1go2a" path="res://Assets/room2/dummy_key.png" id="2_2k4gb"]
+
+[node name="Key" type="Node2D"]
+script = ExtResource("1_w5n2g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -78.0
+offset_top = -78.0
+offset_right = 77.0
+offset_bottom = 69.0
+texture = ExtResource("2_2k4gb")
+expand_mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TextureRect"]
+position = Vector2(-16, -11)
+scale = Vector2(0.243991, 0.243991)
+polygon = PackedVector2Array(425, 105, 377, 138, 347, 190, 335, 245, 340, 298, 337, 323, 294, 371, 91, 574, 103, 639, 178, 643, 183, 605, 226, 601, 232, 556, 279, 547, 279, 501, 293, 490, 312, 492, 314, 463, 331, 448, 407, 453, 573, 387, 619, 345, 645, 281, 640, 203, 608, 142, 553, 102, 493, 89)
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_object_mouse_exited"]

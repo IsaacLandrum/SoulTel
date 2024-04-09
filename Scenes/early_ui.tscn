@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=21 format=3 uid="uid://iyb0x4jsmjmq"]
 
+[ext_resource type="Script" path="res://Scripts/UI.gd" id="1_1o0le"]
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
 [ext_resource type="Texture2D" uid="uid://qg6cuvfkf4aj" path="res://Assets/UI/sidepanleborder.png" id="2_8p7yv"]
 [ext_resource type="Texture2D" uid="uid://ciqhktfwvkmo6" path="res://Assets/UI/sidepanel.png" id="2_x1jid"]
@@ -31,6 +32,7 @@ border_color = Color(0.686275, 0.529412, 0.247059, 1)
 [node name="Early_UI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_1o0le")
 
 [node name="TextBox" type="CanvasLayer" parent="."]
 layer = 0
@@ -165,10 +167,15 @@ offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
 pivot_offset = Vector2(47, 51)
 
-[node name="ItemBox" type="TextureRect" parent="Inventory/InventoryContainer"]
+[node name="Box" type="TextureRect" parent="Inventory/InventoryContainer"]
 layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
+
+[node name="Slot1" type="TextureRect" parent="Inventory/InventoryContainer"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="InventoryContainer2" type="MarginContainer" parent="Inventory"]
 offset_left = 997.0
@@ -178,10 +185,15 @@ offset_bottom = 339.0
 scale = Vector2(1.10112, 1.05249)
 pivot_offset = Vector2(47, 51)
 
-[node name="ItemBox" type="TextureRect" parent="Inventory/InventoryContainer2"]
+[node name="Box" type="TextureRect" parent="Inventory/InventoryContainer2"]
 layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="Inventory/InventoryContainer2"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="InventoryContainer3" type="MarginContainer" parent="Inventory"]
 offset_left = 1073.0
@@ -191,10 +203,15 @@ offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
 pivot_offset = Vector2(47, 51)
 
-[node name="ItemBox" type="TextureRect" parent="Inventory/InventoryContainer3"]
+[node name="Box" type="TextureRect" parent="Inventory/InventoryContainer3"]
 layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="Inventory/InventoryContainer3"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="portrait container" type="MarginContainer" parent="Inventory"]
 offset_left = 919.0

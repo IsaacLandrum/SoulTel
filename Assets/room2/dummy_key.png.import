@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpk8i8u5iqa5i"
-path="res://.godot/imported/Officelines.png-893edf32f82ec251b49da1db28c645dd.ctex"
+uid="uid://123kk4r1go2a"
+path="res://.godot/imported/dummy_key.png-d94e612f7ed15f0393d9eb966a0390d2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 2/Officelines.png"
-dest_files=["res://.godot/imported/Officelines.png-893edf32f82ec251b49da1db28c645dd.ctex"]
+source_file="res://Assets/room2/dummy_key.png"
+dest_files=["res://.godot/imported/dummy_key.png-d94e612f7ed15f0393d9eb966a0390d2.ctex"]
 
 [params]
 
