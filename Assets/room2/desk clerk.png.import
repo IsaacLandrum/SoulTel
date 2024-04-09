@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpk8i8u5iqa5i"
-path="res://.godot/imported/Officelines.png-893edf32f82ec251b49da1db28c645dd.ctex"
+uid="uid://dsbay5inrgmup"
+path="res://.godot/imported/desk clerk.png-b634793fa0727c55ac98fd3acd218993.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 2/Officelines.png"
-dest_files=["res://.godot/imported/Officelines.png-893edf32f82ec251b49da1db28c645dd.ctex"]
+source_file="res://Assets/room2/desk clerk.png"
+dest_files=["res://.godot/imported/desk clerk.png-b634793fa0727c55ac98fd3acd218993.ctex"]
 
 [params]
 
