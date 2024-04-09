@@ -167,10 +167,15 @@ offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
 pivot_offset = Vector2(47, 51)
 
-[node name="Slot1" type="TextureRect" parent="Inventory/InventoryContainer"]
+[node name="Box" type="TextureRect" parent="Inventory/InventoryContainer"]
 layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
+
+[node name="Slot1" type="TextureRect" parent="Inventory/InventoryContainer"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="InventoryContainer2" type="MarginContainer" parent="Inventory"]
 offset_left = 997.0
@@ -180,10 +185,15 @@ offset_bottom = 339.0
 scale = Vector2(1.10112, 1.05249)
 pivot_offset = Vector2(47, 51)
 
-[node name="Slot2" type="TextureRect" parent="Inventory/InventoryContainer2"]
+[node name="Box" type="TextureRect" parent="Inventory/InventoryContainer2"]
 layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="Inventory/InventoryContainer2"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="InventoryContainer3" type="MarginContainer" parent="Inventory"]
 offset_left = 1073.0
@@ -193,10 +203,15 @@ offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
 pivot_offset = Vector2(47, 51)
 
-[node name="Slot3" type="TextureRect" parent="Inventory/InventoryContainer3"]
+[node name="Box" type="TextureRect" parent="Inventory/InventoryContainer3"]
 layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="Inventory/InventoryContainer3"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="portrait container" type="MarginContainer" parent="Inventory"]
 offset_left = 919.0
