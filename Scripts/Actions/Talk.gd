@@ -2,6 +2,8 @@ extends Area2D
 
 signal action(message: String)
 
+@onready var WheelIcon = $"../WheelIcon"
+
 func _ready():
 	# Set the input pickable property to true so it can receive input events
 	input_pickable = true
@@ -10,7 +12,8 @@ func _on_talk_clicked(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		print("Talk Selected")
 		SoundManager.play_click_sound()
-		emit_signal("action", "TALK")		
+		emit_signal("action", "TALK")	
+		WheelIcon.set_frame_and_progress(3,0)
 
 		
 #Following section handles on hover effect

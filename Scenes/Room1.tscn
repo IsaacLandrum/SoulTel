@@ -96,7 +96,7 @@ position = Vector2(932, 515)
 color = Color(1, 1, 0.270588, 0.12549)
 polygon = PackedVector2Array(0, 0, -69, 1, -59, 61, -30, 96, 22, 44)
 
-[node name="Examine" parent="Early_UI/Action Wheel" index="5"]
+[node name="Examine" parent="Early_UI/Action Wheel" index="6"]
 position = Vector2(-1.45508, 3.10199)
 
 [node name="ExamineHover" type="Polygon2D" parent="Early_UI/Action Wheel/Examine" index="1"]
