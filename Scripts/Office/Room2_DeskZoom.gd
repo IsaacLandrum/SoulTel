@@ -20,11 +20,12 @@ var key_info = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	Traverse.connect("action", _on_action)
-	Talk.connect("action", _on_action)
-	Use.connect("action", _on_action)
-	Take.connect("action", _on_action)
-	Examine.connect("action", _on_action)
+	GameManager.initRoom2DeskZoom()
+	Traverse.connect("action", GameManager._on_room2_deskzoom_action)
+	Talk.connect("action", GameManager._on_room2_deskzoom_action)
+	Use.connect("action", GameManager._on_room2_deskzoom_action)
+	Take.connect("action", GameManager._on_room2_deskzoom_action)
+	Examine.connect("action", GameManager._on_room2_deskzoom_action)
 
 	Key.connect("key_pickup", _on_key_pickup)
 	Bell.connect("bell_rung", _on_bell_rung)
@@ -32,19 +33,12 @@ func _ready():
 	
 	Clerk.visible = false
 	Key.visible = false
-	pass # Replace with function body.
-
-func _on_action(action):
-	Clerk.setCurrentAction(action)
-	Bell.setCurrentAction(action)
-	if !key_taken:
-		Key.setCurrentAction(action)
 
 func _on_key_pickup():
 	Inventory.add_item(key_info)
 	UI.update_inventory_ui() # Assuming InventoryUI is the name of the node with the InventoryUI.gd script
 	Key.queue_free() # Remove the item from the scene
-	key_taken = true
+	GameManager._on_puzzle2_keyPickup()
 
 func _on_bell_rung():
 	Clerk.visible = true

@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bygysvll0dksj"]
+[gd_scene load_steps=7 format=3 uid="uid://bygysvll0dksj"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Room2.gd" id="1_4jsff"]
 [ext_resource type="Texture2D" uid="uid://cruvtd2nbytsi" path="res://Assets/room2/Officelines colors.png" id="2_lkt2f"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
 [ext_resource type="Script" path="res://Scripts/Office/Door_To_Lobby.gd" id="5_3lgbo"]
-[ext_resource type="PackedScene" uid="uid://deiov7kmmd2y6" path="res://Scenes/key.tscn" id="5_53uud"]
 [ext_resource type="Script" path="res://Scripts/Office/Desk_Zoom.gd" id="6_v5mvt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jldyf"]
@@ -34,9 +33,6 @@ offset_right = -240.0
 
 [node name="Inventory" parent="Early_UI" index="1"]
 layer = -1
-
-[node name="Key" parent="." instance=ExtResource("5_53uud")]
-position = Vector2(500, 362)
 
 [node name="Door_To_Lobby" type="Node2D" parent="."]
 position = Vector2(746, 176)
