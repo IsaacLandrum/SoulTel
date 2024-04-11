@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://cds0flqbt07x5"]
+
+[ext_resource type="Script" path="res://Scripts/Office/back.gd" id="1_rnq8t"]
+[ext_resource type="Texture2D" uid="uid://c1vnum1oroyo7" path="res://Assets/UI/backarrow.png" id="2_y56jp"]
+
+[node name="back" type="Node2D"]
+script = ExtResource("1_rnq8t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -78.0
+offset_top = -78.0
+offset_right = 77.0
+offset_bottom = 69.0
+texture = ExtResource("2_y56jp")
+expand_mode = 1
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TextureRect"]
+position = Vector2(-13, -16)
+scale = Vector2(0.243991, 0.243991)
+polygon = PackedVector2Array(663.959, 360.669, 381.162, 57.3792, 49.1821, 364.768, 430.344, 659.86)
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_object_mouse_exited"]

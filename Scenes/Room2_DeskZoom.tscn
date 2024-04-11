@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://rsfovv0gqe4v"]
+[gd_scene load_steps=10 format=3 uid="uid://rsfovv0gqe4v"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/key.tscn" id="4_ma5du"]
 [ext_resource type="Script" path="res://Scripts/Office/Clerk.gd" id="4_q6x8t"]
 [ext_resource type="Script" path="res://Scripts/Office/Bell.gd" id="5_cd2f1"]
+[ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awo1a"]
 size = Vector2(108.5, 350)
@@ -86,6 +87,12 @@ shape = SubResource("RectangleShape2D_haqat")
 
 [node name="Key" parent="." instance=ExtResource("4_ma5du")]
 position = Vector2(185, 392)
+
+[node name="Back" parent="." instance=ExtResource("7_w1243")]
+position = Vector2(796, 338)
+rotation = -1.5594
+canTraverse = true
+traverse_path = "res://Scenes/Room2.tscn"
 
 [connection signal="mouse_entered" from="Clerk/ColorRect" to="Clerk" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Clerk/ColorRect" to="Clerk" method="_on_object_mouse_exited"]

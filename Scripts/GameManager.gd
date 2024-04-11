@@ -31,7 +31,8 @@ func initRoom2DeskZoom():
 	puzzle2["nodes"] = {
 		"clerk" : get_node("/root/Room2-deskZoom/Clerk"),
 		"bell" : get_node("/root/Room2-deskZoom/Bell"),
-		"key" : get_node("/root/Room2-deskZoom/Key")
+		"key" : get_node("/root/Room2-deskZoom/Key"),
+		"back" : get_node("/root/Room2-deskZoom/Back")
 	}
 
 '''
@@ -55,6 +56,7 @@ func _on_room2_action(action):
 func _on_room2_deskzoom_action(action):
 	puzzle2["nodes"]["clerk"].setCurrentAction(action)
 	puzzle2["nodes"]["bell"].setCurrentAction(action)
+	puzzle2["nodes"]["back"].setCurrentAction(action)
 	if !puzzle2["conditions"]["keyTaken"]:
 		puzzle2["nodes"]["key"].setCurrentAction(action)
 
