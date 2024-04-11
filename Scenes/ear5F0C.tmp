@@ -261,12 +261,10 @@ expand_mode = 1
 [node name="Action Wheel" type="CanvasLayer" parent="."]
 layer = 2
 
-[node name="WheelIcon" type="AnimatedSprite2D" parent="Action Wheel"]
+[node name="Wheel Icon" type="AnimatedSprite2D" parent="Action Wheel"]
 position = Vector2(1012, 505)
 scale = Vector2(0.11, 0.114)
 sprite_frames = SubResource("SpriteFrames_3veiq")
-frame = 4
-frame_progress = 1.0
 
 [node name="Watch Container" type="MarginContainer" parent="Action Wheel"]
 offset_left = 882.0

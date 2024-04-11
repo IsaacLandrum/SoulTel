@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bygysvll0dksj"]
+[gd_scene load_steps=8 format=3 uid="uid://dc1nem25dtvks"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Room2.gd" id="1_4jsff"]
 [ext_resource type="Texture2D" uid="uid://cruvtd2nbytsi" path="res://Assets/room2/Officelines colors.png" id="2_lkt2f"]
