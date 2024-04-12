@@ -4,6 +4,7 @@ extends Node2D
 @onready var UI = $Early_UI
 @onready var Bell = $Bell
 @onready var Clerk = $Clerk
+@onready var Background = $Background
 
 @onready var Traverse = $"Early_UI/Action Wheel/Traverse"
 @onready var Talk = $"Early_UI/Action Wheel/Talk"
@@ -42,6 +43,7 @@ func _on_key_pickup():
 
 func _on_bell_rung():
 	$block_guy.visible = false
+	Background.texture = load("res://Assets/room2/deskzoominlinesclerk.png")
 	Clerk.visible = true
 
 func _on_clerk_talk():
