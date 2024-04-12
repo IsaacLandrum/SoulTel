@@ -7,9 +7,9 @@
 [node name="Room3" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 25.0
+offset_left = 1.0
 offset_top = -2.0
-offset_right = 942.0
+offset_right = 918.0
 offset_bottom = 474.0
 texture = ExtResource("1_xr8ux")
 expand_mode = 1

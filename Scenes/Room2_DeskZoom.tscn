@@ -98,8 +98,9 @@ stream = ExtResource("6_wbuwr")
 position = Vector2(586, 386)
 
 [node name="Back" parent="." instance=ExtResource("7_w1243")]
-position = Vector2(796, 338)
-rotation = -1.5594
+position = Vector2(49, 418)
+rotation = -1.5708
+scale = Vector2(0.54, 0.54)
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 
