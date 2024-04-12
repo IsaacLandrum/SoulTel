@@ -14,6 +14,7 @@ func interact():
 		
 		pass # examine
 	elif (currentAction == "USE"):
-		pass # USE
+		SoundManager.play_error_sfx()
+		 # USE
 	elif (currentAction == "TRAVERSE"&&canTraverse):
 		print("Traversing")

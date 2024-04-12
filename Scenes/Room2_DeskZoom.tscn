@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://rsfovv0gqe4v"]
+[gd_scene load_steps=11 format=3 uid="uid://rsfovv0gqe4v"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blr1dtw8y0kvs" path="res://Scenes/key.tscn" id="4_ma5du"]
 [ext_resource type="Script" path="res://Scripts/Office/Clerk.gd" id="4_q6x8t"]
 [ext_resource type="Script" path="res://Scripts/Office/Bell.gd" id="5_cd2f1"]
+[ext_resource type="AudioStream" uid="uid://neta2xhl6bea" path="res://Assets/Sound/bell_ding_SOUL.mp3" id="6_wbuwr"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awo1a"]
@@ -65,7 +66,7 @@ offset_left = 363.0
 offset_top = 14.0
 offset_right = 471.0
 offset_bottom = 362.0
-color = Color(0.705882, 0.235294, 0.709804, 1)
+color = Color(0.458824, 0.458824, 0.458824, 0.137255)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Clerk/ColorRect"]
 position = Vector2(53.75, 173)
@@ -84,6 +85,9 @@ color = Color(1, 1, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bell/ColorRect"]
 position = Vector2(24.5, 25.5)
 shape = SubResource("RectangleShape2D_haqat")
+
+[node name="bell_ding" type="AudioStreamPlayer" parent="Bell"]
+stream = ExtResource("6_wbuwr")
 
 [node name="Key" parent="." instance=ExtResource("4_ma5du")]
 position = Vector2(185, 392)

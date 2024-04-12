@@ -41,6 +41,7 @@ func _on_key_pickup():
 	GameManager._on_puzzle2_keyPickup()
 
 func _on_bell_rung():
+	$block_guy.visible = false
 	Clerk.visible = true
 
 func _on_clerk_talk():

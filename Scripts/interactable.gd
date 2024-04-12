@@ -32,20 +32,19 @@ func setCurrentAction(action):
 
 func interact():
 	if (currentAction == "TAKE"):
-		pass#TAKE
+		SoundManager.play_error_sfx()
 	elif (currentAction == "TALK"):
 		print("TALKING")
 		DialogOut.emit(CharacterID)	#emits the error signal to the dialoge
 		
 		pass#TALK 
 	elif (currentAction == "EXAMINE"):
-		
-		pass#examine
+		pass
 	elif (currentAction == "USE"):
-		pass#USE 	
+		SoundManager.play_error_sfx()
+		
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		print("Traversing")
-		
 		SoundManager.play_lobby_music()
 		SceneTransition.changeScene(traverse_path)
 

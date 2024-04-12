@@ -4,6 +4,7 @@ signal clerk_talk
 
 func interact():
 	if (currentAction == "TAKE"):
+		SoundManager.play_error_sfx()
 		pass # TAKE
 		
 	elif (currentAction == "TALK"):
@@ -15,7 +16,9 @@ func interact():
 		
 		pass # examine
 	elif (currentAction == "USE"):
+		SoundManager.play_error_sfx()
 		
 		pass # USE
 	elif (currentAction == "TRAVERSE"):
+		SoundManager.play_error_sfx()
 		pass
