@@ -1,34 +1,39 @@
-[gd_scene load_steps=11 format=3 uid="uid://rsfovv0gqe4v"]
+[gd_scene load_steps=10 format=3 uid="uid://rsfovv0gqe4v"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
-[ext_resource type="Texture2D" uid="uid://dsbay5inrgmup" path="res://Assets/room2/desk clerk.png" id="1_khkhq"]
+[ext_resource type="Texture2D" uid="uid://b8diqo6w5crut" path="res://Assets/room2/deskzoominlines empy.png" id="2_j5m2p"]
 [ext_resource type="PackedScene" uid="uid://blr1dtw8y0kvs" path="res://Scenes/key.tscn" id="4_ma5du"]
 [ext_resource type="Script" path="res://Scripts/Office/Clerk.gd" id="4_q6x8t"]
 [ext_resource type="Script" path="res://Scripts/Office/Bell.gd" id="5_cd2f1"]
 [ext_resource type="AudioStream" uid="uid://neta2xhl6bea" path="res://Assets/Sound/bell_ding_SOUL.mp3" id="6_wbuwr"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_awo1a"]
-size = Vector2(108.5, 350)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haqat"]
-size = Vector2(51, 51)
+size = Vector2(92.5, 70.5)
 
 [node name="Room2-deskZoom" type="Node2D"]
 script = ExtResource("1_6gbbj")
 
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 917.0
+offset_bottom = 469.0
+texture = ExtResource("2_j5m2p")
+expand_mode = 1
+
 [node name="BG with clerk" type="TextureRect" parent="."]
+visible = false
 clip_contents = true
 custom_minimum_size = Vector2(917, 476)
 offset_left = 2.0
 offset_right = 919.0
 offset_bottom = 476.0
 scale = Vector2(0.994948, 1.4152)
-texture = ExtResource("1_khkhq")
+texture = ExtResource("2_j5m2p")
 expand_mode = 1
 
 [node name="block_guy" type="ColorRect" parent="."]
+visible = false
 offset_left = 348.0
 offset_top = 17.0
 offset_right = 471.0
@@ -42,6 +47,7 @@ text = "ROOM 2 DESK ZOOM"
 [node name="Early_UI" parent="." instance=ExtResource("1_36hng")]
 
 [node name="Desk" type="ColorRect" parent="."]
+visible = false
 offset_left = 1.0
 offset_top = 357.0
 offset_right = 918.0
@@ -62,39 +68,39 @@ text = "Desk "
 script = ExtResource("4_q6x8t")
 
 [node name="ColorRect" type="ColorRect" parent="Clerk"]
-offset_left = 363.0
-offset_top = 14.0
-offset_right = 471.0
-offset_bottom = 362.0
-color = Color(0.458824, 0.458824, 0.458824, 0.137255)
+offset_left = 329.0
+offset_top = 4.0
+offset_right = 589.0
+offset_bottom = 414.0
+color = Color(0.458824, 0.458824, 0.458824, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Clerk/ColorRect"]
-position = Vector2(53.75, 173)
-shape = SubResource("RectangleShape2D_awo1a")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clerk/ColorRect"]
+polygon = PackedVector2Array(37, 386, 232, 387, 214, 348, 257, 280, 248, 151, 161, 98, 175, 41, 145, 0, 113, 0, 85, 17, 78, 52, 92, 82, 93, 106, 19, 142, -1, 288, 49, 346)
 
 [node name="Bell" type="Node2D" parent="."]
 script = ExtResource("5_cd2f1")
 
 [node name="ColorRect" type="ColorRect" parent="Bell"]
-offset_left = 633.0
-offset_top = 375.0
-offset_right = 683.0
-offset_bottom = 426.0
-color = Color(1, 1, 0, 1)
+offset_left = 214.0
+offset_top = 333.0
+offset_right = 301.0
+offset_bottom = 403.0
+color = Color(1, 1, 0, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bell/ColorRect"]
-position = Vector2(24.5, 25.5)
+position = Vector2(42.75, 33.75)
 shape = SubResource("RectangleShape2D_haqat")
 
 [node name="bell_ding" type="AudioStreamPlayer" parent="Bell"]
 stream = ExtResource("6_wbuwr")
 
 [node name="Key" parent="." instance=ExtResource("4_ma5du")]
-position = Vector2(185, 392)
+position = Vector2(586, 386)
 
 [node name="Back" parent="." instance=ExtResource("7_w1243")]
-position = Vector2(796, 338)
-rotation = -1.5594
+position = Vector2(49, 418)
+rotation = -1.5708
+scale = Vector2(0.54, 0.54)
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 
