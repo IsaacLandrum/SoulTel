@@ -47,7 +47,7 @@ func interact():
 		print("Traversing")
 		
 		SoundManager.play_lobby_music()
-		get_tree().change_scene_to_file(traverse_path)
+		SceneTransition.changeScene(traverse_path)
 
 func _on_object_mouse_entered():
 	isHovering = true # Replace with function body.

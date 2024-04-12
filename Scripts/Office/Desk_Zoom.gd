@@ -15,4 +15,4 @@ func interact():
 	elif (currentAction == "TRAVERSE"):
 		print("Traversing to zoom")
 	
-		get_tree().change_scene_to_file("res://Scenes/Room2_DeskZoom.tscn")
+		SceneTransition.changeScene("res://Scenes/Room2_DeskZoom.tscn")

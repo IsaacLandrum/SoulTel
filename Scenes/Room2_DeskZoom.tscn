@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Office/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
 [ext_resource type="Texture2D" uid="uid://dsbay5inrgmup" path="res://Assets/room2/desk clerk.png" id="1_khkhq"]
-[ext_resource type="PackedScene" path="res://Scenes/key.tscn" id="4_ma5du"]
+[ext_resource type="PackedScene" uid="uid://blr1dtw8y0kvs" path="res://Scenes/key.tscn" id="4_ma5du"]
 [ext_resource type="Script" path="res://Scripts/Office/Clerk.gd" id="4_q6x8t"]
 [ext_resource type="Script" path="res://Scripts/Office/Bell.gd" id="5_cd2f1"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]

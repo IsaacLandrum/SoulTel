@@ -15,4 +15,4 @@ func interact():
 		pass # USE
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		print("trav")
-		get_tree().change_scene_to_file(traverse_path)
+		SceneTransition.changeScene(traverse_path)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwg5s8er5fvn2"]
+
+[ext_resource type="Texture2D" uid="uid://bff7o3tgov514" path="res://Assets/Main Menu/Main Menu.jpg" id="1_20jls"]
+[ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_jw8nb"]
+[ext_resource type="Theme" uid="uid://dbk3ema4l3234" path="res://Assets/Themes/new_theme.tres" id="3_r54ij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5vws"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3fbu"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_jw8nb")
+
+[node name="MainMenuBg" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_20jls")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(1, 1, 0.113725, 0.741176)
+self_modulate = Color(1, 1, 0.298039, 0.721569)
+offset_left = 1002.0
+offset_top = 36.0
+offset_right = 1010.0
+offset_bottom = 44.0
+scale = Vector2(12.1489, 2.69091)
+theme = ExtResource("3_r54ij")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a5vws")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h3fbu")
+action_mode = 0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

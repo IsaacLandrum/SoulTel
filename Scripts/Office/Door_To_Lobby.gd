@@ -13,4 +13,4 @@ func interact():
 		pass # USE
 	elif (currentAction == "TRAVERSE"):
 		print("Traversing to lobby")
-		get_tree().change_scene_to_file("res://Scenes/Room3.tscn")
+		SceneTransition.changeScene("res://Scenes/Room3.tscn")
