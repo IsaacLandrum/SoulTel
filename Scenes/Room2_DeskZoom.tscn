@@ -64,7 +64,7 @@ offset_bottom = 30.2674
 scale = Vector2(2.30113, 0.632342)
 text = "Desk "
 
-[node name="Clerk" type="Node2D" parent="."]
+[node name="Clerk" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("4_q6x8t")
 
 [node name="ColorRect" type="ColorRect" parent="Clerk"]
@@ -77,7 +77,7 @@ color = Color(0.458824, 0.458824, 0.458824, 0)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Clerk/ColorRect"]
 polygon = PackedVector2Array(37, 386, 232, 387, 214, 348, 257, 280, 248, 151, 161, 98, 175, 41, 145, 0, 113, 0, 85, 17, 78, 52, 92, 82, 93, 106, 19, 142, -1, 288, 49, 346)
 
-[node name="Bell" type="Node2D" parent="."]
+[node name="Bell" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("5_cd2f1")
 
 [node name="ColorRect" type="ColorRect" parent="Bell"]
@@ -94,10 +94,10 @@ shape = SubResource("RectangleShape2D_haqat")
 [node name="bell_ding" type="AudioStreamPlayer" parent="Bell"]
 stream = ExtResource("6_wbuwr")
 
-[node name="Key" parent="." instance=ExtResource("4_ma5du")]
+[node name="Key" parent="." groups=["Interactable"] instance=ExtResource("4_ma5du")]
 position = Vector2(586, 386)
 
-[node name="Back" parent="." instance=ExtResource("7_w1243")]
+[node name="Back" parent="." groups=["Interactable"] instance=ExtResource("7_w1243")]
 position = Vector2(49, 418)
 rotation = -1.5708
 scale = Vector2(0.54, 0.54)

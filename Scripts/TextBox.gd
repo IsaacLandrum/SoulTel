@@ -4,8 +4,7 @@ extends CanvasLayer
 #var dialogueTree_Blueprint
 var dialogueTree
 var display
-var sigSender
-var debug#---------------------------------------------------------delete this
+var sigReciever
 
 #the filepath constants and variables
 const filePath1 = "res://Dialogue/Room_"
@@ -14,13 +13,21 @@ const filePath3 = ".txt"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	var Room_Scene = get_node("/root/Node2D")
+	var Room_data
 	const dialogueTree_Blueprint = preload("res://Scripts/BinarySearchTree.gd")
 	dialogueTree = dialogueTree_Blueprint.new()
 	display = get_node("TextBoxBackground/RichTextLabel")
-	sigSender = get_node("/root/Node2D/Interactable")
-	#sigSender.connect("DialogOut", change_displayed_dialogue)
-	debug = "00"
-	Load_Room_Dialogue(debug)
+	sigReciever = get_tree().get_nodes_in_group("Interactable")
+	if(sigReciever != null):
+		for connect in sigReciever:
+			connect.connect("DialogOut", change_displayed_dialogue)
+	else:
+		print("sigreciever is null")
+	if(Room_Scene != null):
+		Room_data = Room_Scene.get_meta("Room_Number")
+		if(Room_data != null):
+			Load_Room_Dialogue(Room_data)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -49,11 +56,11 @@ func Load_Room_Dialogue(roomID):
 		i+=1
 
 #changes the dipslayed dialogue in the text-box
-func change_displayed_dialogue(newKey):
-	var ID = filePath2+newKey+"00"
+func change_displayed_dialogue(CharacterID, InteractionID):
+	print("change display dialogue")
+	var ID = filePath2+CharacterID+InteractionID
 	var newDialoge = dialogueTree.Search(ID.to_int())
+	if(newDialoge == null):
+		newDialoge = "error, dialoge is Null"
 	display.text = newDialoge
-
-#handles the text
-func Dialoge_handler():
-	pass
+	print("Text change")

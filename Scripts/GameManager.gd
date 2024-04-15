@@ -27,6 +27,7 @@ func initRoom2():
 		"zoom" : get_node("/root/Node2D/Desk_Zoom")
 	}
 	
+	
 func initRoom2DeskZoom():
 	puzzle2["nodes"] = {
 		"clerk" : get_node("/root/Room2-deskZoom/Clerk"),

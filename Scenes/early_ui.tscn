@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=25 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_1o0le"]
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
@@ -23,16 +23,6 @@
 [ext_resource type="Script" path="res://Scripts/Actions/Take.gd" id="16_utkvd"]
 [ext_resource type="Script" path="res://Scripts/Actions/Examine.gd" id="17_a4vhy"]
 [ext_resource type="Texture2D" uid="uid://b5t6uyrlm6vre" path="res://Assets/UI/wheel Icons/Icontraverse.png" id="17_a8g1c"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.686275, 0.529412, 0.247059, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6xsf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3veiq"]
 animations = [{
@@ -112,46 +102,6 @@ offset_right = 969.0
 offset_bottom = 649.0
 texture = ExtResource("6_151yf")
 expand_mode = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="TextBox"]
-visible = false
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 71.0
-offset_top = -219.0
-offset_right = -310.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Panel" type="Panel" parent="TextBox/MarginContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jyoj1")
-
-[node name="MarginContainer2" type="MarginContainer" parent="TextBox/MarginContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="Panel" type="Panel" parent="TextBox/MarginContainer/MarginContainer2"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_v6xsf")
-
-[node name="Label" type="Label" parent="TextBox/MarginContainer/MarginContainer2"]
-custom_minimum_size = Vector2(1, 1)
-layout_mode = 2
-text = "this  area contains the dialogue from npcs, events, or other things
-each peice of dialoge will need it's own box, they cannot be combined in the current setup.
-
-
-
-
-The grey part is the writable inventory. it can hold a maximum of seven lines"
-autowrap_mode = 2
-max_lines_visible = 7
 
 [node name="Inventory" type="CanvasLayer" parent="."]
 

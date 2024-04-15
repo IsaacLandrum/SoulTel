@@ -9,6 +9,7 @@ extends Node2D
 @onready var Use = $"Early_UI/Action Wheel/Use"
 @onready var Take = $"Early_UI/Action Wheel/Take"
 @onready var Examine = $"Early_UI/Action Wheel/Examine"
+@onready var dialoge = $"Early_UI/TextBox"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

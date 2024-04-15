@@ -24,6 +24,7 @@ text = "ROOM 3"
 [node name="Interactable" parent="." instance=ExtResource("3_nxhdk")]
 position = Vector2(827, 323)
 scale = Vector2(1.80085, 2.92589)
+CharacterID = "31"
 
 [node name="ColorRect" parent="Interactable" index="0"]
 color = Color(0.823529, 1, 1, 0)
@@ -31,6 +32,7 @@ color = Color(0.823529, 1, 1, 0)
 [node name="Interactable2" parent="." instance=ExtResource("3_nxhdk")]
 position = Vector2(770, 332)
 scale = Vector2(1.15183, 2.16)
+CharacterID = "32"
 
 [node name="ColorRect" parent="Interactable2" index="0"]
 color = Color(0.823529, 1, 1, 0)
@@ -38,6 +40,7 @@ color = Color(0.823529, 1, 1, 0)
 [node name="Interactable3" parent="." instance=ExtResource("3_nxhdk")]
 position = Vector2(84, 312)
 scale = Vector2(1.52992, 2.24)
+CharacterID = "33"
 
 [node name="ColorRect" parent="Interactable3" index="0"]
 color = Color(0.823529, 1, 1, 0)

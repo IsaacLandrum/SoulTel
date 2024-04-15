@@ -11,6 +11,7 @@ size = Vector2(199, 155)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4jsff")
+metadata/Room_Number = "02"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 917.0
@@ -27,16 +28,16 @@ text = "Lobby"
 offset_top = -1.0
 offset_bottom = -1.0
 
-[node name="MarginContainer" parent="Early_UI/TextBox" index="5"]
-offset_left = -1.0
-offset_right = -240.0
+[node name="RichTextLabel" parent="Early_UI/TextBox/TextBoxBackground" index="0"]
+text = "Hello hi"
 
 [node name="Inventory" parent="Early_UI" index="1"]
 layer = -1
 
-[node name="Door_To_Lobby" type="Node2D" parent="."]
+[node name="Door_To_Lobby" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(746, 176)
 script = ExtResource("5_3lgbo")
+CharacterID = "21"
 
 [node name="ColorRect" type="ColorRect" parent="Door_To_Lobby"]
 offset_left = -52.0
@@ -51,8 +52,9 @@ visibility_layer = 1023
 position = Vector2(98.5, 77.5)
 shape = SubResource("RectangleShape2D_jldyf")
 
-[node name="Desk_Zoom" type="Node2D" parent="."]
+[node name="Desk_Zoom" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("6_v5mvt")
+CharacterID = "22"
 
 [node name="ColorRect" type="ColorRect" parent="Desk_Zoom"]
 offset_left = 104.0

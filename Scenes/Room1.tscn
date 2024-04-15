@@ -10,6 +10,7 @@
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mggkj")
+metadata/Room_Number = "01"
 
 [node name="background" type="Control" parent="."]
 layout_mode = 3
@@ -30,7 +31,7 @@ offset_right = 122.0
 offset_bottom = 40.0
 text = "Outside Hotel"
 
-[node name="Doorman" parent="." instance=ExtResource("3_rhsla")]
+[node name="Doorman" parent="." groups=["Interactable"] instance=ExtResource("3_rhsla")]
 script = ExtResource("3_kud8m")
 
 [node name="ColorRect" parent="Doorman" index="0"]
@@ -43,7 +44,7 @@ color = Color(1, 1, 1, 0)
 [node name="CollisionShape2D" parent="Doorman/ColorRect" index="0"]
 position = Vector2(76, 216)
 
-[node name="Interactable" parent="." instance=ExtResource("1_h5xoy")]
+[node name="Interactable" parent="." groups=["Interactable"] instance=ExtResource("1_h5xoy")]
 position = Vector2(354, 131)
 scale = Vector2(4, 6)
 CharacterID = "02"
@@ -64,10 +65,7 @@ offset_bottom = -1.0
 
 [node name="RichTextLabel" parent="Early_UI/TextBox/TextBoxBackground" index="0"]
 theme_override_fonts/normal_font = ExtResource("7_yfrb0")
-
-[node name="MarginContainer" parent="Early_UI/TextBox" index="5"]
-offset_left = -1.0
-offset_right = -240.0
+text = "Hello 1"
 
 [node name="Inventory" parent="Early_UI" index="1"]
 layer = -1
