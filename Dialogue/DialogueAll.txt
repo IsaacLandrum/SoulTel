@@ -1,0 +1,31 @@
+022100 "Error: there was no dialogue for this in the document so I left it empty"
+022101 "Error: there was no dialogue for this in the document so I left it empty"
+022102 "Error: there was no dialogue for this in the document so I left it empty"
+022103 "Error: there was no dialogue for this in the document so I left it empty"
+022104 "Error: there was no dialogue for this in the document so I left it empty"
+022109 "Error: there was no dialogue for this in the document so I left it empty"
+022200 "Error: there was no dialogue for this in the document so I left it empty"
+022201 "Error: there was no dialogue for this in the document so I left it empty"
+022202 "Error: there was no dialogue for this in the document so I left it empty"
+022203 "Error: there was no dialogue for this in the document so I left it empty"
+022204 Error: there was no dialogue for this in the document so I left it empty"
+020104 I'm not going to do that.
+020103 [rings bell, prompting desk clerk]
+020102 An old ornate bell... This could get the attention of any staff.  
+020101 I'm not going to do that.
+020100 I don't think I want this.
+020204 I'm not going to do that.
+020203 I should take it from his hands first.
+020202 An old key.. With a tag that reads "100"
+020201 I'm not going to do that.
+020200 [keys into inventory]
+020304 "Error: there was no dialogue for this in the document so I left it empty"
+020303 "Error: there was no dialogue for this in the document so I left it empty"
+020302 "Error: there was no dialogue for this in the document so I left it empty"
+020301 "Error: there was no dialogue for this in the document so I left it empty"
+020300 "Error: there was no dialogue for this in the document so I left it empty"
+020304 That would be rude. 
+020303 That would be rude. 
+020302 "Error: there was no dialogue for this in the document so I left it empty"
+020301 [E7 on puzzle Workflow]
+020300 That would be rude.

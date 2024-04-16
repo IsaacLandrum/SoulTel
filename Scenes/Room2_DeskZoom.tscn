@@ -14,6 +14,7 @@ size = Vector2(92.5, 70.5)
 
 [node name="Room2-deskZoom" type="Node2D"]
 script = ExtResource("1_6gbbj")
+metadata/Room_Number = "02"
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 917.0
@@ -66,6 +67,7 @@ text = "Desk "
 
 [node name="Clerk" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("4_q6x8t")
+CharacterID = "04"
 
 [node name="ColorRect" type="ColorRect" parent="Clerk"]
 offset_left = 329.0
@@ -79,6 +81,7 @@ polygon = PackedVector2Array(37, 386, 232, 387, 214, 348, 257, 280, 248, 151, 16
 
 [node name="Bell" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("5_cd2f1")
+CharacterID = "01"
 
 [node name="ColorRect" type="ColorRect" parent="Bell"]
 offset_left = 214.0
@@ -96,11 +99,13 @@ stream = ExtResource("6_wbuwr")
 
 [node name="Key" parent="." groups=["Interactable"] instance=ExtResource("4_ma5du")]
 position = Vector2(586, 386)
+CharacterID = "02"
 
 [node name="Back" parent="." groups=["Interactable"] instance=ExtResource("7_w1243")]
 position = Vector2(49, 418)
 rotation = -1.5708
 scale = Vector2(0.54, 0.54)
+CharacterID = "03"
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 
