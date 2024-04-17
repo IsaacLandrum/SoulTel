@@ -24,8 +24,8 @@
 020302 "Error: there was no dialogue for this in the document so I left it empty"
 020301 "Error: there was no dialogue for this in the document so I left it empty"
 020300 "Error: there was no dialogue for this in the document so I left it empty"
-020304 That would be rude. 
-020303 That would be rude. 
-020302 "Error: there was no dialogue for this in the document so I left it empty"
-020301 [E7 on puzzle Workflow]
-020300 That would be rude.
+020404 That would be rude. 
+020403 That would be rude. 
+020402 "Error: there was no dialogue for this in the document so I left it empty"
+020401 [E7 on puzzle Workflow]
+020400 That would be rude.
