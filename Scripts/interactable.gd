@@ -10,7 +10,7 @@ var isHovering = false
 var dialoge_connection
 
 #signals
-signal DialogOut(DialogeID)
+signal DialogOut(CharacterID, DialogeID)
 
 var currentAction
 
@@ -30,20 +30,30 @@ func _input(event):
 func setCurrentAction(action):
 	currentAction = action
 
+#from Dialoge readme
+#6 each interaction has an assigned dialoge offset
+#6.1 Take is assigned the offset of 0.
+#6.2 talk is assigned the offset of 1
+#6.3 Examine is assigned the offset of 2
+#6.4 USE is assigned the offset of 3
+#6.5 Traverse is assigned the offset of 4
 func interact():
 	if (currentAction == "TAKE"):
+		DialogOut.emit(CharacterID, "00")
 		SoundManager.play_error_sfx()
 	elif (currentAction == "TALK"):
 		print("TALKING")
-		DialogOut.emit(CharacterID)	#emits the error signal to the dialoge
-		
+		DialogOut.emit(CharacterID, "01")
 		pass#TALK 
 	elif (currentAction == "EXAMINE"):
+		DialogOut.emit(CharacterID, "02")
 		pass
 	elif (currentAction == "USE"):
+		DialogOut.emit(CharacterID, "03")
 		SoundManager.play_error_sfx()
 		
 	elif (currentAction == "TRAVERSE" && canTraverse):
+		DialogOut.emit(CharacterID, "04")
 		print("Traversing")
 		SoundManager.play_lobby_music()
 		SceneTransition.changeGameScene(traverse_path)
