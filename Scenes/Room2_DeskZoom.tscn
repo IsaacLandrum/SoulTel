@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://rsfovv0gqe4v"]
 
-[ext_resource type="Script" path="res://Scripts/Office/Room2_DeskZoom.gd" id="1_6gbbj"]
+[ext_resource type="Script" path="res://Scripts/Reception/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
 [ext_resource type="Texture2D" uid="uid://b8diqo6w5crut" path="res://Assets/room2/deskzoominlines empy.png" id="2_j5m2p"]
 [ext_resource type="PackedScene" uid="uid://blr1dtw8y0kvs" path="res://Scenes/key.tscn" id="4_ma5du"]
-[ext_resource type="Script" path="res://Scripts/Office/Clerk.gd" id="4_q6x8t"]
-[ext_resource type="Script" path="res://Scripts/Office/Bell.gd" id="5_cd2f1"]
+[ext_resource type="Script" path="res://Scripts/Reception/Clerk.gd" id="4_q6x8t"]
+[ext_resource type="Script" path="res://Scripts/Reception/Bell.gd" id="5_cd2f1"]
 [ext_resource type="AudioStream" uid="uid://neta2xhl6bea" path="res://Assets/Sound/bell_ding_SOUL.mp3" id="6_wbuwr"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]
 
@@ -21,48 +21,7 @@ offset_bottom = 469.0
 texture = ExtResource("2_j5m2p")
 expand_mode = 1
 
-[node name="BG with clerk" type="TextureRect" parent="."]
-visible = false
-clip_contents = true
-custom_minimum_size = Vector2(917, 476)
-offset_left = 2.0
-offset_right = 919.0
-offset_bottom = 476.0
-scale = Vector2(0.994948, 1.4152)
-texture = ExtResource("2_j5m2p")
-expand_mode = 1
-
-[node name="block_guy" type="ColorRect" parent="."]
-visible = false
-offset_left = 348.0
-offset_top = 17.0
-offset_right = 471.0
-offset_bottom = 357.0
-
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 503.0
-offset_bottom = 50.0
-text = "ROOM 2 DESK ZOOM"
-
 [node name="Early_UI" parent="." instance=ExtResource("1_36hng")]
-
-[node name="Desk" type="ColorRect" parent="."]
-visible = false
-offset_left = 1.0
-offset_top = 357.0
-offset_right = 918.0
-offset_bottom = 397.0
-scale = Vector2(1, 2.82884)
-color = Color(0.443137, 0.141176, 0.0313726, 1)
-
-[node name="Label" type="Label" parent="Desk"]
-layout_mode = 0
-offset_left = 395.0
-offset_top = 7.26744
-offset_right = 438.0
-offset_bottom = 30.2674
-scale = Vector2(2.30113, 0.632342)
-text = "Desk "
 
 [node name="Clerk" type="Node2D" parent="."]
 script = ExtResource("4_q6x8t")

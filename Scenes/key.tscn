@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://blr1dtw8y0kvs"]
 
-[ext_resource type="Script" path="res://Scripts/Office/key.gd" id="1_w5n2g"]
+[ext_resource type="Script" path="res://Scripts/Reception/key.gd" id="1_w5n2g"]
 [ext_resource type="Texture2D" uid="uid://123kk4r1go2a" path="res://Assets/room2/dummy_key.png" id="2_2k4gb"]
 
 [node name="Key" type="Node2D"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cds0flqbt07x5"]
 
-[ext_resource type="Script" path="res://Scripts/Office/back.gd" id="1_rnq8t"]
+[ext_resource type="Script" path="res://Scripts/Reception/back.gd" id="1_rnq8t"]
 [ext_resource type="Texture2D" uid="uid://c1vnum1oroyo7" path="res://Assets/UI/backarrow.png" id="2_y56jp"]
 
 [node name="back" type="Node2D"]
