@@ -42,8 +42,7 @@ func _on_key_pickup():
 	GameManager._on_puzzle2_keyPickup()
 
 func _on_bell_rung():
-	$block_guy.visible = false
-	Background.texture = load("res://Assets/room2/deskzoominlinesclerk.png")
+	Background.texture = load("res://Assets/Reception/deskzoominlinesclerk.png")
 	Clerk.visible = true
 
 func _on_clerk_talk():

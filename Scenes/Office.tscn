@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ds1gy1abobmvi"]
+[gd_scene load_steps=6 format=3 uid="uid://ds1gy1abobmvi"]
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_gfyh2"]
 [ext_resource type="Texture2D" uid="uid://di5jhyjjno3oc" path="res://Assets/Lobby/Office/TempOffice.jpg" id="2_hk5t4"]
 [ext_resource type="Texture2D" uid="uid://bfgeaqkcdm55v" path="res://Assets/Lobby/Office/Automaton Temp.png" id="3_0bm0b"]
+[ext_resource type="Script" path="res://Scripts/Office/Automaton.gd" id="3_dyi5t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d8nb"]
 size = Vector2(158, 194)
@@ -18,6 +19,7 @@ texture = ExtResource("2_hk5t4")
 
 [node name="Automaton" type="Node2D" parent="."]
 position = Vector2(733, 173)
+script = ExtResource("3_dyi5t")
 
 [node name="TextureRect" type="TextureRect" parent="Automaton"]
 offset_left = -109.0
