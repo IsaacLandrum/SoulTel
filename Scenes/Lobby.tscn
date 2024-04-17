@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf7bryyno0cxu"]
+
+[ext_resource type="Texture2D" uid="uid://bfws00kfvh1ll" path="res://Assets/Lobby/lobbycolors.png" id="1_qsiau"]
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_yolvg"]
+[ext_resource type="Script" path="res://Scripts/Lobby/DoorToHallway.gd" id="3_yqglq"]
+[ext_resource type="Script" path="res://Scripts/Lobby/DoorToOffice.gd" id="4_8ens5"]
+[ext_resource type="Script" path="res://Scripts/Lobby/DoorToLaundry.gd" id="5_up15s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3v3y"]
+size = Vector2(20, 38.3333)
+
+[node name="Room3" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = -2.0
+offset_right = 918.0
+offset_bottom = 474.0
+texture = ExtResource("1_qsiau")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 503.0
+offset_bottom = 50.0
+text = "ROOM 3"
+
+[node name="Early_UI" parent="." instance=ExtResource("2_yolvg")]
+
+[node name="DoorToHallway" type="Node2D" parent="."]
+script = ExtResource("3_yqglq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorToHallway"]
+position = Vector2(91, 354)
+scale = Vector2(2.45004, 2.4)
+shape = SubResource("RectangleShape2D_b3v3y")
+
+[node name="DoorToOffice" type="Node2D" parent="."]
+position = Vector2(767, 372)
+scale = Vector2(0.0283474, 0.0776703)
+script = ExtResource("4_8ens5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DoorToOffice"]
+polygon = PackedVector2Array(-317.488, 514.997, -493.871, -502.122, 458.596, -540.747, 670.256, 643.747)
+
+[node name="DoorToLaundry" type="Node2D" parent="."]
+position = Vector2(836, 379)
+scale = Vector2(2.18685, 4.34173)
+script = ExtResource("5_up15s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DoorToLaundry"]
+polygon = PackedVector2Array(-9.60284, -12.2071, -8.68829, 12.4374, 13.2611, 15.662, 12.8038, -13.8194)

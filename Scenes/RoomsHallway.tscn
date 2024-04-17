@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnlkq4k0xi3tw"]
+
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_3gcys"]
+[ext_resource type="Texture2D" uid="uid://x210o6fp2ar6" path="res://Assets/RoomsHallway/hallway lines and color.png" id="2_8nxwv"]
+
+[node name="RoomsHallway" type="Node2D"]
+
+[node name="background" type="TextureRect" parent="."]
+offset_right = 917.0
+offset_bottom = 469.0
+texture = ExtResource("2_8nxwv")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Early_UI" parent="." instance=ExtResource("1_3gcys")]
+metadata/_edit_lock_ = true
+
+[node name="GuestRoom1" type="Node2D" parent="."]
+position = Vector2(767, 372)
+scale = Vector2(0.0283474, 0.0776703)
+metadata/_edit_lock_ = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom1"]
+polygon = PackedVector2Array(-2292.98, 708.121, -2151.87, -2922.61, 3280.72, -3141.48, 3457.11, 939.87)
+
+[node name="GuestRoom2" type="Node2D" parent="."]
+position = Vector2(486, 270)
+scale = Vector2(0.0283474, 0.0776703)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom2"]
+position = Vector2(-211.659, 77.2492)
+scale = Vector2(5.31432, 2.7162)
+polygon = PackedVector2Array(-106.209, 592.506, -119.485, -478.745, 550.957, -521.405, 577.509, 649.387)
+
+[node name="GuestRoom3" type="Node2D" parent="."]
+position = Vector2(767, 372)
+scale = Vector2(0.0283474, 0.0776703)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom3"]
+position = Vector2(-15822.4, -923.592)
+scale = Vector2(1.60985, 1.21644)
+polygon = PackedVector2Array(-580.153, 861.148, -580.153, -1059.51, 997.582, -1135.3, 975.668, 956.65)

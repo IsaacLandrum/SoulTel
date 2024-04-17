@@ -7,6 +7,6 @@ func _process(delta):
 	pass
 
 func _on_button_pressed():
-	SceneTransition.changeScene("res://Scenes/Room1.tscn")
+	SceneTransition.changeMenuScene("res://Scenes/Room1.tscn")
 	
 	

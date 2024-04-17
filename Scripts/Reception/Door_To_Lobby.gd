@@ -14,4 +14,4 @@ func interact():
 		SoundManager.play_error_sfx() # USE
 	elif (currentAction == "TRAVERSE"):
 		print("Traversing to lobby")
-		SceneTransition.changeScene("res://Scenes/Room3.tscn")
+		SceneTransition.changeGameScene("res://Scenes/Lobby.tscn")

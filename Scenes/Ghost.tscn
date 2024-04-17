@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ws05o3o0fpcm"]
+
+[ext_resource type="Script" path="res://Scripts/GuestRoom1/Ghost.gd" id="1_x0hsd"]
+[ext_resource type="Texture2D" uid="uid://cx422hjtsh8hv" path="res://Assets/RoomsHallway/GuestRoom1/ghostWIP.png" id="2_2k7wt"]
+
+[node name="Interactable" type="Node2D"]
+script = ExtResource("1_x0hsd")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_2k7wt")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TextureRect"]
+polygon = PackedVector2Array(44, 80, 46, 26, 89, 22, 109, 32, 123, 46, 126, 74, 147, 94, 152, 121, 139, 132, 123, 175, 149, 199, 174, 185, 188, 195, 176, 229, 149, 239, 130, 233, 121, 237, 104, 266, 61, 263, 52, 229, 24, 153, 5, 93, 19, 77)

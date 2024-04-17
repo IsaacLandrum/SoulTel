@@ -15,4 +15,4 @@ func interact():
 		pass # USE
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		print("trav")
-		SceneTransition.changeScene(traverse_path)
+		SceneTransition.changeGameScene(traverse_path)

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj4g7g7ghrj50"]
+
+[ext_resource type="Texture2D" uid="uid://v37egakuurao" path="res://Assets/Lobby/LaundryRoom/laundry room temporary.jpg" id="1_opuqr"]
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_yiald"]
+[ext_resource type="Script" path="res://Scripts/Laundry/BellhopTemp.gd" id="3_8a8cg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1rqm"]
+size = Vector2(48.9458, 18.4524)
+
+[node name="LaundryRoom" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 917.0
+offset_bottom = 469.0
+texture = ExtResource("1_opuqr")
+expand_mode = 1
+
+[node name="Early_UI" parent="." instance=ExtResource("2_yiald")]
+
+[node name="BellhopTemp" type="Node2D" parent="."]
+script = ExtResource("3_8a8cg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BellhopTemp"]
+position = Vector2(675.439, 155.605)
+rotation = 3.14159
+scale = Vector2(1.92803, -11.1211)
+shape = SubResource("RectangleShape2D_o1rqm")
+
+[node name="Label" type="Label" parent="BellhopTemp"]
+offset_left = 629.0
+offset_top = 126.0
+offset_right = 738.0
+offset_bottom = 175.0
+text = "Bellhop 
+Outfit
+"

@@ -18,4 +18,4 @@ func interact():
 	elif (currentAction == "TRAVERSE"):
 		print("Traversing to zoom")
 	
-		SceneTransition.changeScene("res://Scenes/Room2_DeskZoom.tscn")
+		SceneTransition.changeGameScene("res://Scenes/Room2_DeskZoom.tscn")

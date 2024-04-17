@@ -46,7 +46,7 @@ func interact():
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		print("Traversing")
 		SoundManager.play_lobby_music()
-		SceneTransition.changeScene(traverse_path)
+		SceneTransition.changeGameScene(traverse_path)
 
 func _on_object_mouse_entered():
 	isHovering = true # Replace with function body.
