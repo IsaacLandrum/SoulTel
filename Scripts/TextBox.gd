@@ -42,8 +42,11 @@ func Load_Room_Dialogue():
 	var Input_path = filePath
 	var content = []
 	var FileReader = FileAccess.open(Input_path, FileAccess.READ)
+	var holder
 	while FileReader.get_position() < FileReader.get_length():
-		content.append(FileReader.get_line())
+		holder = FileReader.get_line()
+		if(not (holder.is_empty() or holder.left(1) == "#")):
+			content.append(holder)
 	FileReader.close()
 	
 	#all content stored in content. now parse
@@ -51,8 +54,8 @@ func Load_Room_Dialogue():
 	var treeData = null
 	var i = 0
 	while(i < content.size()):
-		treeKey = (content[i].left(6)).to_int()
-		treeData = content[i].right(-7)
+		treeKey = (content[i].left(8)).to_int()
+		treeData = content[i].right(-9)
 		dialogueTree.insert(treeKey, treeData)
 		i+=1
 
