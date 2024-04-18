@@ -1,12 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://cjd4b11pj0fqj"]
+
+[gd_scene load_steps=9 format=3 uid="uid://cnlkq4k0xi3tw"]
+
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_3gcys"]
 [ext_resource type="Script" path="res://Scripts/HallwayRoom/hallwayRooms_Main.gd" id="1_06ndc"]
 [ext_resource type="Texture2D" uid="uid://x210o6fp2ar6" path="res://Assets/RoomsHallway/hallway lines and color.png" id="2_8nxwv"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_0ksxc"]
+
 [ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1.gd" id="4_6ln4k"]
 [ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom2.gd" id="5_k2kde"]
 [ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom3.gd" id="6_n18qw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tt5en"]
+size = Vector2(199, 155)
 
 [node name="RoomsHallway" type="Node2D"]
 script = ExtResource("1_06ndc")
@@ -24,23 +30,33 @@ metadata/_edit_lock_ = true
 [node name="GuestRoom1" type="Node2D" parent="."]
 position = Vector2(767, 372)
 scale = Vector2(0.0283474, 0.0776703)
-script = ExtResource("4_6ln4k")
+
+script = ExtResource("4_2gkcm")
+canTraverse = true
+traverse_path = "res://Scenes/GuestRoom1.tscn"
+metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="GuestRoom1"]
-offset_left = -3387.0
-offset_top = -3592.0
-offset_right = 4939.0
-offset_bottom = 863.0
+offset_left = 3245.45
+offset_top = 888.371
+offset_right = 3443.45
+offset_bottom = 1041.37
+scale = Vector2(-29.5937, -26.2196)
 color = Color(1, 1, 1, 0)
+metadata/_edit_use_anchors_ = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom1/ColorRect"]
-position = Vector2(3281.17, 3592)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GuestRoom1/ColorRect"]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(98.5, 77.5)
 scale = Vector2(1, 1)
-polygon = PackedVector2Array(-2292.98, 708.121, -2151.87, -2922.61, 3280.72, -3141.48, 3457.11, 939.87)
+shape = SubResource("RectangleShape2D_tt5en")
+
 
 [node name="GuestRoom2" type="Node2D" parent="."]
 position = Vector2(486, 270)
 scale = Vector2(0.0283474, 0.0776703)
+
 script = ExtResource("5_k2kde")
 
 [node name="ColorRect" type="ColorRect" parent="GuestRoom2"]
@@ -50,6 +66,7 @@ offset_right = 3633.0
 offset_bottom = 1905.0
 color = Color(1, 1, 1, 0)
 
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom2/ColorRect"]
 position = Vector2(1587.62, 1622.25)
 scale = Vector2(5.31432, 2.7162)
@@ -58,7 +75,9 @@ polygon = PackedVector2Array(-106.209, 592.506, -119.485, -478.745, 550.957, -52
 [node name="GuestRoom3" type="Node2D" parent="."]
 position = Vector2(767, 372)
 scale = Vector2(0.0283474, 0.0776703)
+
 script = ExtResource("6_n18qw")
+
 
 [node name="ColorRect" type="ColorRect" parent="GuestRoom3"]
 offset_left = -18203.0
@@ -82,3 +101,4 @@ traverse_path = "res://Scenes/Lobby.tscn"
 [connection signal="mouse_exited" from="GuestRoom2/ColorRect" to="GuestRoom2" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="GuestRoom3/ColorRect" to="GuestRoom3" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="GuestRoom3/ColorRect" to="GuestRoom3" method="_on_object_mouse_exited"]
+

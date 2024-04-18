@@ -77,7 +77,6 @@ shape = SubResource("RectangleShape2D_ckc5j")
 [node name="DoorToLaundry" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(801, 344)
 script = ExtResource("5_up15s")
-CharacterID = "21"
 
 [node name="ColorRect" type="ColorRect" parent="DoorToLaundry"]
 offset_left = 4.0

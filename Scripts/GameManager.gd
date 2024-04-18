@@ -67,6 +67,11 @@ func initHallway():
 		"room3" : get_node("/root/RoomsHallway/GuestRoom3"),
 		"back" : get_node("/root/RoomsHallway/back")
 	}
+	
+func guestroom1():
+	puzzle2["nodes"] = {
+		"ghost" : get_node("/root/GuestRoom1/Ghost")
+	}
 '''
 Puzzle 1
 '''
@@ -115,3 +120,6 @@ func _on_hallway_action(action):
 	puzzle2["nodes"]["room2"].setCurrentAction(action)
 	puzzle2["nodes"]["room3"].setCurrentAction(action)
 	puzzle2["nodes"]["back"].setCurrentAction(action)
+	
+func _on_guestroom1_action(action):
+	puzzle2["nodes"]["ghost"].setCurrentAction(action)
