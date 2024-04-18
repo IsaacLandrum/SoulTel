@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ws05o3o0fpcm"]
 
-[ext_resource type="Script" path="res://Scripts/GuestRoom1/Ghost.gd" id="1_x0hsd"]
+[ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1/Ghost.gd" id="1_x0hsd"]
 [ext_resource type="Texture2D" uid="uid://cx422hjtsh8hv" path="res://Assets/RoomsHallway/GuestRoom1/ghostWIP.png" id="2_2k7wt"]
 
 [node name="Interactable" type="Node2D"]
