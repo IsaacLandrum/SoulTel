@@ -74,8 +74,7 @@ func guestroom1():
 Puzzle 1
 '''
 func _on_room1_action(action):
-	if puzzle1["conditions"]["doormanComplete"]:
-		puzzle1["nodes"]["door"].setCurrentAction(action)
+	puzzle1["nodes"]["door"].setCurrentAction(action)
 	puzzle1["nodes"]["doorman"].setCurrentAction(action)
 
 func _on_puzzle1_doormanComplete():

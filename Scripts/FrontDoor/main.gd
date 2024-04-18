@@ -19,6 +19,7 @@ func _ready():
 	Examine.connect("action", GameManager._on_room1_action)
 	
 	Doorman.connect("doorman_complete", GameManager._on_puzzle1_doormanComplete)
+	Doorman.connect("doorman_complete", Interactable.DialogeHandler)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
