@@ -225,7 +225,6 @@ stretch_mode = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer"]
 position = Vector2(874.34, 284.652)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_y0pul")
 
 [node name="InventoryContainer2" type="Area2D" parent="Inventory"]
@@ -274,7 +273,6 @@ stretch_mode = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer3"]
 position = Vector2(1011.02, 286.088)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wypqp")
 
 [node name="portrait container" type="MarginContainer" parent="Inventory"]

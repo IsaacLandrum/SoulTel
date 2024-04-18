@@ -35,7 +35,6 @@ color = Color(1, 1, 1, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom1/ColorRect"]
 position = Vector2(3281.17, 3592)
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-2292.98, 708.121, -2151.87, -2922.61, 3280.72, -3141.48, 3457.11, 939.87)
 
 [node name="GuestRoom2" type="Node2D" parent="."]

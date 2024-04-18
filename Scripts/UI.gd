@@ -58,12 +58,12 @@ func _on_action(message: String):
 func _on_container_selected(number: int):
 	if use_selected:
 		if number == 1:
-			Inventory.select_item(Inventory.items[0].name)
+			Inventory.select_item(Inventory.items[0])
 			print ("Container 1 from UI")
 		elif number == 2:
-			Inventory.select_item(Inventory.items[1].name)
+			Inventory.select_item(Inventory.items[1])
 			print ("Container 2 from UI")
 		elif number == 3:
-			Inventory.select_item(Inventory.items[2].name)
+			Inventory.select_item(Inventory.items[2])
 			print ("Container 3 from UI")	
 	

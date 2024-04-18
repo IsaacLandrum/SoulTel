@@ -1,6 +1,6 @@
 extends "res://Scripts/interactable.gd"
 
-signal attempt_open()
+signal open_complete()
 
 func interact():
 	if (currentAction == "TAKE"):
@@ -18,9 +18,10 @@ func interact():
 		
 		pass # examine
 	elif (currentAction == "USE"):
-		if Inventory.selected_item == "Key":
+		if Inventory.selected_item.name == "Key":
 			print("Door has been unlocked")
 			GameManager.puzzle2.keyUsed = true
+			open_complete.emit()
 		pass # USE
 	elif (currentAction == "TRAVERSE"):
 		DialogOut.emit(CharacterID, "04")
