@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyl5dy1agf1jb"]
+[gd_scene load_steps=9 format=3 uid="uid://bf7bryyno0cxu"]
 
 [ext_resource type="Script" path="res://Scripts/Lobby/Lobby_Main.gd" id="1_p655h"]
 [ext_resource type="Texture2D" uid="uid://bfws00kfvh1ll" path="res://Assets/Lobby/lobbycolors.png" id="1_qsiau"]
@@ -77,7 +77,6 @@ shape = SubResource("RectangleShape2D_ckc5j")
 [node name="DoorToLaundry" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(801, 344)
 script = ExtResource("5_up15s")
-CharacterID = "21"
 
 [node name="ColorRect" type="ColorRect" parent="DoorToLaundry"]
 offset_left = 4.0

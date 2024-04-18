@@ -7,13 +7,12 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GameManager.initHallway()
-	Traverse.connect("action", GameManager._on_hallway_action)
-	Talk.connect("action", GameManager._on_hallway_action)
-	Use.connect("action", GameManager._on_hallway_action)
-	Take.connect("action", GameManager._on_hallway_action)
-	Examine.connect("action", GameManager._on_hallway_action)
-
+	GameManager.guestroom1()
+	Traverse.connect("action", GameManager._on_guestroom1_action)
+	Talk.connect("action", GameManager._on_guestroom1_action)
+	Use.connect("action", GameManager._on_guestroom1_action)
+	Take.connect("action", GameManager._on_guestroom1_action)
+	Examine.connect("action", GameManager._on_guestroom1_action)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

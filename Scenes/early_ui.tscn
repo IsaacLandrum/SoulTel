@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=27 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_1o0le"]
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
@@ -13,10 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c8hve0be40eae" path="res://Assets/sculpting/UI_design.png" id="5_yp6hw"]
 [ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
-[ext_resource type="Script" path="res://Scripts/Inventory/InventoryContainer.gd" id="10_70635"]
-[ext_resource type="Script" path="res://Scripts/Inventory/InventoryContainer2.gd" id="12_i6cg3"]
 [ext_resource type="Texture2D" uid="uid://chwqnkua8gg47" path="res://Assets/UI/wheel Icons/iconexamine.png" id="13_hnpvo"]
-[ext_resource type="Script" path="res://Scripts/Inventory/InventoryContainer3.gd" id="13_mxlh4"]
 [ext_resource type="Script" path="res://Scripts/Actions/Traverse.gd" id="13_paq7k"]
 [ext_resource type="Script" path="res://Scripts/Actions/Talk.gd" id="14_8xvhn"]
 [ext_resource type="Texture2D" uid="uid://bfx8mu42ipuwl" path="res://Assets/UI/wheel Icons/icontake.png" id="14_158d8"]
@@ -36,15 +33,6 @@ border_width_bottom = 4
 border_color = Color(0.686275, 0.529412, 0.247059, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6xsf"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0pul"]
-size = Vector2(65.388, 84.2678)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xks8"]
-size = Vector2(65.3879, 86.4616)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wypqp"]
-size = Vector2(66.2962, 85.2254)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3veiq"]
 animations = [{
@@ -199,83 +187,59 @@ expand_mode = 1
 [node name="Panel" type="Panel" parent="Inventory/MarginContainer"]
 layout_mode = 2
 
-[node name="InventoryContainer" type="Area2D" parent="Inventory"]
-light_mask = 1023
-visibility_layer = 1023
+[node name="InventoryContainer" type="MarginContainer" parent="Inventory"]
+offset_left = 922.0
+offset_top = 246.0
+offset_right = 1004.0
+offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
-collision_layer = 255
-collision_mask = 255
-script = ExtResource("10_70635")
+pivot_offset = Vector2(47, 51)
 
 [node name="Box" type="TextureRect" parent="Inventory/InventoryContainer"]
-offset_left = 832.789
-offset_top = 233.652
-offset_right = 914.789
-offset_bottom = 326.652
+layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
 
 [node name="Slot1" type="TextureRect" parent="Inventory/InventoryContainer"]
-offset_left = 832.789
-offset_top = 233.652
-offset_right = 914.789
-offset_bottom = 326.652
+layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer"]
-position = Vector2(874.34, 284.652)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_y0pul")
-
-[node name="InventoryContainer2" type="Area2D" parent="Inventory"]
+[node name="InventoryContainer2" type="MarginContainer" parent="Inventory"]
+offset_left = 997.0
+offset_top = 246.0
+offset_right = 1079.0
+offset_bottom = 339.0
 scale = Vector2(1.10112, 1.05249)
-script = ExtResource("12_i6cg3")
+pivot_offset = Vector2(47, 51)
 
 [node name="Box" type="TextureRect" parent="Inventory/InventoryContainer2"]
-offset_left = 900.901
-offset_top = 231.831
-offset_right = 982.901
-offset_bottom = 324.831
+layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
 
 [node name="Slot2" type="TextureRect" parent="Inventory/InventoryContainer2"]
-offset_left = 900.901
-offset_top = 231.831
-offset_right = 982.901
-offset_bottom = 324.831
+layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer2"]
-position = Vector2(942.452, 284.256)
-shape = SubResource("RectangleShape2D_4xks8")
-
-[node name="InventoryContainer3" type="Area2D" parent="Inventory"]
+[node name="InventoryContainer3" type="MarginContainer" parent="Inventory"]
+offset_left = 1073.0
+offset_top = 246.0
+offset_right = 1155.0
+offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
-script = ExtResource("13_mxlh4")
+pivot_offset = Vector2(47, 51)
 
 [node name="Box" type="TextureRect" parent="Inventory/InventoryContainer3"]
-offset_left = 969.013
-offset_top = 234.609
-offset_right = 1051.01
-offset_bottom = 327.609
+layout_mode = 2
 texture = ExtResource("4_4yrhr")
 expand_mode = 1
 
 [node name="Slot3" type="TextureRect" parent="Inventory/InventoryContainer3"]
-offset_left = 969.013
-offset_top = 234.609
-offset_right = 1051.01
-offset_bottom = 327.609
+layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer3"]
-position = Vector2(1011.02, 286.088)
-scale = Vector2(1, 1)
-shape = SubResource("RectangleShape2D_wypqp")
 
 [node name="portrait container" type="MarginContainer" parent="Inventory"]
 offset_left = 919.0
@@ -346,9 +310,6 @@ script = ExtResource("17_a4vhy")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Examine"]
 polygon = PackedVector2Array(957, 561, 912, 613, 931, 629, 998, 646, 1016, 639, 1009, 578)
 
-[connection signal="input_event" from="Inventory/InventoryContainer" to="Inventory/InventoryContainer" method="_on_container_clicked"]
-[connection signal="input_event" from="Inventory/InventoryContainer2" to="Inventory/InventoryContainer2" method="_on_container_clicked"]
-[connection signal="input_event" from="Inventory/InventoryContainer3" to="Inventory/InventoryContainer3" method="_on_container_clicked"]
 [connection signal="input_event" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_traverse_clicked"]
 [connection signal="input_event" from="Action Wheel/Talk" to="Action Wheel/Talk" method="_on_talk_clicked"]
 [connection signal="input_event" from="Action Wheel/Use" to="Action Wheel/Use" method="_on_use_clicked"]
