@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ds1gy1abobmvi"]
+[gd_scene load_steps=8 format=3 uid="uid://rt1gahd7rxvr"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Office_Main.gd" id="1_fu2s6"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_gfyh2"]
