@@ -10,11 +10,9 @@ var puzzle1 = {
 }
 var puzzle2 = {
 	"conditions" : {
-		"keyTaken" : false,
-		"keyUsed" : false
+		"keyTaken" : false
 	}
 }
-
 
 
 # Need initializer functions to ensure nodes are in scope when initialized
