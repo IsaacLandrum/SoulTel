@@ -16,7 +16,7 @@ var key_taken = false # Protects from sending action to Key if it has been freed
 
 var key_info = {
 	"name": "Key",
-	"icon_path": "res://Assets/room2/dummy_key.png"
+	"icon_path": "res://Assets/Reception/dummy_key.png"
 }
 
 # Called when the node enters the scene tree for the first time.
@@ -38,6 +38,7 @@ func _ready():
 func _on_key_pickup():
 	Inventory.add_item(key_info)
 	UI.update_inventory_ui() # Assuming InventoryUI is the name of the node with the InventoryUI.gd script
+	print("Updated UI")
 	Key.queue_free() # Remove the item from the scene
 	GameManager._on_puzzle2_keyPickup()
 

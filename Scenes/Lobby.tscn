@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf7bryyno0cxu"]
+[gd_scene load_steps=9 format=3 uid="uid://cyl5dy1agf1jb"]
 
 [ext_resource type="Script" path="res://Scripts/Lobby/Lobby_Main.gd" id="1_p655h"]
 [ext_resource type="Texture2D" uid="uid://bfws00kfvh1ll" path="res://Assets/Lobby/lobbycolors.png" id="1_qsiau"]
