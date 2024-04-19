@@ -16,7 +16,7 @@ var key_taken = false # Protects from sending action to Key if it has been freed
 
 var key_info = {
 	"name": "Key",
-	"icon_path": "res://Assets/room2/dummy_key.png"
+	"icon_path": "res://Assets/Reception/Key.png"
 }
 
 # Called when the node enters the scene tree for the first time.
