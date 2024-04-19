@@ -4,7 +4,9 @@
 [ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1/GuestRoom1_Main.gd" id="1_3vlpf"]
 [ext_resource type="Texture2D" uid="uid://c0job4rllycko" path="res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png" id="2_3v4m4"]
 [ext_resource type="PackedScene" uid="uid://ws05o3o0fpcm" path="res://Scenes/Ghost.tscn" id="3_lmorj"]
+
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_o0kcn"]
+
 
 [node name="GuestRoom1" type="Node2D"]
 script = ExtResource("1_3vlpf")
