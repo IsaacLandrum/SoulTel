@@ -42,8 +42,11 @@
 01-11-04 That would be rude. 
 01-11-03 That would be rude. 
 01-11-02 A man guarding the door...
-01-11-01 [E3 on Puzzle Work Flow]
+01-11-01 "PLAYER: Hello…?
 01-11-00 That would be rude.
+01-11-06 [DOORMAN: We’ve been waiting… You’re not as late as some of our other guests… Not everyone is eager to make this hotel to their last stop…]
+01-11-11 PLAYER: Last stop?
+01-11-16 [DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… Good luck"
 
 #Front Doorway
 01-10-04 Some kind of force appears to be keeping this shut…
