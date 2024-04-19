@@ -205,13 +205,11 @@ layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer"]
-position = Vector2(874.34, 284.652)
-shape = SubResource("RectangleShape2D_y0pul")
-
-[node name="InventoryContainer2" type="Area2D" parent="Inventory"]
-
+[node name="InventoryContainer2" type="MarginContainer" parent="Inventory"]
+offset_left = 997.0
+offset_top = 246.0
+offset_right = 1079.0
+offset_bottom = 339.0
 scale = Vector2(1.10112, 1.05249)
 pivot_offset = Vector2(47, 51)
 
@@ -242,11 +240,6 @@ expand_mode = 1
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
-
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer3"]
-position = Vector2(1011.02, 286.088)
-shape = SubResource("RectangleShape2D_wypqp")
 
 [node name="portrait container" type="MarginContainer" parent="Inventory"]
 offset_left = 919.0
