@@ -13,6 +13,7 @@ size = Vector2(199, 155)
 
 [node name="Room3" type="Node2D"]
 script = ExtResource("1_p655h")
+metadata/Room_Number = "03"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 1.0
@@ -37,7 +38,7 @@ offset_bottom = -277.0
 [node name="DoorToHallway" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(51, 309)
 script = ExtResource("3_yqglq")
-CharacterID = "21"
+CharacterID = "31"
 
 [node name="ColorRect" type="ColorRect" parent="DoorToHallway"]
 offset_left = 8.0
@@ -57,7 +58,7 @@ shape = SubResource("RectangleShape2D_ckc5j")
 [node name="DoorToOffice" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(731, 322)
 script = ExtResource("4_8ens5")
-CharacterID = "21"
+CharacterID = "32"
 
 [node name="ColorRect" type="ColorRect" parent="DoorToOffice"]
 offset_left = 8.0
@@ -77,6 +78,7 @@ shape = SubResource("RectangleShape2D_ckc5j")
 [node name="DoorToLaundry" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(801, 344)
 script = ExtResource("5_up15s")
+CharacterID = "33"
 
 [node name="ColorRect" type="ColorRect" parent="DoorToLaundry"]
 offset_left = 4.0

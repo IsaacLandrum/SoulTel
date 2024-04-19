@@ -71,3 +71,5 @@ traverse_path = "res://Scenes/Room2.tscn"
 [connection signal="mouse_exited" from="Clerk/ColorRect" to="Clerk" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="Bell/ColorRect" to="Bell" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Bell/ColorRect" to="Bell" method="_on_object_mouse_exited"]
+
+[editable path="Early_UI"]
