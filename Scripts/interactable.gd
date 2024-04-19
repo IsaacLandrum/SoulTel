@@ -6,9 +6,6 @@ extends Node
 
 var isHovering = false
 
-#connection to other node/script
-var dialoge_connection
-
 #signals
 signal DialogOut(CharacterID, DialogeID)
 
@@ -16,15 +13,15 @@ var currentAction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	dialoge_connection = get_node("/root/Node2D/Early_UI/TextBox")
-	print(get_path())
-
+	pass
 
 func _input(event):
+	#print("In _input")
    # Mouse in viewport coordinates.
 	if Input.is_action_pressed("mouse_click") && isHovering:
 		print("click")
 		interact() #takes action based on what action is selected
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func setCurrentAction(action):
@@ -57,6 +54,12 @@ func interact():
 		print("Traversing")
 		SoundManager.play_lobby_music()
 		SceneTransition.changeGameScene(traverse_path)
+
+func _on_mouse_entered():
+	isHovering = true
+
+func _on_mouse_exited():
+	isHovering = false
 
 func _on_object_mouse_entered():
 	isHovering = true # Replace with function body.

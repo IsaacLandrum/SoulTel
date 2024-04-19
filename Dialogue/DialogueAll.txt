@@ -34,6 +34,22 @@
 #clerk
 02-04-04 That would be rude. 
 02-04-03 That would be rude. 
-02-04-02 "Error: there was no dialogue for this in the document so I left it empty"
+02-04-02 A pale, thin man in dark clothes stands behind the counter... Not exactly welcoming.
 02-04-01 [E7 on puzzle Workflow]
 02-04-00 That would be rude.
+
+#front Doorman
+01-11-04 That would be rude. 
+01-11-03 That would be rude. 
+01-11-02 A man guarding the door...
+01-11-01 [E3 on Puzzle Work Flow]
+01-11-00 That would be rude.
+
+#Front Doorway
+01-10-04 Some kind of force appears to be keeping this shut…
+01-10-03 Some kind of force appears to be keeping this shut…
+01-10-02 A wooden door...
+01-10-01 I'm not going to do that.
+01-10-00 I don't have anything to take it off it's hinges.
+01-10-09 [enter lobby]
+01-10-08 The Doorman has opened the door.
