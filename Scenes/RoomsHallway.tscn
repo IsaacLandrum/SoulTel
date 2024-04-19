@@ -43,10 +43,11 @@ scale = Vector2(-29.5937, -26.2196)
 color = Color(1, 1, 1, 0)
 metadata/_edit_use_anchors_ = true
 
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom1/ColorRect"]
-position = Vector2(3281.17, 3592)
-polygon = PackedVector2Array(-2292.98, 708.121, -2151.87, -2922.61, 3280.72, -3141.48, 3457.11, 939.87)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GuestRoom1/ColorRect"]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(98.5, 77.5)
+shape = SubResource("RectangleShape2D_tt5en")
 
 [node name="GuestRoom2" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(486, 270)
