@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dj4g7g7ghrj50"]
+[gd_scene load_steps=7 format=3 uid="uid://o741tsp07klt"]
 
 [ext_resource type="Script" path="res://Scripts/Laundry/laundry_Main.gd" id="1_nu54p"]
-[ext_resource type="Texture2D" uid="uid://v37egakuurao" path="res://Assets/Lobby/LaundryRoom/laundry room temporary.jpg" id="1_opuqr"]
+[ext_resource type="Texture2D" uid="uid://c6cbiaaxuwb8t" path="res://Assets/Laundry/laundryroomClothes with uniform.png" id="2_et51d"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_yiald"]
 [ext_resource type="Script" path="res://Scripts/Laundry/BellhopTemp.gd" id="3_8a8cg"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="5_rj2hn"]
@@ -15,7 +15,7 @@ script = ExtResource("1_nu54p")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 917.0
 offset_bottom = 469.0
-texture = ExtResource("1_opuqr")
+texture = ExtResource("2_et51d")
 expand_mode = 1
 
 [node name="Early_UI" parent="." instance=ExtResource("2_yiald")]

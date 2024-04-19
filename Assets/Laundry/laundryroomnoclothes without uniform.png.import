@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2ciafikmcrr6"
-path="res://.godot/imported/dummy_key.png-9af1c1b2a56a65a1572259092179ab8a.ctex"
+uid="uid://cgsmfhcs3rguo"
+path="res://.godot/imported/laundryroomnoclothes without uniform.png-5bd318dd6245d3c5e3b5169e9d7010e0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Reception/dummy_key.png"
-dest_files=["res://.godot/imported/dummy_key.png-9af1c1b2a56a65a1572259092179ab8a.ctex"]
+source_file="res://Assets/Laundry/laundryroomnoclothes without uniform.png"
+dest_files=["res://.godot/imported/laundryroomnoclothes without uniform.png-5bd318dd6245d3c5e3b5169e9d7010e0.ctex"]
 
 [params]
 
