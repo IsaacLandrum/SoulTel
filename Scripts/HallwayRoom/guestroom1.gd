@@ -13,10 +13,11 @@ func interact():
 		pass#TALK 
 	elif (currentAction == "EXAMINE"):
 		DialogOut.emit(CharacterID, "02")
+		SoundManager.play_door_jiggle()
 		pass
 	elif (currentAction == "USE"):
 		if(Inventory.get_selected_item().name == "Key"):
-			#Play unlock sound
+			SoundManager.play_unlock_door()
 			GameManager._on_puzzle2_keyUsed()
 			print("DOOR UNLOCKED")
 			Inventory.remove_item(Inventory.get_selected_item())
@@ -24,7 +25,7 @@ func interact():
 			
 		else:
 			DialogOut.emit(CharacterID, "03")
-			SoundManager.play_error_sfx()
+			SoundManager.play_door_jiggle()
 		
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		if(GameManager.puzzle2.conditions.keyUsed):
@@ -32,5 +33,5 @@ func interact():
 			print("Traversing")
 		else:
 			print("DOOR IS LOCKED")
-			
-		DialogOut.emit(CharacterID, "04")
+			DialogOut.emit(CharacterID, "04")
+			SoundManager.play_door_jiggle()

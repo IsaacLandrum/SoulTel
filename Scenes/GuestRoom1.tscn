@@ -1,13 +1,33 @@
 [gd_scene load_steps=6 format=3 uid="uid://dsmfxv4hpchxw"]
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_2npwd"]
-[ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1/GuestRoom1_Main.gd" id="1_3vlpf"]
 [ext_resource type="Texture2D" uid="uid://c0job4rllycko" path="res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png" id="2_3v4m4"]
 [ext_resource type="PackedScene" uid="uid://ws05o3o0fpcm" path="res://Scenes/Ghost.tscn" id="3_lmorj"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_o0kcn"]
 
+[sub_resource type="GDScript" id="GDScript_ggx21"]
+script/source = "extends Node
+@onready var Traverse = $\"Early_UI/Action Wheel/Traverse\"
+@onready var Talk = $\"Early_UI/Action Wheel/Talk\"
+@onready var Use = $\"Early_UI/Action Wheel/Use\"
+@onready var Take = $\"Early_UI/Action Wheel/Take\"
+@onready var Examine = $\"Early_UI/Action Wheel/Examine\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameManager.guestroom1()
+	Traverse.connect(\"action\", GameManager._on_guestroom1_action)
+	Talk.connect(\"action\", GameManager._on_guestroom1_action)
+	Use.connect(\"action\", GameManager._on_guestroom1_action)
+	Take.connect(\"action\", GameManager._on_guestroom1_action)
+	Examine.connect(\"action\", GameManager._on_guestroom1_action)
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
 [node name="GuestRoom1" type="Node2D"]
-script = ExtResource("1_3vlpf")
+script = SubResource("GDScript_ggx21")
 metadata/Room_Number = "05"
 
 [node name="Early_UI" parent="." instance=ExtResource("1_2npwd")]

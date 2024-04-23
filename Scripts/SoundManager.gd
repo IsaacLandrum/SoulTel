@@ -5,6 +5,9 @@ var click_sound_player = AudioStreamPlayer.new()
 var lobby_music = AudioStreamPlayer.new()
 var locked_door =AudioStreamPlayer.new()
 var error_sfx = AudioStreamPlayer.new()
+var unlock_sound = AudioStreamPlayer.new()
+var door_jiggle = AudioStreamPlayer.new()
+
 func _ready():
 	add_child(click_sound_player)
 	click_sound_player.stream = preload("res://Assets/Sound/action_select.mp3")
@@ -14,6 +17,10 @@ func _ready():
 	locked_door.stream= preload("res://Assets/Sound/locked_door_jiggle.mp3")
 	add_child(error_sfx)
 	error_sfx.stream = preload('res://Assets/Sound/error_blip.mp3')
+	add_child(unlock_sound)
+	unlock_sound.stream = preload('res://Assets/Sound/door_unlock.mp3')
+	add_child(door_jiggle)
+	door_jiggle.stream = preload("res://Assets/Sound/locked_door_jiggle.mp3")
 	
 func play_click_sound():
 	click_sound_player.play()
@@ -24,4 +31,8 @@ func play_locked_door():
 	locked_door.play()
 func play_error_sfx():
 	error_sfx.play()
+func play_unlock_door():
+	unlock_sound.play()
+func play_door_jiggle():
+	door_jiggle.play()
 
