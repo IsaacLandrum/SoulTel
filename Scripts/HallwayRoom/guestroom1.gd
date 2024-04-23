@@ -16,7 +16,7 @@ func interact():
 		SoundManager.play_door_jiggle()
 		pass
 	elif (currentAction == "USE"):
-		if(Inventory.get_selected_item().name == "Key"):
+		if(Inventory.check_selected_item("Key")):
 			SoundManager.play_unlock_door()
 			GameManager._on_puzzle2_keyUsed()
 			print("DOOR UNLOCKED")

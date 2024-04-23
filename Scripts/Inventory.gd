@@ -35,5 +35,11 @@ func clear_selected_item():
 	print("Cleared selected item: ", selected_item)
 	selected_item = null
 
+func check_selected_item(name):
+	if(selected_item):
+		if(selected_item.name == name):
+			return true
+	return false
+
 func _ready():
 	pass
