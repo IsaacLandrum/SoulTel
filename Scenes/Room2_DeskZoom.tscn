@@ -57,7 +57,8 @@ shape = SubResource("RectangleShape2D_haqat")
 stream = ExtResource("6_wbuwr")
 
 [node name="Key" parent="." groups=["Interactable"] instance=ExtResource("4_ma5du")]
-position = Vector2(586, 386)
+position = Vector2(454, 402)
+scale = Vector2(0.53, 0.53)
 CharacterID = "02"
 
 [node name="Back" parent="." instance=ExtResource("7_w1243")]
