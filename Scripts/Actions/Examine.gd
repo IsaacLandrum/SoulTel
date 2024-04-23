@@ -16,10 +16,8 @@ func _on_examine_clicked(_viewport, event, _shape_idx):
 		print("Examine Selected")
 		SoundManager.play_click_sound()
 		WheelIcon.set_frame_and_progress(0,0)
-		
-		emit_signal("action", "EXAMINE")		
-
-		
+		emit_signal("action", "EXAMINE")
+		Inventory.clear_selected_item()
 		
 #Following section handles on hover effect		
 func _on_mouse_entered():

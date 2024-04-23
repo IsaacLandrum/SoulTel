@@ -31,6 +31,9 @@ func _input(event):
 #6.4 USE is assigned the offset of 3
 #6.5 Traverse is assigned the offset of 4
 func interact():
+	if(Inventory.items.size() > 1):
+		Inventory.set_selected_item(Inventory.items[1])
+		
 	if (currentAction == "TAKE"):
 		DialogOut.emit(CharacterID, "00")
 		SoundManager.play_error_sfx()
