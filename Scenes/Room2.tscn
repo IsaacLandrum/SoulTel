@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc1nem25dtvks"]
+[gd_scene load_steps=9 format=3 uid="uid://dc1nem25dtvks"]
 
 [ext_resource type="Script" path="res://Scripts/Reception/Room2.gd" id="1_4jsff"]
-[ext_resource type="Texture2D" uid="uid://cruvtd2nbytsi" path="res://Assets/Reception/Officelines colors.png" id="2_lkt2f"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_omolg"]
+[ext_resource type="Texture2D" uid="uid://bgjhssojc872g" path="res://Assets/Reception/FrontdeskDoor.png" id="2_w6cvb"]
 [ext_resource type="Script" path="res://Scripts/Reception/Door_To_Lobby.gd" id="5_3lgbo"]
 [ext_resource type="Script" path="res://Scripts/Reception/Desk_Zoom.gd" id="6_v5mvt"]
+[ext_resource type="Script" path="res://Scripts/Reception/Door_To_Closet.gd" id="6_wvr1d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jldyf"]
 size = Vector2(199, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwn47"]
+size = Vector2(71, 208)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_4jsff")
@@ -16,7 +20,7 @@ metadata/Room_Number = "02"
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 917.0
 offset_bottom = 476.0
-texture = ExtResource("2_lkt2f")
+texture = ExtResource("2_w6cvb")
 expand_mode = 1
 
 [node name="TextEdit" type="TextEdit" parent="."]
@@ -67,11 +71,31 @@ color = Color(1, 1, 1, 0)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Desk_Zoom/ColorRect"]
 position = Vector2(46, 127)
-polygon = PackedVector2Array(10, 90, 255, 127, 331, 46, 314, 24, 310, -77, -10, -86)
+polygon = PackedVector2Array(10, 90, 255, 127, 331, 46, 314, 24, 310, -77, 6, -87)
+
+[node name="Door_To_Closet" type="Node2D" parent="." groups=["Interactable"]]
+script = ExtResource("6_wvr1d")
+canTraverse = true
+traverse_path = "res://Scenes/Closet.tscn"
+
+[node name="ColorRect" type="ColorRect" parent="Door_To_Closet"]
+offset_left = 51.0
+offset_top = 105.0
+offset_right = 157.0
+offset_bottom = 382.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door_To_Closet/ColorRect"]
+light_mask = 1023
+visibility_layer = 1023
+position = Vector2(54.5, 125)
+shape = SubResource("RectangleShape2D_fwn47")
 
 [connection signal="mouse_entered" from="Door_To_Lobby/ColorRect" to="Door_To_Lobby" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Door_To_Lobby/ColorRect" to="Door_To_Lobby" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="Desk_Zoom/ColorRect" to="Desk_Zoom" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Desk_Zoom/ColorRect" to="Desk_Zoom" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Door_To_Closet/ColorRect" to="Door_To_Closet" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Door_To_Closet/ColorRect" to="Door_To_Closet" method="_on_object_mouse_exited"]
 
 [editable path="Early_UI"]
