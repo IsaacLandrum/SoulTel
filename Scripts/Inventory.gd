@@ -23,7 +23,7 @@ func has_item(item):
 
 func set_selected_item(item):
 	if item in items:
-		selected_item = items
+		selected_item = item
 		print("Selected item successful: ")
 		print(item)
 
