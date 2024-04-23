@@ -14,6 +14,7 @@ func _on_use_clicked(_viewport, event, _shape_idx):
 		SoundManager.play_click_sound()
 		emit_signal("action", "USE")		
 		WheelIcon.set_frame_and_progress(2,0)
+		Inventory.clear_selected_item()
 
 		
 		

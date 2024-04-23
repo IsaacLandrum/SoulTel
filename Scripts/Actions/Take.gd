@@ -14,7 +14,7 @@ func _on_take_clicked(_viewport, event, _shape_idx):
 		SoundManager.play_click_sound()
 		emit_signal("action", "TAKE")	
 		WheelIcon.set_frame_and_progress(1,0)
-
+		Inventory.clear_selected_item()
 #Following section handles on hover effect		
 func _on_mouse_entered():
 	$TakeHover.show()

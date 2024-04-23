@@ -10,7 +10,8 @@ var puzzle1 = {
 }
 var puzzle2 = {
 	"conditions" : {
-		"keyTaken" : false
+		"keyTaken" : false,
+		"keyUsed" : false
 	}
 }
 
@@ -98,6 +99,9 @@ func _on_room2_deskzoom_action(action):
 
 func _on_puzzle2_keyPickup():
 	puzzle2["conditions"]["keyTaken"] = true
+
+func _on_puzzle2_keyUsed():
+	puzzle2["conditions"]["keyUsed"] = true
 
 
 func _on_lobby_action(action):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=33 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_1o0le"]
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
@@ -13,7 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://c8hve0be40eae" path="res://Assets/sculpting/UI_design.png" id="5_yp6hw"]
 [ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
+[ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer.gd" id="10_boe5s"]
+[ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer2.gd" id="12_dasif"]
 [ext_resource type="Texture2D" uid="uid://chwqnkua8gg47" path="res://Assets/UI/wheel Icons/iconexamine.png" id="13_hnpvo"]
+[ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer3.gd" id="13_j3dqx"]
 [ext_resource type="Script" path="res://Scripts/Actions/Traverse.gd" id="13_paq7k"]
 [ext_resource type="Script" path="res://Scripts/Actions/Talk.gd" id="14_8xvhn"]
 [ext_resource type="Texture2D" uid="uid://bfx8mu42ipuwl" path="res://Assets/UI/wheel Icons/icontake.png" id="14_158d8"]
@@ -33,6 +36,15 @@ border_width_bottom = 4
 border_color = Color(0.686275, 0.529412, 0.247059, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6xsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25osd"]
+size = Vector2(66.0001, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apr6y"]
+size = Vector2(59.0308, 80.7609)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4wt7"]
+size = Vector2(59.9389, 79.4798)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3veiq"]
 animations = [{
@@ -194,6 +206,7 @@ offset_right = 1004.0
 offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
 pivot_offset = Vector2(47, 51)
+script = ExtResource("10_boe5s")
 
 [node name="Box" type="TextureRect" parent="Inventory/InventoryContainer"]
 layout_mode = 2
@@ -205,6 +218,11 @@ layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer"]
+position = Vector2(40.6429, 51.4788)
+scale = Vector2(0.908167, 0.957588)
+shape = SubResource("RectangleShape2D_25osd")
+
 [node name="InventoryContainer2" type="MarginContainer" parent="Inventory"]
 offset_left = 997.0
 offset_top = 246.0
@@ -212,6 +230,7 @@ offset_right = 1079.0
 offset_bottom = 339.0
 scale = Vector2(1.10112, 1.05249)
 pivot_offset = Vector2(47, 51)
+script = ExtResource("12_dasif")
 
 [node name="Box" type="TextureRect" parent="Inventory/InventoryContainer2"]
 layout_mode = 2
@@ -223,6 +242,10 @@ layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer2"]
+position = Vector2(41.0969, 51.4751)
+shape = SubResource("RectangleShape2D_apr6y")
+
 [node name="InventoryContainer3" type="MarginContainer" parent="Inventory"]
 offset_left = 1073.0
 offset_top = 246.0
@@ -230,6 +253,7 @@ offset_right = 1155.0
 offset_bottom = 339.0
 scale = Vector2(1.10112, 1.04429)
 pivot_offset = Vector2(47, 51)
+script = ExtResource("13_j3dqx")
 
 [node name="Box" type="TextureRect" parent="Inventory/InventoryContainer3"]
 layout_mode = 2
@@ -240,6 +264,11 @@ expand_mode = 1
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Inventory/InventoryContainer3"]
+position = Vector2(40.6429, 51.4788)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_h4wt7")
 
 [node name="portrait container" type="MarginContainer" parent="Inventory"]
 offset_left = 919.0
@@ -310,6 +339,12 @@ script = ExtResource("17_a4vhy")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Examine"]
 polygon = PackedVector2Array(957, 561, 912, 613, 931, 629, 998, 646, 1016, 639, 1009, 578)
 
+[connection signal="mouse_entered" from="Inventory/InventoryContainer" to="Inventory/InventoryContainer" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Inventory/InventoryContainer" to="Inventory/InventoryContainer" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Inventory/InventoryContainer2" to="Inventory/InventoryContainer2" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Inventory/InventoryContainer2" to="Inventory/InventoryContainer2" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Inventory/InventoryContainer3" to="Inventory/InventoryContainer3" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Inventory/InventoryContainer3" to="Inventory/InventoryContainer3" method="_on_object_mouse_exited"]
 [connection signal="input_event" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_traverse_clicked"]
 [connection signal="input_event" from="Action Wheel/Talk" to="Action Wheel/Talk" method="_on_talk_clicked"]
 [connection signal="input_event" from="Action Wheel/Use" to="Action Wheel/Use" method="_on_use_clicked"]

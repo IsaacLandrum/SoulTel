@@ -13,7 +13,3 @@ func _ready():
 	Use.connect("action", GameManager._on_hallway_action)
 	Take.connect("action", GameManager._on_hallway_action)
 	Examine.connect("action", GameManager._on_hallway_action)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

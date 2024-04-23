@@ -14,6 +14,7 @@ func _on_traverse_clicked(_viewport, event, _shape_idx):
 		SoundManager.play_click_sound()
 		emit_signal("action", "TRAVERSE")
 		WheelIcon.set_frame_and_progress(4,0)
+		Inventory.clear_selected_item()
 
 
 #Following section handles on hover effect
