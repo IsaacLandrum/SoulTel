@@ -4,6 +4,7 @@ extends Node
 @onready var Use = $"Early_UI/Action Wheel/Use"
 @onready var Take = $"Early_UI/Action Wheel/Take"
 @onready var Examine = $"Early_UI/Action Wheel/Examine"
+@onready var Background = $"Background"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +14,8 @@ func _ready():
 	Use.connect("action", GameManager._on_laundry_action)
 	Take.connect("action", GameManager._on_laundry_action)
 	Examine.connect("action", GameManager._on_laundry_action)
+	if(GameManager.puzzle3.conditions.clothesTaken):
+		Background.texture = load("res://Assets/Laundry/laundryroomnoclothes without uniform.png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
