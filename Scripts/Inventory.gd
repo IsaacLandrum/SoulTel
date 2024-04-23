@@ -2,6 +2,7 @@ extends Node
 
 var items = []
 var selected_item = null
+signal bellhop_worn()
 
 # Example item format
 
@@ -26,6 +27,10 @@ func set_selected_item(item):
 		selected_item = item
 		print("Selected item successful: ")
 		print(item)
+		if(item.name == "Bellhop"):
+			GameManager.puzzle3.conditions.clothesWorn = true
+			print("clothes worn: ", GameManager.puzzle3.conditions.clothesWorn)
+			bellhop_worn.emit()
 
 func get_selected_item():
 	print("SELECTED ITEM IS RETURNING: ", selected_item)

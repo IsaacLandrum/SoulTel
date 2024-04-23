@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://o741tsp07klt"]
+[gd_scene load_steps=6 format=3 uid="uid://o741tsp07klt"]
 
 [ext_resource type="Script" path="res://Scripts/Laundry/laundry_Main.gd" id="1_nu54p"]
 [ext_resource type="Texture2D" uid="uid://c6cbiaaxuwb8t" path="res://Assets/Laundry/laundryroomClothes with uniform.png" id="2_et51d"]
@@ -6,13 +6,10 @@
 [ext_resource type="Script" path="res://Scripts/Laundry/BellhopTemp.gd" id="3_8a8cg"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="5_rj2hn"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1rqm"]
-size = Vector2(48.9458, 18.4524)
-
 [node name="LaundryRoom" type="Node2D"]
 script = ExtResource("1_nu54p")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 917.0
 offset_bottom = 469.0
 texture = ExtResource("2_et51d")
@@ -23,21 +20,19 @@ expand_mode = 1
 [node name="BellhopTemp" type="Node2D" parent="."]
 script = ExtResource("3_8a8cg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BellhopTemp"]
-position = Vector2(675.439, 155.605)
-rotation = 3.14159
-scale = Vector2(1.92803, -11.1211)
-shape = SubResource("RectangleShape2D_o1rqm")
+[node name="ColorRect" type="ColorRect" parent="BellhopTemp"]
+offset_left = 727.0
+offset_top = 275.0
+offset_right = 870.0
+offset_bottom = 451.0
+color = Color(1, 1, 1, 0)
 
-[node name="Label" type="Label" parent="BellhopTemp"]
-offset_left = 629.0
-offset_top = 126.0
-offset_right = 738.0
-offset_bottom = 175.0
-text = "Bellhop 
-Outfit
-"
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BellhopTemp/ColorRect"]
+polygon = PackedVector2Array(42, 17, 124, 18, 123, 38, 114, 80, 99, 148, 90, 148, 91, 130, 73, 141, 69, 124, 65, 127, 63, 161, 35, 164, 27, 116, 20, 97, 24, 78, 23, 50, 17, 46, 19, 36, 33, 37)
 
 [node name="back" parent="." instance=ExtResource("5_rj2hn")]
 position = Vector2(144, 122)
 traverse_path = "res://Scenes/Lobby.tscn"
+
+[connection signal="mouse_entered" from="BellhopTemp/ColorRect" to="BellhopTemp" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="BellhopTemp/ColorRect" to="BellhopTemp" method="_on_object_mouse_exited"]

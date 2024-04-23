@@ -15,6 +15,12 @@ var puzzle2 = {
 	}
 }
 
+var puzzle3 = {
+	"conditions" : {
+		"clothesTaken" : false,
+		"clothesWorn" : false
+	}
+}
 
 # Need initializer functions to ensure nodes are in scope when initialized
 func initRoom1():
@@ -46,13 +52,6 @@ func initLobby():
 		"back" : get_node("/root/Room3/back")
 	}
 
-
-func initLaundry():
-	puzzle2["nodes"] = {
-		"bellhop" : get_node("/root/Room3/BellhopTemp"),
-		"back" : get_node("/root/LaundryRoom/back")
-	}
-
 func initOffice():
 	puzzle2["nodes"] = {
 		"automaton" : get_node("/root/Office/Automaton"),
@@ -72,6 +71,14 @@ func guestroom1():
 	puzzle2["nodes"] = {
 		"ghost" : get_node("/root/GuestRoom1/Ghost")
 	}
+
+func initLaundry():
+	puzzle3["nodes"] = {
+		"bellhop" : get_node("/root/LaundryRoom/BellhopTemp"),
+		"back" : get_node("/root/LaundryRoom/back")
+	}
+	print("Init Laundry")
+	
 '''
 Puzzle 1
 '''
@@ -110,9 +117,7 @@ func _on_lobby_action(action):
 	puzzle2["nodes"]["door_to_office"].setCurrentAction(action)
 	puzzle2["nodes"]["back"].setCurrentAction(action)
 	
-func _on_laundry_action(action):
-	puzzle2["nodes"]["bellhop"].setCurrentAction(action)
-	puzzle2["nodes"]["back"].setCurrentAction(action)
+
 	
 func _on_office_action(action):
 	puzzle2["nodes"]["automaton"].setCurrentAction(action)
@@ -126,3 +131,14 @@ func _on_hallway_action(action):
 	
 func _on_guestroom1_action(action):
 	puzzle2["nodes"]["ghost"].setCurrentAction(action)
+	
+'''
+Puzzle 3
+'''
+
+func _on_laundry_action(action):
+	puzzle3["nodes"]["bellhop"].setCurrentAction(action)
+	puzzle3["nodes"]["back"].setCurrentAction(action)
+
+func _on_clothes_taken():
+	puzzle3.conditions.clothesTaken = true
