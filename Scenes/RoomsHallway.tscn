@@ -29,7 +29,7 @@ metadata/_edit_lock_ = true
 position = Vector2(767, 372)
 scale = Vector2(0.0283474, 0.0776703)
 script = ExtResource("4_2gkcm")
-CharacterID = "41"
+CharacterID = "01"
 canTraverse = true
 traverse_path = "res://Scenes/GuestRoom1.tscn"
 metadata/_edit_lock_ = true
@@ -53,7 +53,7 @@ shape = SubResource("RectangleShape2D_tt5en")
 position = Vector2(486, 270)
 scale = Vector2(0.0283474, 0.0776703)
 script = ExtResource("5_hom6u")
-CharacterID = "42"
+CharacterID = "02"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom2"]
 position = Vector2(-211.659, 77.2492)
@@ -64,7 +64,7 @@ polygon = PackedVector2Array(-106.209, 592.506, -119.485, -478.745, 550.957, -52
 position = Vector2(767, 372)
 scale = Vector2(0.0283474, 0.0776703)
 script = ExtResource("6_csakg")
-CharacterID = "43"
+CharacterID = "03"
 metadata/Room_Number = "04"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="GuestRoom3"]

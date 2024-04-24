@@ -42,7 +42,7 @@ layer = -1
 [node name="Door_To_Lobby" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(746, 176)
 script = ExtResource("5_3lgbo")
-CharacterID = "21"
+CharacterID = "01"
 
 [node name="ColorRect" type="ColorRect" parent="Door_To_Lobby"]
 offset_left = -52.0
@@ -60,7 +60,7 @@ shape = SubResource("RectangleShape2D_jldyf")
 
 [node name="Desk_Zoom" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("6_v5mvt")
-CharacterID = "22"
+CharacterID = "02"
 
 [node name="ColorRect" type="ColorRect" parent="Desk_Zoom"]
 offset_left = 104.0
@@ -75,6 +75,7 @@ polygon = PackedVector2Array(10, 90, 255, 127, 331, 46, 314, 24, 310, -77, 6, -8
 
 [node name="Door_To_Closet" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("6_wvr1d")
+CharacterID = "07"
 canTraverse = true
 traverse_path = "res://Scenes/Closet.tscn"
 

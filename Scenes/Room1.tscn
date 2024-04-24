@@ -34,7 +34,7 @@ text = "Outside Hotel"
 
 [node name="Doorman" parent="." groups=["Interactable"] instance=ExtResource("3_rhsla")]
 script = ExtResource("3_kud8m")
-CharacterID = "11"
+CharacterID = "01"
 
 [node name="ColorRect" parent="Doorman" index="0"]
 offset_left = 95.0
@@ -50,7 +50,7 @@ position = Vector2(76, 216)
 position = Vector2(354, 131)
 scale = Vector2(4, 6)
 script = ExtResource("6_fnusd")
-CharacterID = "10"
+CharacterID = "02"
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 

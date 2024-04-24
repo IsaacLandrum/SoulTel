@@ -1,111 +1,115 @@
-02-21-00 "Error: there was no dialogue for this in the document so I left it empty"
-02-21-01 "Error: there was no dialogue for this in the document so I left it empty"
-02-21-02 "Error: there was no dialogue for this in the document so I left it empty"
-02-21-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-21-04 "Error: there was no dialogue for this in the document so I left it empty"
-02-21-09 "Error: there was no dialogue for this in the document so I left it empty"
-02-22-00 "Error: there was no dialogue for this in the document so I left it empty"
-02-22-01 "Error: there was no dialogue for this in the document so I left it empty"
-02-22-02 "Error: there was no dialogue for this in the document so I left it empty"
-02-22-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-22-04 Error: there was no dialogue for this in the document so I left it empty"
+#lobby door
+02-01-00 "Error: there was no dialogue for this in the document so I left it empty"
+02-01-01 "Error: there was no dialogue for this in the document so I left it empty"
+02-01-02 "Error: there was no dialogue for this in the document so I left it empty"
+02-01-03 "Error: there was no dialogue for this in the document so I left it empty"
+02-01-04 "Error: there was no dialogue for this in the document so I left it empty"
+02-01-09 "Error: there was no dialogue for this in the document so I left it empty"
+
+#desk zoom
+02-02-00 "Error: there was no dialogue for this in the document so I left it empty"
+02-02-01 "Error: there was no dialogue for this in the document so I left it empty"
+02-02-02 "Error: there was no dialogue for this in the document so I left it empty"
+02-02-03 "Error: there was no dialogue for this in the document so I left it empty"
+02-02-04 Error: there was no dialogue for this in the document so I left it empty"
 
 #bell
-02-01-04 I'm not going to do that.
-02-01-03 [rings bell, prompting desk clerk]
-02-01-02 An old ornate bell... This could get the attention of any staff.  
-02-01-01 I'm not going to do that.
-02-01-00 I don't think I want this.
+02-03-04 I'm not going to do that.
+02-03-03 [rings bell, prompting desk clerk]
+02-03-02 An old ornate bell... This could get the attention of any staff.  
+02-03-01 I'm not going to do that.
+02-03-00 I don't think I want this.
 
 #key
-02-02-04 I'm not going to do that.
-02-02-03 I should take it from his hands first.
-02-02-02 An old key.. With a tag that reads "100"
-02-02-01 I'm not going to do that.
-02-02-00 [keys into inventory]
+02-04-04 I'm not going to do that.
+02-04-03 I should take it from his hands first.
+02-04-02 An old key.. With a tag that reads "100"
+02-04-01 I'm not going to do that.
+02-04-00 [keys into inventory]
 
 #back
-02-03-04 "Error: there was no dialogue for this in the document so I left it empty"
-02-03-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-03-02 "Error: there was no dialogue for this in the document so I left it empty"
-02-03-01 "Error: there was no dialogue for this in the document so I left it empty"
-02-03-00 "Error: there was no dialogue for this in the document so I left it empty"
+02-05-04 "Error: there was no dialogue for this in the document so I left it empty"
+02-05-03 "Error: there was no dialogue for this in the document so I left it empty"
+02-05-02 "Error: there was no dialogue for this in the document so I left it empty"
+02-05-01 "Error: there was no dialogue for this in the document so I left it empty"
+02-05-00 "Error: there was no dialogue for this in the document so I left it empty"
 
 #clerk
-02-04-04 That would be rude. 
-02-04-03 That would be rude. 
-02-04-02 A pale, thin man in dark clothes stands behind the counter... Not exactly welcoming.
-02-04-01 [E7 on puzzle Workflow]
-02-04-00 That would be rude.
+02-06-04 That would be rude. 
+02-06-03 That would be rude. 
+02-06-02 A pale, thin man in dark clothes stands behind the counter... Not exactly welcoming.
+02-06-01 [E7 on puzzle Workflow]
+02-06-00 That would be rude.
 
 #front Doorman
-01-11-04 That would be rude. 
-01-11-03 That would be rude. 
-01-11-02 A man guarding the door...
-01-11-01 "PLAYER: Hello…?
-01-11-00 That would be rude.
-01-11-06 [DOORMAN: We’ve been waiting… You’re not as late as some of our other guests… Not everyone is eager to make this hotel to their last stop…]
-01-11-11 PLAYER: Last stop?
-01-11-16 [DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… Good luck"
+01-01-04 That would be rude. 
+01-01-03 That would be rude. 
+01-01-02 A man guarding the door...
+01-01-01 "PLAYER: Hello…?
+01-01-00 That would be rude.
+01-01-06 [DOORMAN: We’ve been waiting… You’re not as late as some of our other guests… Not everyone is eager to make this hotel to their last stop…]
+01-01-11 PLAYER: Last stop?
+01-01-16 [DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… Good luck"
 
 #Front Doorway
-01-10-04 Some kind of force appears to be keeping this shut…
-01-10-03 Some kind of force appears to be keeping this shut…
-01-10-02 A wooden door...
-01-10-01 I'm not going to do that.
-01-10-00 I don't have anything to take it off it's hinges.
-01-10-09 [enter lobby]
-01-10-08 The Doorman has opened the door.
+01-02-04 Some kind of force appears to be keeping this shut…
+01-02-03 Some kind of force appears to be keeping this shut…
+01-02-02 A wooden door...
+01-02-01 I'm not going to do that.
+01-02-00 I don't have anything to take it off it's hinges.
+01-02-09 [enter lobby]
+01-02-08 The Doorman has opened the door.
 
 #Lobby door To hallway
-03-31-04 You Traverse the door
-03-31-03 (temp)As you attemp to Use the Door, you notice it being already open
-03-31-02 (temp)A sturdy wooden door... you notice a sign that says "To Guest Bedrooms"
-03-31-01 (temp)You talk to the door... The door seems unfaced by your words
-03-31-00 (temp) The door refuses to be taken from its hinges
+03-01-04 You Traverse the door
+03-01-03 (temp)As you attemp to Use the Door, you notice it being already open
+03-01-02 (temp)A sturdy wooden door... you notice a sign that says "To Guest Bedrooms"
+03-01-01 (temp)You talk to the door... The door seems unfaced by your words
+03-01-00 (temp) The door refuses to be taken from its hinges
 
 #Lobby door to office
-03-32-04 You Traverse the door
-03-32-03 (temp)As you attemp to Use the Door, you notice it being already open
-03-32-02 (temp)A sturdy wooden door... you Notice a Small sign that says "Office"
-03-32-01 (temp)You talk to the door... The door seems unfaced by your words
-03-32-00 (temp) The door refuses to be taken from its hinges 
+03-02-04 You Traverse the door
+03-02-03 (temp)As you attemp to Use the Door, you notice it being already open
+03-02-02 (temp)A sturdy wooden door... you Notice a Small sign that says "Office"
+03-02-01 (temp)You talk to the door... The door seems unfaced by your words
+03-02-00 (temp) The door refuses to be taken from its hinges 
 
 #Lobby To hallway door
-03-33-04 You Traverse the door
-03-33-03 (temp)As you attemp to Use the Door, you notice it being already open
-03-33-02 (temp)A sturdy wooden door... You notice a sign that says "Laundry Room"
-03-33-01 (temp)You talk to the door... The door seems unfaced by your words
-03-33-00 (temp) The door refuses to be taken from its hinges
+03-03-04 You Traverse the door
+03-03-03 (temp)As you attemp to Use the Door, you notice it being already open
+03-03-02 (temp)A sturdy wooden door... You notice a sign that says "Laundry Room"
+03-03-01 (temp)You talk to the door... The door seems unfaced by your words
+03-03-00 (temp) The door refuses to be taken from its hinges
 
 #Rooms Hallway door to guest room 1
-04-41-04 I should try unlocking it first.
-04-41-03 I should try unlocking it first.
-04-41-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 1"
-04-41-01 (temp)"... Hello?"
-04-41-00 The door refuses to be taken from its hinges
-04-41-09 [enters room]
-04-41-08 [key unlocks door]
+04-01-04 I should try unlocking it first.
+04-01-03 I should try unlocking it first.
+04-01-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 1"
+04-01-01 (temp)"... Hello?"
+04-01-00 The door refuses to be taken from its hinges
+04-01-09 [enters room]
+04-01-08 [key unlocks door]
 
 
 #Rooms Hallway to guest room 2
-04-42-04 The door is locked
-04-42-03 (temp)As you attemp to Use the Door handle, you notice its locked
-04-42-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 2"
-04-42-01 You talk to the door ... The door listens carefully, yet it does not seem to have an interest in responding
-04-42-00 I don't have anything to take it off it's hinges.
+04-02-04 The door is locked
+04-02-03 (temp)As you attemp to Use the Door handle, you notice its locked
+04-02-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 2"
+04-02-01 You talk to the door ... The door listens carefully, yet it does not seem to have an interest in responding
+04-02-00 I don't have anything to take it off it's hinges.
 
 
 #Rooms Hallway door to guest room 3
-04-43-04 (temp)the door is locked
-04-43-03 (temp)As you attemp to Use the Door handle, you notice its locked
-04-43-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 3"
-04-43-01 (temp)You talk to the door... The door seems unfaced by your words
-04-43-00 The door refuses to be taken from its hinges
+04-03-04 (temp)the door is locked
+04-03-03 (temp)As you attemp to Use the Door handle, you notice its locked
+04-03-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 3"
+04-03-01 (temp)You talk to the door... The door seems unfaced by your words
+04-03-00 The door refuses to be taken from its hinges
 
 #Guest room 1 Ghost
-05-51-04 That would be rude...
-05-51-03 That would be rude...
-05-51-02 (temp) A ghost that is curled up in a corner of the bed.
-05-51-01 Paper into inventory
-05-51-00 That would be rude...
+05-01-04 That would be rude...
+05-01-03 That would be rude...
+05-01-02 (temp) A ghost that is curled up in a corner of the bed.
+05-01-01 Paper into inventory
+05-01-00 That would be rude...
+
