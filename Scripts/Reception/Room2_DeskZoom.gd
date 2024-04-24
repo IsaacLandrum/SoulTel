@@ -37,6 +37,7 @@ func _ready():
 
 func _on_key_pickup():
 	Inventory.add_item(key_info)
+	SoundManager.play_key_pickup()
 	UI.update_inventory_ui() # Assuming InventoryUI is the name of the node with the InventoryUI.gd script
 	Key.queue_free() # Remove the item from the scene
 	GameManager._on_puzzle2_keyPickup()
