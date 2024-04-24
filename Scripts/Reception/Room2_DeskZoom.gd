@@ -47,7 +47,8 @@ func _on_bell_rung():
 	Clerk.visible = true
 
 func _on_clerk_talk():
-	Key.visible = true
+	if(!GameManager.puzzle2.condition.keyTaken):
+		Key.visible = true
 	
 func _on_color_rect_mouse_exited():
 	pass # Replace with function body.
