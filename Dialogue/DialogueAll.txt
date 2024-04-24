@@ -3,7 +3,7 @@
 02-01-01 "Error: there was no dialogue for this in the document so I left it empty"
 02-01-02 "Error: there was no dialogue for this in the document so I left it empty"
 02-01-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-01-04 "Error: there was no dialogue for this in the document so I left it empty"
+02-01-04 "move"
 02-01-09 "Error: there was no dialogue for this in the document so I left it empty"
 
 #desk zoom
@@ -11,7 +11,7 @@
 02-02-01 "Error: there was no dialogue for this in the document so I left it empty"
 02-02-02 "Error: there was no dialogue for this in the document so I left it empty"
 02-02-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-02-04 Error: there was no dialogue for this in the document so I left it empty"
+02-02-04 "move"
 
 #bell
 02-03-04 I'm not going to do that.
