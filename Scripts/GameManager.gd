@@ -18,7 +18,9 @@ var puzzle2 = {
 var puzzle3 = {
 	"conditions" : {
 		"clothesTaken" : false,
-		"clothesWorn" : false
+		"clothesWorn" : false,
+		"inkwellTaken" : false,
+		"inkwellUsed" : false
 	}
 }
 
@@ -78,6 +80,12 @@ func initLaundry():
 		"back" : get_node("/root/LaundryRoom/back")
 	}
 	print("Init Laundry")
+
+func initCloset():
+	puzzle3["nodes"] = {
+		"inkwell" : get_node("/root/Closet/Inkwell"),
+		"back" : get_node("/root/Closet/back")
+	}
 	
 '''
 Puzzle 1
@@ -142,3 +150,7 @@ func _on_laundry_action(action):
 
 func _on_clothes_taken():
 	puzzle3.conditions.clothesTaken = true
+
+func _on_closet_action(action):
+	puzzle3["nodes"]["inkwell"].setCurrentAction(action)
+	puzzle3["nodes"]["back"].setCurrentAction(action)

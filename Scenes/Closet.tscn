@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmtnr3ljq3nlm"]
+[gd_scene load_steps=6 format=3 uid="uid://cmtnr3ljq3nlm"]
 
 [ext_resource type="Script" path="res://Scripts/Closet/Closet.gd" id="1_r88ct"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_je1lx"]
 [ext_resource type="Script" path="res://Scripts/Closet/Inkwell.gd" id="3_oogre"]
 [ext_resource type="Texture2D" uid="uid://bkssc1xsqnb1t" path="res://Assets/Closet/inkwell.png" id="4_gwqu6"]
+[ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="5_jeg7j"]
 
 [node name="Closet" type="Node2D"]
 script = ExtResource("1_r88ct")
@@ -24,6 +25,10 @@ expand_mode = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inkwell/TextureRect"]
 polygon = PackedVector2Array(82, 47, 73, 49, 68, 53, 61, 91, 66, 94, 93, 95, 102, 92, 102, 65, 97, 49)
+
+[node name="back" parent="." instance=ExtResource("5_jeg7j")]
+position = Vector2(89, 391)
+traverse_path = "res://Scenes/Room2.tscn"
 
 [connection signal="mouse_entered" from="Inkwell/TextureRect" to="Inkwell" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Inkwell/TextureRect" to="Inkwell" method="_on_object_mouse_exited"]
