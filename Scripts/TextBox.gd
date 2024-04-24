@@ -53,6 +53,7 @@ func Load_Room_Dialogue():
 	var treeKey = null
 	var treeData = null
 	var i = 0
+	
 	while(i < content.size()):
 		treeKey = (content[i].left(8)).to_int()
 		treeData = content[i].right(-9)
@@ -64,7 +65,13 @@ func change_displayed_dialogue(CharacterID, InteractionID):
 	print("change display dialogue")
 	var ID = RoomID+CharacterID+InteractionID
 	var newDialoge = dialogueTree.Search(ID.to_int())
+	var i = 0
+	
+	display.text = ""
 	if(newDialoge == null):
 		newDialoge = "error, dialoge is Null"
-	display.text = newDialoge
+	while(i < newDialoge.length()):
+		display.text += newDialoge[i]
+		i =i +1
+		await get_tree().create_timer(0.01).timeout
 	print("Text change")
