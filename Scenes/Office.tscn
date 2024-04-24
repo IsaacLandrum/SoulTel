@@ -1,14 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://ds1gy1abobmvi"]
+[gd_scene load_steps=7 format=3 uid="uid://ds1gy1abobmvi"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Office_Main.gd" id="1_fu2s6"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_gfyh2"]
-[ext_resource type="Texture2D" uid="uid://di5jhyjjno3oc" path="res://Assets/Lobby/Office/TempOffice.jpg" id="2_hk5t4"]
-[ext_resource type="Texture2D" uid="uid://bfgeaqkcdm55v" path="res://Assets/Lobby/Office/Automaton Temp.png" id="3_0bm0b"]
+[ext_resource type="Texture2D" uid="uid://d1hsiiir8w6ur" path="res://Assets/Lobby/Office/endroom color.png" id="3_1modm"]
 [ext_resource type="Script" path="res://Scripts/Office/Automaton.gd" id="3_dyi5t"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="6_4tgyy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d8nb"]
-size = Vector2(158, 194)
+size = Vector2(94, 131)
 
 [node name="Office" type="Node2D"]
 script = ExtResource("1_fu2s6")
@@ -19,23 +18,27 @@ metadata/Room_Number = "06"
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 917.0
 offset_bottom = 469.0
-texture = ExtResource("2_hk5t4")
+texture = ExtResource("3_1modm")
+expand_mode = 1
 
 [node name="Automaton" type="Node2D" parent="."]
 position = Vector2(733, 173)
 script = ExtResource("3_dyi5t")
 
-[node name="TextureRect" type="TextureRect" parent="Automaton"]
-offset_left = -109.0
-offset_right = 282.0
-offset_bottom = 197.0
-texture = ExtResource("3_0bm0b")
-expand_mode = 1
+[node name="TextureRect" type="ColorRect" parent="Automaton"]
+offset_left = -204.0
+offset_top = 16.0
+offset_right = -80.0
+offset_bottom = 167.0
+color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Automaton/TextureRect"]
-position = Vector2(197, 99)
+position = Vector2(58, 65.5)
 shape = SubResource("RectangleShape2D_3d8nb")
 
 [node name="back" parent="." instance=ExtResource("6_4tgyy")]
 position = Vector2(820, 92)
 traverse_path = "res://Scenes/Lobby.tscn"
+
+[connection signal="mouse_entered" from="Automaton/TextureRect" to="Automaton" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Automaton/TextureRect" to="Automaton" method="_on_object_mouse_exited"]
