@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c0job4rllycko" path="res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png" id="2_3v4m4"]
 [ext_resource type="PackedScene" uid="uid://ws05o3o0fpcm" path="res://Scenes/Ghost.tscn" id="3_lmorj"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_o0kcn"]
-[ext_resource type="PackedScene" uid="uid://bpadmxi7a8s1s" path="res://Scenes/Paper.tscn" id="6_d5430"]
+[ext_resource type="PackedScene" path="res://Scenes/Paper.tscn" id="6_d5430"]
 [ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="7_ghde3"]
 
 [node name="GuestRoom1" type="Node2D"]
