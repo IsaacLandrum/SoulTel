@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://iyb0x4jsmjmq"]
+[gd_scene load_steps=35 format=3 uid="uid://iyb0x4jsmjmq"]
 
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_1o0le"]
 [ext_resource type="Script" path="res://Scripts/TextBox.gd" id="1_16yjp"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://d25bbhiv67s7p" path="res://Assets/UI/pfp temp.jpg" id="5_yo2sw"]
 [ext_resource type="Texture2D" uid="uid://c8hve0be40eae" path="res://Assets/sculpting/UI_design.png" id="5_yp6hw"]
 [ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
+[ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="6_cg0sd"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
 [ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer.gd" id="10_boe5s"]
 [ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer2.gd" id="12_dasif"]
@@ -26,6 +27,9 @@
 [ext_resource type="Script" path="res://Scripts/Actions/Take.gd" id="16_utkvd"]
 [ext_resource type="Script" path="res://Scripts/Actions/Examine.gd" id="17_a4vhy"]
 [ext_resource type="Texture2D" uid="uid://b5t6uyrlm6vre" path="res://Assets/UI/wheel Icons/Icontraverse.png" id="17_a8g1c"]
+
+[sub_resource type="Theme" id="Theme_lub2r"]
+Button/colors/icon_pressed_color = Color(1, 1, 0.423529, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyoj1"]
 bg_color = Color(0, 0, 0, 1)
@@ -107,7 +111,20 @@ layout_mode = 0
 offset_left = 58.0
 offset_right = 661.0
 offset_bottom = 149.0
+theme_override_fonts/normal_font = ExtResource("6_cg0sd")
 text = "Hello"
+
+[node name="Button" type="Button" parent="TextBox/TextBoxBackground"]
+layout_mode = 0
+offset_left = 591.0
+offset_top = 113.0
+offset_right = 636.0
+offset_bottom = 147.0
+scale = Vector2(1.16557, 0.814545)
+theme = SubResource("Theme_lub2r")
+theme_override_fonts/font = ExtResource("6_cg0sd")
+action_mode = 0
+text = "Next"
 
 [node name="DetailLeft" type="TextureRect" parent="TextBox"]
 offset_left = 1.0
