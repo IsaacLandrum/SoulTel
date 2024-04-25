@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c215atenvcdki" path="res://Assets/RoomsHallway/GuestRoom1/GHOST.png" id="2_qewtl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c2bo"]
-size = Vector2(225, 291)
+size = Vector2(225, 230)
 
 [node name="Interactable" type="Node2D"]
 script = ExtResource("1_x0hsd")
@@ -16,9 +16,12 @@ texture = ExtResource("2_qewtl")
 expand_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect"]
-position = Vector2(102.5, 135.5)
+position = Vector2(102.5, 105)
 shape = SubResource("RectangleShape2D_0c2bo")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="TextureRect"]
 visible = false
 polygon = PackedVector2Array(44, 80, 46, 26, 89, 22, 109, 32, 123, 46, 126, 74, 147, 94, 152, 121, 139, 132, 123, 175, 149, 199, 174, 185, 188, 195, 176, 229, 149, 239, 130, 233, 121, 237, 104, 266, 61, 263, 52, 229, 24, 153, 5, 93, 19, 77)
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_mouse_exited"]
