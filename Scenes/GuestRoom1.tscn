@@ -1,33 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsmfxv4hpchxw"]
+[gd_scene load_steps=8 format=3 uid="uid://dsmfxv4hpchxw"]
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_2npwd"]
+[ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1/GuestRoom1_Main.gd" id="1_3f4aq"]
 [ext_resource type="Texture2D" uid="uid://c0job4rllycko" path="res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png" id="2_3v4m4"]
 [ext_resource type="PackedScene" uid="uid://ws05o3o0fpcm" path="res://Scenes/Ghost.tscn" id="3_lmorj"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_o0kcn"]
-
-[sub_resource type="GDScript" id="GDScript_ggx21"]
-script/source = "extends Node
-@onready var Traverse = $\"Early_UI/Action Wheel/Traverse\"
-@onready var Talk = $\"Early_UI/Action Wheel/Talk\"
-@onready var Use = $\"Early_UI/Action Wheel/Use\"
-@onready var Take = $\"Early_UI/Action Wheel/Take\"
-@onready var Examine = $\"Early_UI/Action Wheel/Examine\"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	GameManager.guestroom1()
-	Traverse.connect(\"action\", GameManager._on_guestroom1_action)
-	Talk.connect(\"action\", GameManager._on_guestroom1_action)
-	Use.connect(\"action\", GameManager._on_guestroom1_action)
-	Take.connect(\"action\", GameManager._on_guestroom1_action)
-	Examine.connect(\"action\", GameManager._on_guestroom1_action)
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
+[ext_resource type="PackedScene" uid="uid://bpadmxi7a8s1s" path="res://Scenes/Paper.tscn" id="6_d5430"]
+[ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="7_ghde3"]
 
 [node name="GuestRoom1" type="Node2D"]
-script = SubResource("GDScript_ggx21")
+script = ExtResource("1_3f4aq")
 metadata/Room_Number = "05"
 
 [node name="Early_UI" parent="." instance=ExtResource("1_2npwd")]
@@ -39,10 +21,32 @@ offset_bottom = 469.0
 texture = ExtResource("2_3v4m4")
 expand_mode = 1
 
-[node name="Ghost" parent="." groups=["Interactable"] instance=ExtResource("3_lmorj")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 265.0
+offset_top = 19.0
+offset_right = 768.0
+offset_bottom = 443.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 35
+theme_override_fonts/normal_font = ExtResource("7_ghde3")
+text = "Vincent Archer is considered the genius behind Archer Inventions Co., when in reality it is his wife, Theodora, who designs all of their technology. This fact is known to very few, only the couple and a few close business partners. Theodora (and sometimes Vincent) would often visit the hotel to work on her inventions since it was further away from their home, and not as fancy as people might suspect the Archers would visit. 
+
+Rival company owner, Charles Connors, caught wind that this hotel was where the Archer inventions might be being designed, and decided that one day, while Vincent was known to be at a conference, he would go check out the hotel himself and see what he could find. Connors figured this was also a perfect time to hire the player to kill Vincent while he was at it.
+
+However, while Connors is visiting, Theodora is there working on the automaton. She hides away in the office with it, and programs it to write the letter that we see at the end."
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Ghost" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("3_lmorj")]
 position = Vector2(56, 173)
 CharacterID = "51"
 
-[node name="back" parent="." instance=ExtResource("4_o0kcn")]
+[node name="back" parent="CanvasLayer2" instance=ExtResource("4_o0kcn")]
 position = Vector2(834, 88)
 traverse_path = "res://Scenes/RoomsHallway.tscn"
+
+[node name="Paper" parent="CanvasLayer2" instance=ExtResource("6_d5430")]
+position = Vector2(105, 378)
