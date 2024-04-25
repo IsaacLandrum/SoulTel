@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpadmxi7a8s1s"]
+
+[ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1/Paper.gd" id="1_caq0u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tyg8v"]
+size = Vector2(155, 86)
+
+[node name="Paper" type="Node2D"]
+script = ExtResource("1_caq0u")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 155.0
+offset_bottom = 86.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect"]
+position = Vector2(77.5, 43)
+shape = SubResource("RectangleShape2D_tyg8v")
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_mouse_exited"]
