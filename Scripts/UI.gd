@@ -5,6 +5,9 @@ extends Control
 @onready var Slot3 = $"Inventory/InventoryContainer3/Slot3"
 @onready var portrait = $"Inventory/portrait container/Sprite2D"
 
+#signals
+signal NextDialogue(Ifpushed)
+
 var inventory_slots = []
 
 func _ready():
@@ -30,4 +33,5 @@ func _on_bellhop_worn():
 	portrait.texture = load("res://Assets/Laundry/temp_shirt.png")
 	Inventory.remove_item(Inventory.get_selected_item())
 	update_inventory_ui()
-	
+
+

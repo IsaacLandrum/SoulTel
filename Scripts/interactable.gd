@@ -6,9 +6,13 @@ extends Node
 
 var isHovering = false
 
+var waiting = false
+var done = false
+var talkOff = 0
+
 #signals
 signal DialogOut(CharacterID, DialogeID)
-
+signal NextPressed()
 var currentAction
 
 # Called when the node enters the scene tree for the first time.
@@ -54,6 +58,25 @@ func interact():
 		print("Traversing")
 		SoundManager.play_lobby_music()
 		SceneTransition.changeGameScene(traverse_path)
+		
+		
+func talkUpper():
+	print(talkOff)
+	talkOff+=1
+	var OutputCalc = talkOff*5+1
+	print(OutputCalc)
+	var outputStr
+	
+	if(OutputCalc < 10):
+		outputStr = "0"+str(OutputCalc)
+	else:
+		outputStr = str(OutputCalc)
+	
+	if talkOff>3:
+		waiting = false
+	else:
+		DialogOut.emit(CharacterID, outputStr)
+		
 
 func _on_mouse_entered():
 	isHovering = true
@@ -69,3 +92,4 @@ func _on_object_mouse_exited():
 
 func _on_action(message):
 	print(message)
+

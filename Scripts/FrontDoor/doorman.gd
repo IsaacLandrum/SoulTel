@@ -2,9 +2,6 @@ extends "res://Scripts/interactable.gd"
 
 signal doorman_complete
 
-var waiting = false
-var done = false
-var talkOff = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

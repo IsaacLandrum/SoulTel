@@ -66,7 +66,6 @@ func change_displayed_dialogue(CharacterID, InteractionID):
 	var ID = RoomID+CharacterID+InteractionID
 	var newDialoge = dialogueTree.Search(ID.to_int())
 	var i = 0
-	
 	display.text = ""
 	if(newDialoge == null):
 		newDialoge = "error, dialoge is Null"
