@@ -35,6 +35,8 @@ text = "Outside Hotel"
 [node name="Doorman" parent="." groups=["Interactable"] instance=ExtResource("3_rhsla")]
 script = ExtResource("3_kud8m")
 CharacterID = "01"
+canTraverse = null
+traverse_path = null
 
 [node name="ColorRect" parent="Doorman" index="0"]
 offset_left = 95.0

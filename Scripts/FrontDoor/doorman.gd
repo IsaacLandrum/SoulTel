@@ -32,7 +32,7 @@ func interact():
 		DialogOut.emit(CharacterID, "04")
 		print("Traversing")
 
-func talkUpper():
+func talkUpper(CharacterID):
 	print(talkOff)
 	talkOff+=1
 	var OutputCalc = talkOff*5+1

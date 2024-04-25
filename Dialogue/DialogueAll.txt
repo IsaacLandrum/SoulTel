@@ -1,115 +1,232 @@
-#lobby door
-02-01-00 "Error: there was no dialogue for this in the document so I left it empty"
-02-01-01 "Error: there was no dialogue for this in the document so I left it empty"
-02-01-02 "Error: there was no dialogue for this in the document so I left it empty"
-02-01-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-01-04 "move"
-02-01-09 "Error: there was no dialogue for this in the document so I left it empty"
+#Outside(room id 01)
 
-#desk zoom
-02-02-00 "Error: there was no dialogue for this in the document so I left it empty"
-02-02-01 "Error: there was no dialogue for this in the document so I left it empty"
-02-02-02 "Error: there was no dialogue for this in the document so I left it empty"
-02-02-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-02-04 "move"
-
-#bell
-02-03-04 I'm not going to do that.
-02-03-03 [rings bell, prompting desk clerk]
-02-03-02 An old ornate bell... This could get the attention of any staff.  
-02-03-01 I'm not going to do that.
-02-03-00 I don't think I want this.
-
-#key
-02-04-04 I'm not going to do that.
-02-04-03 I should take it from his hands first.
-02-04-02 An old key.. With a tag that reads "100"
-02-04-01 I'm not going to do that.
-02-04-00 [keys into inventory]
-
-#back
-02-05-04 "Error: there was no dialogue for this in the document so I left it empty"
-02-05-03 "Error: there was no dialogue for this in the document so I left it empty"
-02-05-02 "Error: there was no dialogue for this in the document so I left it empty"
-02-05-01 "Error: there was no dialogue for this in the document so I left it empty"
-02-05-00 "Error: there was no dialogue for this in the document so I left it empty"
-
-#clerk
-02-06-04 That would be rude. 
-02-06-03 That would be rude. 
-02-06-02 A pale, thin man in dark clothes stands behind the counter... Not exactly welcoming.
-02-06-01 [E7 on puzzle Workflow]
-02-06-00 That would be rude.
-
-#front Doorman
-01-01-04 That would be rude. 
-01-01-03 That would be rude. 
-01-01-02 A man guarding the door...
-01-01-01 "PLAYER: Hello…?
+#Front Doorman
 01-01-00 That would be rude.
-01-01-06 [DOORMAN: We’ve been waiting… You’re not as late as some of our other guests… Not everyone is eager to make this hotel to their last stop…]
+01-01-01 "PLAYER: Hello…?
+01-01-02 A man guarding the door...
+01-01-03 That would be rude. 
+01-01-04 That would be rude. 
+01-01-06 DOORMAN: We’ve been waiting… You’re not as late as some of our other guests… Not everyone is eager to make this hotel to their last stop…
 01-01-11 PLAYER: Last stop?
-01-01-16 [DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… Good luck"
+01-01-16 DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… Good luck"
 
 #Front Doorway
-01-02-04 Some kind of force appears to be keeping this shut…
-01-02-03 Some kind of force appears to be keeping this shut…
-01-02-02 A wooden door...
-01-02-01 I'm not going to do that.
 01-02-00 I don't have anything to take it off it's hinges.
-01-02-09 [enter lobby]
+01-02-01 I'm not going to do that.
+01-02-02 A wooden door...
+01-02-03 Some kind of force appears to be keeping this shut…
+01-02-04 Some kind of force appears to be keeping this shut…
+01-02-09 Enters lobby
 01-02-08 The Doorman has opened the door.
 
+#Wall lamp
+01-03-00 I should probley leave this alone.
+01-03-01 I don't think it will talk back.
+01-03-02 An old metal oil lamp, it's small but somehow gives off plenty of light.
+01-03-03 I don't think I need to mess with this.
+01-03-04 Why am I wasteing time? I cant do that.
+
+#Reception room (room id 02)
+
+#Lobby door
+02-01-00 Its a door you can't take it with you.
+02-01-01 It's a door, I don't need to talk to it.
+02-01-02 It looks like this door leads to the main lobby.
+02-01-03 
+02-01-04 
+02-01-09 
+
+#desk zoom
+02-02-00 I'm too far to grab anything from the desk.
+02-02-01 I'm too far from the dest to talk to anyone there, I should move closer.
+02-02-02 I should try to get closer.
+02-02-03 I seem to be wasting time.
+02-02-04 You move towards the desk.
+
+#bell
+02-03-00 I don't think I want this.
+02-03-01 I'm not going to do that.
+02-03-02 An old ornate bell... This could get the attention of any staff.  
+02-03-03 The bell rings to summon the desk clerk
+02-03-04 I'm not going to do that.
+
+#key
+02-04-00 You put the key into your pocket.
+02-04-01 I'm not going to do that.
+02-04-02 An old key.. With a tag that reads "001"
+02-04-03 I should take it from his hands first.
+02-04-04 I'm not going to do that.
+
+#back
+02-05-00 
+02-05-01 
+02-05-02 
+02-05-03 
+02-05-04 
+
+#clerk
+02-06-00 That would be rude.
+02-06-01 DESK CLERK: Welcome.
+02-06-02 A pale, thin man in dark clothes stands behind the counter... Not exactly welcoming.
+02-06-03 That would be rude. 
+02-06-04 That would be rude. 
+02-06-06 DESK CLEARK: You need a key? Take this one. You should find what you’re looking for down the hall.
+
+#Sofa
+02-07-00 It might be to big to put in my pockets.
+02-07-01 I can't talk to a sofa.
+02-07-02 It looks comfortbal but I don't need to sit at this time.
+02-07-03  I can't do anything here
+02-07-04 I don't need to sit right now.
+
+#Closet Door
+02-08-00 I have no reason to take a door.
+02-08-01 It's a door, I don't need to talk to it.
+02-08-02 Its a closet that might have supplies in it but it's for employees only.
+02-08-03 I should not mess with this door at the moment, someone might get upset with me.
+02-08-04 I can't go in there, its for employees only.
+
+#lobby (room id 3)
+
 #Lobby door To hallway
-03-01-04 You Traverse the door
-03-01-03 (temp)As you attemp to Use the Door, you notice it being already open
-03-01-02 (temp)A sturdy wooden door... you notice a sign that says "To Guest Bedrooms"
-03-01-01 (temp)You talk to the door... The door seems unfaced by your words
-03-01-00 (temp) The door refuses to be taken from its hinges
+03-01-00 The door refuses to be taken from its hinges.
+03-01-01 You try to talk to the door... The door seems unfazed by your words.
+03-01-02 A sturdy wooden door... You notice a sign that says "To Guest Bedrooms."
+03-01-03 You notice it being already open.
+03-01-04 You Traverse into the hallway.
 
 #Lobby door to office
-03-02-04 You Traverse the door
-03-02-03 (temp)As you attemp to Use the Door, you notice it being already open
-03-02-02 (temp)A sturdy wooden door... you Notice a Small sign that says "Office"
-03-02-01 (temp)You talk to the door... The door seems unfaced by your words
-03-02-00 (temp) The door refuses to be taken from its hinges 
+03-02-00 I have no reason to take a door. 
+03-02-01 I can't talk to doors, I need to stop wasting time.
+03-02-02 A sturdy wooden door... you Notice a Small sign that says "Office."
+03-02-03 You notice it being already open.
+03-02-04 You Traverse the into the office.
 
-#Lobby To hallway door
-03-03-04 You Traverse the door
-03-03-03 (temp)As you attemp to Use the Door, you notice it being already open
-03-03-02 (temp)A sturdy wooden door... You notice a sign that says "Laundry Room"
-03-03-01 (temp)You talk to the door... The door seems unfaced by your words
-03-03-00 (temp) The door refuses to be taken from its hinges
+#Lobby To laundry door
+03-03-00 Why would I take a door?
+03-03-01 I can't talk to doors, I need to stop wasting time.
+03-03-02 A sturdy wooden door... You notice a sign that says "Laundry Room."
+03-03-03 You notice it being already open.
+03-03-04 You Traverse into the laundry room.
+
+#Fireplace
+03-04-00 I don't want to burn myself.
+03-04-01 I wonder what it would say if it could talk back?
+03-04-02 A big fireplace in the center of the room. It's strange but I don't seem to feel any heat coming from it.
+03-04-03 There's nothing to do here.
+03-04-04 I would burn myself if I went in there.
+
+#Hallway (room id 4)
 
 #Rooms Hallway door to guest room 1
-04-01-04 I should try unlocking it first.
-04-01-03 I should try unlocking it first.
-04-01-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 1"
-04-01-01 (temp)"... Hello?"
 04-01-00 The door refuses to be taken from its hinges
-04-01-09 [enters room]
-04-01-08 [key unlocks door]
+04-01-01 I can't talk to doors, I need to stop wasting time.
+04-01-02 A sturdy wooden door... You notice the number 1 above the door.
+04-01-03 I should try unlocking it first.
+04-01-04 I should try unlocking it first.
+04-01-09 Enters room
+04-01-08 The key unlocks the door
 
 
 #Rooms Hallway to guest room 2
-04-02-04 The door is locked
-04-02-03 (temp)As you attemp to Use the Door handle, you notice its locked
-04-02-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 2"
-04-02-01 You talk to the door ... The door listens carefully, yet it does not seem to have an interest in responding
 04-02-00 I don't have anything to take it off it's hinges.
-
+04-02-01 You talk to the door ... The door listens carefully, yet it does not seem to have an interest in responding.
+04-02-02 A sturdy wooden door... You notice the number 2 above the door.
+04-02-03 As you attemp to Use the Door handle, you notice its locked.
+04-02-04 I can't do that, the door is locked.
 
 #Rooms Hallway door to guest room 3
-04-03-04 (temp)the door is locked
-04-03-03 (temp)As you attemp to Use the Door handle, you notice its locked
-04-03-02 (temp)A sturdy wooden door... You notice a sign that says "Guest Room 3"
-04-03-01 (temp)You talk to the door... The door seems unfaced by your words
 04-03-00 The door refuses to be taken from its hinges
+04-03-01 I can't talk to doors, I need to stop wasting time.
+04-03-02 A sturdy wooden door... You notice the number 3 above the door.
+04-03-03 As you attemp to Use the Door handle, you notice its locked
+04-03-04 I would need to unlock the door first.
+
+#Note 1
+04-04-00
+04-04-01
+04-04-02
+04-04-03
+04-04-04
+
+#Portrait
+04-05-00 I looks nice but I don't think I should take it.
+04-05-01 They say pictures have many words but I don't think they are talking.
+04-05-02 They seem to be stairing right into my soul.
+04-05-03 I can't seem to do anything here.
+04-05-04 I should stop wasting time.
+
+#Guest room 1 (room id 5)
 
 #Guest room 1 Ghost
-05-01-04 That would be rude...
-05-01-03 That would be rude...
-05-01-02 (temp) A ghost that is curled up in a corner of the bed.
-05-01-01 Paper into inventory
 05-01-00 That would be rude...
+05-01-01 PLAYER: …Hello?
+05-01-02 Is this a ghost? He seems to be curled up in a corner of the bed.
+05-01-03 That would be rude...
+05-01-04 That would be rude...
+05-01-06 Vincent: You? Again?
+05-01-11 Player: I remember this guy… I was called to do this hit months ago. It’s a miracle I accomplished it with the little time I was given.
+05-01-16 VINCENT: You got the wrong person last time… Just leave me alone, okay?
+05-01-21 Player: Wrong guy? I never get the wrong guy.
+05-01-26 VINCENT: I’m dead. You did your job, it’s over. It doesn’t matter. Just go.
+05-01-31 Player: Look, I guess I’m here to help you out. I won’t take no for an answer.
+05-01-36 VINCENT: I don’t really have a choice, do I?… Listen, I have this paper… My wife gave it to me but I never understood what it was for. Look into you, will you?
+05-01-41 Player: I’ll see what I can do.
+
+
+#Blank paper
+05-02-00 Put the paper into your pocket.
+05-02-01 I can't talk to that.
+05-02-02 A blank piece of paper, this may come I may need this later.
+05-02-03 I don't think I can do that.
+05-02-04 Nope
+
+#Office-6
+
+#Automatron
+06-01-00 I think I should leave this here.
+06-01-01 It has a mouth but it won't talk back.
+06-01-02 It somesort of automatic writing machine but its looks to be missing paper and ink.
+06-01-03 
+06-01-04 I'm not sure what I'm trying to do.
+
+#Note 2
+06-02-00
+06-02-01
+06-02-02
+06-02-03
+06-02-04
+
+#Laundy Room-7
+
+#Bellhop Outfit
+07-01-00 This might be useful. If only I had some way to see myself in it. 
+07-01-01 In my line of work, it’s important to not like a complete fool.
+07-01-02 A worn bellhop uniform... The name tag reads "Pete".
+07-01-03
+07-01-04
+
+#Washbin area(pretty much the whole room)
+07-02-00 There's nothing there I need.
+07-02-01 No one to talk to.
+07-02-02 This place may have been state of the are at one time.
+07-02-03 No need, my cloths are clean. 
+07-02-04 I don't need to go there.
+
+#Closet-8
+
+#Inkwell
+08-01-00 I could use this. Hopefully it won't spill in my pocket.
+08-01-01 In my line of work, it’s important to not like a complete fool.
+08-01-02 A small jar with black ink inside. It looks half empty.
+08-01-03 I am a poet, but I don't have anything to write with.
+08-01-04 I need to stop wasting time.
+
+#Desk and chairs
+08-02-00 There's no reason to do that.
+08-02-01 No one's there to talk to.
+08-02-02 These desk have not been used in a long time.
+08-02-03 There's nothing there to use.
+08-02-04 I don't need to go there.
+
 

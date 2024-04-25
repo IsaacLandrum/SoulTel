@@ -109,6 +109,15 @@ offset_right = 661.0
 offset_bottom = 149.0
 text = "Hello"
 
+[node name="Button" type="Button" parent="TextBox/TextBoxBackground"]
+layout_mode = 0
+offset_left = 602.0
+offset_top = 120.0
+offset_right = 647.0
+offset_bottom = 151.0
+scale = Vector2(1.16557, 0.814545)
+text = "Next"
+
 [node name="DetailLeft" type="TextureRect" parent="TextBox"]
 offset_left = 1.0
 offset_top = 463.0
