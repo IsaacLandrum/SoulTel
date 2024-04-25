@@ -3,6 +3,8 @@ extends "res://Scripts/interactable.gd"
 
 @onready var UI = $"../Early_UI"
 
+signal inkwell_taken
+
 var inkwell_info = {
 	"name": "Inkwell",
 	"icon_path": "res://Assets/Closet/inkwell.png"
@@ -12,9 +14,10 @@ func interact():
 	if (currentAction == "TAKE"):
 		DialogOut.emit(CharacterID, "00")
 		GameManager.puzzle3.conditions.inkwellTaken = true
+		SoundManager.play_generic_pickup()
 		Inventory.add_item(inkwell_info)
 		UI.update_inventory_ui()
-		self.visible = false
+		inkwell_taken.emit()
 		
 	elif (currentAction == "TALK"):
 		print("TALKING")

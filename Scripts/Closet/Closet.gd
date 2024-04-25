@@ -17,6 +17,9 @@ func _ready():
 	Use.connect("action", GameManager._on_closet_action)
 	Take.connect("action", GameManager._on_closet_action)
 	Examine.connect("action", GameManager._on_closet_action)
+	Inkwell.connect("inkwell_taken", _on_inkwell_taken)
 	if(GameManager.puzzle3.conditions.inkwellTaken):
-		Inkwell.visible = false
+		Background.texture = load("res://Assets/Closet/backofficetransparent no ink.png")
 		
+func _on_inkwell_taken():
+	Background.texture = load("res://Assets/Closet/backofficetransparent no ink.png")
