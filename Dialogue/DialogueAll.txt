@@ -8,7 +8,7 @@
 01-01-04 That would be rude. 
 01-01-06 DOORMAN: We’ve been waiting… You’re not as late as some of our other guests… Not everyone is eager to make this hotel to their last stop…
 01-01-11 PLAYER: Last stop?
-01-01-16 DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… Good luck"
+01-01-16 DOORMAN: You must have not been properly briefed… A guest is waiting for you inside. Help them out and you might see the light of day again. These kinds of guests have odd requests… let me get the door for you. "
 
 #Front Doorway
 01-02-00 I don't have anything to take it off it's hinges.
