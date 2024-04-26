@@ -106,7 +106,7 @@ CharacterID = "07"
 offset_top = -5.0
 offset_right = 40.0
 offset_bottom = 72.0
-color = Color(0.866667, 0.988235, 1, 0.486275)
+color = Color(0.866667, 0.988235, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sofa/ColorRect"]
 position = Vector2(19.391, 37.1667)
