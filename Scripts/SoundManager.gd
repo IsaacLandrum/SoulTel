@@ -4,6 +4,7 @@ extends Node
 
 
 var click_sound_player = AudioStreamPlayer.new()
+var title_music = AudioStreamPlayer.new()
 var lobby_music = AudioStreamPlayer.new()
 var locked_door =AudioStreamPlayer.new()
 var error_sfx = AudioStreamPlayer.new()
@@ -21,6 +22,8 @@ var footsArr=[footsteps1,footsteps2,footsteps3]
 func _ready():
 	add_child(click_sound_player)
 	click_sound_player.stream = preload("res://Assets/Sound/action_select.mp3")
+	add_child(title_music)
+	title_music.stream = preload("res://Assets/Themes/soultel_title_perchance_demo.mp3")
 	add_child(lobby_music)
 	lobby_music.stream = preload("res://Assets/Soultel_Lobby_w_Filter.mp3")
 	add_child(locked_door)
@@ -47,7 +50,10 @@ func _ready():
 	
 func play_click_sound():
 	click_sound_player.play()
-
+func play_title_music():
+	title_music.play()
+func stop_title_music():
+	title_music.stop()
 func play_lobby_music():
 	lobby_music.play()
 func play_locked_door():

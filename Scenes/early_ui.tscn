@@ -118,8 +118,9 @@ layout_mode = 0
 offset_left = 57.0
 offset_right = 660.0
 offset_bottom = 149.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("6_cg0sd")
-text = "Hello"
+theme_override_font_sizes/normal_font_size = 19
 
 [node name="NextButton" type="Node2D" parent="TextBox/TextBoxBackground/RichTextLabel"]
 position = Vector2(522, 137)
