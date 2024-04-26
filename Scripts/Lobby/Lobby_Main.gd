@@ -4,9 +4,11 @@ extends Node
 @onready var Use = $"Early_UI/Action Wheel/Use"
 @onready var Take = $"Early_UI/Action Wheel/Take"
 @onready var Examine = $"Early_UI/Action Wheel/Examine"
+@onready var Next_label = $"Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Next_label.visible = false
 	GameManager.initLobby()
 	Traverse.connect("action", GameManager._on_lobby_action)
 	Talk.connect("action", GameManager._on_lobby_action)

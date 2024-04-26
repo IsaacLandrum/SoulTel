@@ -75,7 +75,7 @@
 #Sofa
 02-07-00 It might be to big to put in my pockets.
 02-07-01 I can't talk to a sofa.
-02-07-02 It looks comfortbal but I don't need to sit at this time.
+02-07-02 It looks comfortbal but I don't need to sit at this time.------------------------------------------------------------------------------------------------------------------------------------------------------
 02-07-03  I can't do anything here
 02-07-04 I don't need to sit right now.
 
@@ -112,7 +112,7 @@
 #Fireplace
 03-04-00 I don't want to burn myself.
 03-04-01 I wonder what it would say if it could talk back?
-03-04-02 A big fireplace in the center of the room. It's strange but I don't seem to feel any heat coming from it.
+03-04-02 A big fireplace in the center of the room. It's strange but I don't seem to feel any heat coming from it.----------------------------------------------------------------------------------------------------------
 03-04-03 There's nothing to do here.
 03-04-04 I would burn myself if I went in there.
 
@@ -144,14 +144,14 @@
 
 #Note 1
 04-04-00
-04-04-01
+04-04-01												------------------------------------------------------------------------------------------------------------------------------
 04-04-02
 04-04-03
 04-04-04
 
 #Portrait
 04-05-00 I looks nice but I don't think I should take it.
-04-05-01 They say pictures have many words but I don't think they are talking.
+04-05-01 They say pictures have many words but I don't think they are talking.				----------------------------------------------------------------------------------------------------------------------
 04-05-02 They seem to be stairing right into my soul.
 04-05-03 I can't seem to do anything here.
 04-05-04 I should stop wasting time.
@@ -193,7 +193,7 @@
 #Note 2
 06-02-00
 06-02-01
-06-02-02
+06-02-02		-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 06-02-03
 06-02-04
 
@@ -209,7 +209,7 @@
 #Washbin area(pretty much the whole room)
 07-02-00 There's nothing there I need.
 07-02-01 No one to talk to.
-07-02-02 This place may have been state of the are at one time.
+07-02-02 This place may have been state of the art at one time.			------------------------------------------------------------------------------------------------------------------
 07-02-03 No need, my cloths are clean. 
 07-02-04 I don't need to go there.
 
@@ -217,7 +217,7 @@
 
 #Inkwell
 08-01-00 I could use this. Hopefully it won't spill in my pocket.
-08-01-01 In my line of work, it’s important to not like a complete fool.
+08-01-01 In my line of work, it’s important to not like a complete fool.			
 08-01-02 A small jar with black ink inside. It looks half empty.
 08-01-03 I am a poet, but I don't have anything to write with.
 08-01-04 I need to stop wasting time.
@@ -225,7 +225,7 @@
 #Desk and chairs
 08-02-00 There's no reason to do that.
 08-02-01 No one's there to talk to.
-08-02-02 These desk have not been used in a long time.
+08-02-02 These desk have not been used in a long time.			----------------------------------------------------------------------------------------------------------------------------
 08-02-03 There's nothing there to use.
 08-02-04 I don't need to go there.
 

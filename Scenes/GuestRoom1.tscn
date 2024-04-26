@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c0job4rllycko" path="res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png" id="2_3v4m4"]
 [ext_resource type="PackedScene" uid="uid://ws05o3o0fpcm" path="res://Scenes/Ghost.tscn" id="3_lmorj"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_o0kcn"]
-[ext_resource type="PackedScene" path="res://Scenes/Paper.tscn" id="6_d5430"]
+[ext_resource type="PackedScene" uid="uid://dgvcymxqaupu1" path="res://Scenes/Paper.tscn" id="6_d5430"]
 [ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="7_ghde3"]
 
 [node name="GuestRoom1" type="Node2D"]
@@ -22,6 +22,7 @@ texture = ExtResource("2_3v4m4")
 expand_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 265.0
@@ -42,11 +43,14 @@ layer = 2
 
 [node name="Ghost" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("3_lmorj")]
 position = Vector2(56, 173)
-CharacterID = "51"
+CharacterID = "01"
 
 [node name="back" parent="CanvasLayer2" instance=ExtResource("4_o0kcn")]
-position = Vector2(834, 88)
+position = Vector2(41, 587)
+rotation = -1.5708
+scale = Vector2(0.59, 0.59)
 traverse_path = "res://Scenes/RoomsHallway.tscn"
 
-[node name="Paper" parent="CanvasLayer2" instance=ExtResource("6_d5430")]
+[node name="Paper" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("6_d5430")]
 position = Vector2(105, 378)
+CharacterID = "02"

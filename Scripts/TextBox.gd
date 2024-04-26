@@ -5,12 +5,13 @@ extends CanvasLayer
 var dialogueTree
 var display
 var sigReciever
+var is_playing = false
 
 #the filepath constants and variables
 const filePath = "res://Dialogue/DialogueAll.txt"
 var RoomID = "00"
 #@onready var RootNode = $".."
-
+@onready var Next_label = get_node("TextBoxBackground/RichTextLabel/NextButton")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 #	var Room_Scene = get_node("/root/Node2D")
@@ -22,7 +23,9 @@ func _ready():
 	sigReciever = get_tree().get_nodes_in_group("Interactable")
 	if(sigReciever != null):
 		for connect in sigReciever:
-			connect.connect("DialogOut", change_displayed_dialogue)
+				connect.connect("DialogOut", change_displayed_dialogue)
+				
+				
 	else:
 		print("sigreciever is null")
 	if(Room_Scene != null):
@@ -69,8 +72,9 @@ func change_displayed_dialogue(CharacterID, InteractionID):
 	display.text = ""
 	if(newDialoge == null):
 		newDialoge = "error, dialoge is Null"
-	while(i < newDialoge.length()):
+	while((i < newDialoge.length()) and newDialoge !="error, dialoge is Null"):
 		display.text += newDialoge[i]
 		i =i +1
 		await get_tree().create_timer(0.01).timeout
+	
 	print("Text change")

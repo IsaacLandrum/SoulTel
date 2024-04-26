@@ -4,8 +4,8 @@ extends Node
 @export var canTraverse: bool = false
 @export var traverse_path: String
 
-var isHovering = false
 
+var isHovering = false
 var waiting = false
 var done = false
 var talkOff = 0
@@ -21,10 +21,14 @@ func _ready():
 
 func _input(event):
 	#print("In _input")
-   # Mouse in viewport coordinates.
-	if Input.is_action_pressed("mouse_click") && isHovering:
-		print("click")
-		interact() #takes action based on what action is selected
+	# Mouse in viewport coordinates.
+	if not waiting:
+		if Input.is_action_pressed("mouse_click") && isHovering:
+			print("click")
+			interact() #takes action based on what action is selected
+	elif Input.is_anything_pressed() && not Input.is_action_pressed("mouse_click"):
+		talkUpper()
+
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
@@ -45,6 +49,9 @@ func interact():
 	elif (currentAction == "TALK"):
 		print("TALKING")
 		DialogOut.emit(CharacterID, "01")
+		if(!done):
+			waiting = true
+		pass#TALK 
 		pass#TALK 
 	elif (currentAction == "EXAMINE"):
 		DialogOut.emit(CharacterID, "02")
@@ -75,7 +82,7 @@ func talkUpper():
 	if talkOff>3:
 		waiting = false
 	else:
-		DialogOut.emit(CharacterID, outputStr)
+		await DialogOut.emit(CharacterID, outputStr)
 		
 
 func _on_mouse_entered():

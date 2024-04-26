@@ -8,9 +8,11 @@ extends Node2D
 @onready var Examine = $"Early_UI/Action Wheel/Examine"
 @onready var Interactable = $Interactable
 @onready var Doorman = $Doorman
+@onready var Next_label = $"Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Next_label.visible = false
 	GameManager.initRoom1()
 	Traverse.connect("action", GameManager._on_room1_action)
 	Talk.connect("action", GameManager._on_room1_action)

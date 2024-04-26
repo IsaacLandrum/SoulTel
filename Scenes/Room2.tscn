@@ -75,7 +75,7 @@ polygon = PackedVector2Array(10, 90, 255, 127, 331, 46, 314, 24, 310, -77, 6, -8
 
 [node name="Door_To_Closet" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("6_wvr1d")
-CharacterID = "07"
+CharacterID = "08"
 canTraverse = true
 traverse_path = "res://Scenes/Closet.tscn"
 

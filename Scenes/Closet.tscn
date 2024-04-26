@@ -12,8 +12,9 @@ metadata/Room_Number = "08"
 
 [node name="Early_UI" parent="." instance=ExtResource("2_je1lx")]
 
-[node name="Inkwell" type="Node2D" parent="."]
+[node name="Inkwell" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("3_oogre")
+CharacterID = "01"
 
 [node name="TextureRect" type="TextureRect" parent="Inkwell"]
 offset_left = 269.0
@@ -26,8 +27,9 @@ expand_mode = 1
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inkwell/TextureRect"]
 polygon = PackedVector2Array(82, 47, 73, 49, 68, 53, 61, 91, 66, 94, 93, 95, 102, 92, 102, 65, 97, 49)
 
-[node name="back" parent="." instance=ExtResource("5_jeg7j")]
-position = Vector2(89, 391)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="back" parent="CanvasLayer" instance=ExtResource("5_jeg7j")]
 traverse_path = "res://Scenes/Room2.tscn"
 
 [connection signal="mouse_entered" from="Inkwell/TextureRect" to="Inkwell" method="_on_object_mouse_entered"]

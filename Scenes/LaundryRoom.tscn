@@ -18,8 +18,9 @@ expand_mode = 1
 
 [node name="Early_UI" parent="." instance=ExtResource("2_yiald")]
 
-[node name="BellhopTemp" type="Node2D" parent="."]
+[node name="BellhopTemp" type="Node2D" parent="." groups=["Interactable"]]
 script = ExtResource("3_8a8cg")
+CharacterID = "01"
 
 [node name="ColorRect" type="ColorRect" parent="BellhopTemp"]
 offset_left = 727.0
@@ -31,8 +32,12 @@ color = Color(1, 1, 1, 0)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BellhopTemp/ColorRect"]
 polygon = PackedVector2Array(42, 17, 124, 18, 123, 38, 114, 80, 99, 148, 90, 148, 91, 130, 73, 141, 69, 124, 65, 127, 63, 161, 35, 164, 27, 116, 20, 97, 24, 78, 23, 50, 17, 46, 19, 36, 33, 37)
 
-[node name="back" parent="." instance=ExtResource("5_rj2hn")]
-position = Vector2(144, 122)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="back" parent="CanvasLayer" instance=ExtResource("5_rj2hn")]
+position = Vector2(41, 587)
+rotation = -1.5708
+scale = Vector2(0.59, 0.59)
 traverse_path = "res://Scenes/Lobby.tscn"
 
 [connection signal="mouse_entered" from="BellhopTemp/ColorRect" to="BellhopTemp" method="_on_object_mouse_entered"]

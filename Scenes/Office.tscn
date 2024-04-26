@@ -21,9 +21,10 @@ offset_bottom = 469.0
 texture = ExtResource("3_1modm")
 expand_mode = 1
 
-[node name="Automaton" type="Node2D" parent="."]
+[node name="Automaton" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(733, 173)
 script = ExtResource("3_dyi5t")
+CharacterID = "01"
 
 [node name="TextureRect" type="ColorRect" parent="Automaton"]
 offset_left = -204.0
@@ -36,8 +37,12 @@ color = Color(1, 1, 1, 0)
 position = Vector2(58, 65.5)
 shape = SubResource("RectangleShape2D_3d8nb")
 
-[node name="back" parent="." instance=ExtResource("6_4tgyy")]
-position = Vector2(820, 92)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="back" parent="CanvasLayer" instance=ExtResource("6_4tgyy")]
+position = Vector2(41, 587)
+rotation = -1.5708
+scale = Vector2(0.59, 0.59)
 traverse_path = "res://Scenes/Lobby.tscn"
 
 [connection signal="mouse_entered" from="Automaton/TextureRect" to="Automaton" method="_on_object_mouse_entered"]

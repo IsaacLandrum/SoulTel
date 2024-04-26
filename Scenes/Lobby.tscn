@@ -95,8 +95,12 @@ visibility_layer = 1023
 position = Vector2(98.5, 77.5)
 shape = SubResource("RectangleShape2D_ckc5j")
 
-[node name="back" parent="." instance=ExtResource("7_2x6hw")]
-position = Vector2(822, 84)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="back" parent="CanvasLayer" instance=ExtResource("7_2x6hw")]
+position = Vector2(41, 587)
+rotation = -1.5708
+scale = Vector2(0.59, 0.59)
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 

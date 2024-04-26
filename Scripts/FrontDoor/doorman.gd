@@ -2,10 +2,10 @@ extends "res://Scripts/interactable.gd"
 
 signal doorman_complete
 
-
+@onready var Next_label = $"../Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func interact():
 	if (currentAction == "TAKE"):
@@ -15,9 +15,10 @@ func interact():
 		print("DOORMAN TALK")
 		emit_signal("doorman_complete")
 		DialogOut.emit(CharacterID, "01")
+		Next_label.visible = true
 		if(!done):
 			waiting = true
-		pass#TALK 
+		
 	elif (currentAction == "EXAMINE"):
 		DialogOut.emit(CharacterID, "02")
 		pass
@@ -54,5 +55,5 @@ func _input(event):
 			print("click")
 			interact() #takes action based on what action is selected
 	elif Input.is_anything_pressed() && not Input.is_action_pressed("mouse_click"):
-		talkUpper()
+		await talkUpper()
 

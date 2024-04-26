@@ -31,9 +31,10 @@
 [ext_resource type="Texture2D" uid="uid://b5t6uyrlm6vre" path="res://Assets/UI/wheel Icons/Icontraverse.png" id="17_a8g1c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hytr1"]
-size = Vector2(8.5961, 9.68228)
+size = Vector2(15.1548, 9.68228)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ugrxq"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4na05"]
+bg_color = Color(0, 0, 0, 0.623529)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_euyty"]
 
@@ -121,38 +122,38 @@ theme_override_fonts/normal_font = ExtResource("6_cg0sd")
 text = "Hello"
 
 [node name="NextButton" type="Node2D" parent="TextBox/TextBoxBackground/RichTextLabel"]
-position = Vector2(574, 133)
+position = Vector2(522, 137)
 scale = Vector2(1.60001, 1)
 script = ExtResource("7_2ptvx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextBox/TextBoxBackground/RichTextLabel/NextButton"]
-position = Vector2(-5.72205e-06, -2.38419e-07)
+position = Vector2(13.2149, 0)
 scale = Vector2(4.02972, 2.9875)
 shape = SubResource("RectangleShape2D_hytr1")
 one_way_collision_margin = 0.0
 
 [node name="NextLabel" type="RichTextLabel" parent="TextBox/TextBoxBackground/RichTextLabel/NextButton/CollisionShape2D"]
-offset_left = -4.06869
-offset_top = -4.76569
-offset_right = 138.931
-offset_bottom = 54.2343
+offset_left = -8.0
+offset_top = -7.0
+offset_right = 295.0
+offset_bottom = 54.0
 scale = Vector2(0.0548285, 0.165869)
 theme_override_fonts/normal_font = ExtResource("6_cg0sd")
-theme_override_font_sizes/normal_font_size = 35
-text = "    next"
+theme_override_font_sizes/normal_font_size = 36
+text = "   Next:(Any Key)"
 scroll_active = false
-autowrap_mode = 0
 
 [node name="Button" type="Button" parent="TextBox/TextBoxBackground/RichTextLabel/NextButton/CollisionShape2D"]
 show_behind_parent = true
-offset_left = -4.3427
-offset_top = -4.35147
-offset_right = 31.6573
-offset_bottom = 15.6485
+offset_left = -8.0
+offset_top = -6.0
+offset_right = 65.0
+offset_bottom = 14.0
 scale = Vector2(0.230721, 0.451047)
 theme = ExtResource("8_00vx1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_ugrxq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_4na05")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_euyty")
+disabled = true
 action_mode = 0
 
 [node name="DetailLeft" type="TextureRect" parent="TextBox"]

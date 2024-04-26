@@ -11,6 +11,7 @@ extends Node2D
 @onready var Use = $"Early_UI/Action Wheel/Use"
 @onready var Take = $"Early_UI/Action Wheel/Take"
 @onready var Examine = $"Early_UI/Action Wheel/Examine"
+@onready var Next_label = $"Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 
 var key_taken = false # Protects from sending action to Key if it has been freed
 
@@ -21,6 +22,7 @@ var key_info = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Next_label.visible =false
 	GameManager.initRoom2DeskZoom()
 	Traverse.connect("action", GameManager._on_room2_deskzoom_action)
 	Talk.connect("action", GameManager._on_room2_deskzoom_action)

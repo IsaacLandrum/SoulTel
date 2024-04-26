@@ -12,6 +12,7 @@ extends Node
 @onready var Paper = $"CanvasLayer2/Paper"
 
 @onready var LetterText = $"CanvasLayer/RichTextLabel"
+@onready var Next_label = $"Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 
 var paper_info = {
 	"name": "Paper",
@@ -20,6 +21,7 @@ var paper_info = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Next_label.visible =false
 	GameManager.initGuestRoom1()
 	Traverse.connect("action", GameManager._on_guestroom1_action)
 	Talk.connect("action", GameManager._on_guestroom1_action)
