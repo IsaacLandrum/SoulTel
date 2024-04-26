@@ -54,3 +54,15 @@ func _on_clerk_talk():
 	
 func _on_color_rect_mouse_exited():
 	pass # Replace with function body.
+	
+func ChangeDeskClerk(target:String)-> void:
+	$"AnimationPlayer/CanvasLayer/BGClerk".set_size(Vector2(917,476))
+	$"AnimationPlayer".play("Dissolve")
+	await get_tree().create_timer(1.0).timeout
+	if _on_animation_player_animation_finished():
+		Background.texture=load(target)
+		
+		
+		
+func _on_animation_player_animation_finished():
+	return true

@@ -16,6 +16,7 @@ func changeGameScene(target:String) -> void:
 	if _on_animation_player_animation_finished():
 		get_tree().change_scene_to_file(target)
 		$AnimationPlayer.play_backwards("Dissolve")
+		
 
 
 func _on_animation_player_animation_finished():

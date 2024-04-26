@@ -1,13 +1,52 @@
-[gd_scene load_steps=10 format=3 uid="uid://rsfovv0gqe4v"]
+[gd_scene load_steps=14 format=3 uid="uid://rsfovv0gqe4v"]
 
 [ext_resource type="Script" path="res://Scripts/Reception/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
 [ext_resource type="Texture2D" uid="uid://b8diqo6w5crut" path="res://Assets/Reception/deskzoominlines empy.png" id="2_j5m2p"]
+[ext_resource type="Texture2D" uid="uid://e8xa6booiy5w" path="res://Assets/Reception/deskzoominlinesclerk.png" id="2_wqgwr"]
 [ext_resource type="PackedScene" uid="uid://blr1dtw8y0kvs" path="res://Scenes/key.tscn" id="4_ma5du"]
 [ext_resource type="Script" path="res://Scripts/Reception/Clerk.gd" id="4_q6x8t"]
 [ext_resource type="Script" path="res://Scripts/Reception/Bell.gd" id="5_cd2f1"]
 [ext_resource type="AudioStream" uid="uid://neta2xhl6bea" path="res://Assets/Sound/bell_ding_SOUL.mp3" id="6_wbuwr"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]
+
+[sub_resource type="Animation" id="Animation_wp0y1"]
+resource_name = "RESET"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lo7m1"]
+resource_name = "Dissolve"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52bvk"]
+_data = {
+"Dissolve": SubResource("Animation_lo7m1"),
+"RESET": SubResource("Animation_wp0y1")
+}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haqat"]
 size = Vector2(92.5, 70.5)
@@ -15,6 +54,23 @@ size = Vector2(92.5, 70.5)
 [node name="Room2-deskZoom" type="Node2D"]
 script = ExtResource("1_6gbbj")
 metadata/Room_Number = "02"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_52bvk")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="AnimationPlayer"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="AnimationPlayer/CanvasLayer"]
+color = Color(1, 1, 1, 0)
+
+[node name="BGClerk" type="TextureRect" parent="AnimationPlayer/CanvasLayer"]
+offset_right = 917.0
+offset_bottom = 469.0
+mouse_filter = 2
+texture = ExtResource("2_wqgwr")
+expand_mode = 1
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 917.0
@@ -68,6 +124,7 @@ CharacterID = "05"
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
 
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="mouse_entered" from="Clerk/ColorRect" to="Clerk" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Clerk/ColorRect" to="Clerk" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="Bell/ColorRect" to="Bell" method="_on_object_mouse_entered"]
