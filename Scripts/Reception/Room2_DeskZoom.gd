@@ -47,6 +47,7 @@ func _on_key_pickup():
 func _on_bell_rung():
 	ChangeDeskClerk("res://Assets/Reception/deskzoominlinesclerk.png")
 	Clerk.visible = true
+	
 
 func _on_clerk_talk():
 	if(!GameManager.puzzle2.conditions.keyTaken):

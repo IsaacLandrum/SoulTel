@@ -12,6 +12,7 @@ func changeMenuScene(target: String) -> void:
 func changeGameScene(target:String) -> void:
 	$FadeRect.set_size(Vector2(917,476))
 	$"AnimationPlayer".play("Dissolve")
+	SoundManager.play_rand_footstep()
 	await get_tree().create_timer(1.0).timeout
 	if _on_animation_player_animation_finished():
 		get_tree().change_scene_to_file(target)

@@ -1,6 +1,8 @@
 extends Node
 
 
+
+
 var click_sound_player = AudioStreamPlayer.new()
 var lobby_music = AudioStreamPlayer.new()
 var locked_door =AudioStreamPlayer.new()
@@ -9,7 +11,12 @@ var unlock_sound = AudioStreamPlayer.new()
 var door_jiggle = AudioStreamPlayer.new()
 var key_pickup = AudioStreamPlayer.new()
 var generic_pickup = AudioStreamPlayer.new()
-var footsteps= AudioStreamPlayer.new()
+var footsteps1= AudioStreamPlayer.new()
+var footsteps2= AudioStreamPlayer.new()
+var footsteps3= AudioStreamPlayer.new()
+var longsteps= AudioStreamPlayer.new()
+
+var footsArr=[footsteps1,footsteps2,footsteps3]
 
 func _ready():
 	add_child(click_sound_player)
@@ -28,8 +35,14 @@ func _ready():
 	key_pickup.stream = preload("res://Assets/Sound/key_pickup.mp3")
 	add_child(generic_pickup)
 	generic_pickup.stream = preload("res://Assets/Sound/generic_item_pickup.mp3")
-	add_child(footsteps)
-	footsteps.stream = preload("res://Assets/Sound/generic_item_pickup.mp3")
+	add_child(footsteps1)
+	footsteps1.stream = preload("res://Assets/Sound/footsteps/footsteps_1.mp3")
+	add_child(footsteps2)
+	footsteps2.stream = preload("res://Assets/Sound/footsteps/footsteps_2.mp3")
+	add_child(footsteps3)
+	footsteps3.stream = preload("res://Assets/Sound/footsteps/footsteps_3.mp3")
+	add_child(longsteps)
+	longsteps.stream = preload("res://Assets/Sound/footsteps/longfootstep.mp3")
 	
 	
 func play_click_sound():
@@ -49,4 +62,11 @@ func play_key_pickup():
 	key_pickup.play()
 func play_generic_pickup():
 	generic_pickup.play()
+func play_rand_footstep():
+	var curr_sound = footsArr[randi()% footsArr.size()]
+	curr_sound.play()
+func play_long_steps():
+	longsteps.play()
+	
+	
 
