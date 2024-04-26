@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cx5uef2gxhuli"]
+[gd_scene load_steps=9 format=3 uid="uid://cx5uef2gxhuli"]
 
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_h5xoy"]
 [ext_resource type="Script" path="res://Scripts/FrontDoor/main.gd" id="1_mggkj"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/FrontDoor/doorman.gd" id="3_kud8m"]
 [ext_resource type="PackedScene" uid="uid://cx1m7wtquih6e" path="res://Scenes/doorman.tscn" id="3_rhsla"]
 [ext_resource type="Script" path="res://Scripts/FrontDoor/FrontDoor.gd" id="6_fnusd"]
+[ext_resource type="AudioStream" uid="uid://bmpv86wl510es" path="res://Assets/FrontDoor/Soultel_Intro.mp3" id="8_ygpdk"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mggkj")
@@ -104,6 +105,10 @@ visible = false
 position = Vector2(958, 562)
 color = Color(1, 1, 0.270588, 0.12549)
 polygon = PackedVector2Array(0, 0, -49, 50, -29, 67, 40, 84, 58, 77, 51, 16)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ygpdk")
+autoplay = true
 
 [connection signal="mouse_entered" from="Doorman/ColorRect" to="Doorman" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Doorman/ColorRect" to="Doorman" method="_on_mouse_exited"]

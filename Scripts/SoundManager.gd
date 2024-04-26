@@ -25,7 +25,7 @@ func _ready():
 	add_child(title_music)
 	title_music.stream = preload("res://Assets/Themes/soultel_title_perchance_demo.mp3")
 	add_child(lobby_music)
-	lobby_music.stream = preload("res://Assets/Soultel_Lobby_w_Filter.mp3")
+	lobby_music.stream = preload("res://Assets/Sound/Soultel_Lobby_hi_filter.mp3")
 	add_child(locked_door)
 	locked_door.stream= preload("res://Assets/Sound/locked_door_jiggle.mp3")
 	add_child(error_sfx)
