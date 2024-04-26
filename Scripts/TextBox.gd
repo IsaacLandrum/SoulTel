@@ -6,6 +6,7 @@ var dialogueTree
 var display
 var sigReciever
 var is_playing = false
+var is_talking = false
 
 #the filepath constants and variables
 const filePath = "res://Dialogue/DialogueAll.txt"
@@ -65,16 +66,19 @@ func Load_Room_Dialogue():
 
 #changes the dipslayed dialogue in the text-box
 func change_displayed_dialogue(CharacterID, InteractionID):
-	print("change display dialogue")
-	var ID = RoomID+CharacterID+InteractionID
-	var newDialoge = dialogueTree.Search(ID.to_int())
-	var i = 0
-	display.text = ""
-	if(newDialoge == null):
-		newDialoge = "error, dialoge is Null"
-	while((i < newDialoge.length()) and newDialoge !="error, dialoge is Null"):
-		display.text += newDialoge[i]
-		i =i +1
-		await get_tree().create_timer(0.01).timeout
+	if(!(is_talking)):
+		is_talking = true
+		print("change display dialogue")
+		var ID = RoomID+CharacterID+InteractionID
+		var newDialoge = dialogueTree.Search(ID.to_int())
+		var i = 0
+		display.text = ""
+		if(newDialoge == null):
+			newDialoge = "error, dialoge is Null"
+		while((i < newDialoge.length()) and newDialoge !="error, dialoge is Null"):
+				display.text += newDialoge[i]
+				i =i +1
+				await get_tree().create_timer(0.01).timeout
+		is_talking = false
 	
 	print("Text change")

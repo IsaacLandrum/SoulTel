@@ -15,7 +15,7 @@
 [ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="6_cg0sd"]
 [ext_resource type="Texture2D" uid="uid://brol56sug3oa5" path="res://Assets/UI/portrait.png" id="6_mq00r"]
 [ext_resource type="Script" path="res://Scripts/NextButton.gd" id="7_2ptvx"]
-[ext_resource type="Theme" uid="uid://dp23s4nxg40mf" path="res://Assets/Themes/nextButton theme.tres" id="8_00vx1"]
+[ext_resource type="Theme" path="res://Assets/Themes/nextButton theme.tres" id="8_00vx1"]
 [ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer.gd" id="10_boe5s"]
 [ext_resource type="Script" path="res://Scripts/InventorySlots/InventoryContainer2.gd" id="12_dasif"]
 [ext_resource type="Texture2D" uid="uid://chwqnkua8gg47" path="res://Assets/UI/wheel Icons/iconexamine.png" id="13_hnpvo"]
