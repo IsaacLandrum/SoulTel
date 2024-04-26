@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ry4ajdopx6dg"]
 
-[ext_resource type="Texture2D" uid="uid://bff7o3tgov514" path="res://Assets/MainMenu/Main Menu.jpg" id="1_20jls"]
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_jw8nb"]
+[ext_resource type="Texture2D" uid="uid://chmff5jdiep8i" path="res://Assets/MainMenu/title screen  final.png" id="2_fj1fe"]
 [ext_resource type="Theme" uid="uid://dbk3ema4l3234" path="res://Assets/Themes/new_theme.tres" id="3_r54ij"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5vws"]
@@ -14,16 +14,16 @@ script = ExtResource("1_jw8nb")
 [node name="MainMenuBg" type="TextureRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("1_20jls")
+texture = ExtResource("2_fj1fe")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
 modulate = Color(1, 1, 0.113725, 0.741176)
 self_modulate = Color(1, 1, 0.298039, 0.721569)
-offset_left = 1002.0
-offset_top = 36.0
-offset_right = 1010.0
-offset_bottom = 44.0
+offset_left = 926.0
+offset_top = 19.0
+offset_right = 937.0
+offset_bottom = 33.0
 scale = Vector2(12.1489, 2.69091)
 theme = ExtResource("3_r54ij")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_a5vws")
