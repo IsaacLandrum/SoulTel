@@ -75,7 +75,7 @@
 #Sofa
 02-07-00 It might be to big to put in my pockets.
 02-07-01 I can't talk to a sofa.
-02-07-02 It looks comfortbal but I don't need to sit at this time.------------------------------------------------------------------------------------------------------------------------------------------------------
+02-07-02 It looks comfortbal but I don't need to sit at this time.
 02-07-03  I can't do anything here
 02-07-04 I don't need to sit right now.
 
