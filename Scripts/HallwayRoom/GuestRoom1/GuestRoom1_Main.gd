@@ -14,6 +14,8 @@ extends Node
 @onready var LetterText = $"CanvasLayer/RichTextLabel"
 @onready var Next_label = $"Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 
+
+
 var paper_info = {
 	"name": "Paper",
 	"icon_path": "res://Assets/RoomsHallway/GuestRoom1/paper empty.png"
@@ -48,4 +50,4 @@ func ghost_talked():
 	GameManager._on_puzzle3_ghost_talked()
 
 func paper_returned():
-	LetterText.visible = true
+	SceneTransition.changeMenuScene("Scenes/final_text_scroll.tscn")
