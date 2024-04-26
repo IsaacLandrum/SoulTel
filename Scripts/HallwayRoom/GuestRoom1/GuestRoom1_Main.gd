@@ -45,9 +45,22 @@ func paper_pickup():
 	GameManager._on_puzzle3_paperPickup()
 
 func ghost_talked():
-	Ghost.queue_free()
-	Background.texture = load("res://Assets/RoomsHallway/GuestRoom1/guestroom(paper).png")
+	#Ghost.queue_free()
+	PaperAppear("res://Assets/RoomsHallway/GuestRoom1/guestroom(paper).png")
 	GameManager._on_puzzle3_ghost_talked()
 
 func paper_returned():
 	SceneTransition.changeMenuScene("Scenes/final_text_scroll.tscn")
+	
+	
+func PaperAppear(target:String)-> void:
+	$"PaperAppearLayer/BGPaper".set_size(Vector2(917,469))
+	$"PaperAppearLayer/AnimationPlayer".play("Appear")
+	await get_tree().create_timer(1.0).timeout
+	if _on_animation_player_animation_finished():
+		$Background.texture=load(target)
+		$"PaperAppearLayer/BGPaper".visible = false
+
+
+func _on_animation_player_animation_finished():
+	return true # Replace with function body.

@@ -1,12 +1,50 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsmfxv4hpchxw"]
+[gd_scene load_steps=12 format=3 uid="uid://dsmfxv4hpchxw"]
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_2npwd"]
 [ext_resource type="Script" path="res://Scripts/HallwayRoom/GuestRoom1/GuestRoom1_Main.gd" id="1_3f4aq"]
 [ext_resource type="Texture2D" uid="uid://c0job4rllycko" path="res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png" id="2_3v4m4"]
 [ext_resource type="PackedScene" uid="uid://ws05o3o0fpcm" path="res://Scenes/Ghost.tscn" id="3_lmorj"]
+[ext_resource type="Texture2D" uid="uid://6ifiiupafdiu" path="res://Assets/RoomsHallway/GuestRoom1/guestroom(paper).png" id="4_5odxk"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="4_o0kcn"]
 [ext_resource type="PackedScene" uid="uid://dgvcymxqaupu1" path="res://Scenes/Paper.tscn" id="6_d5430"]
 [ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="7_ghde3"]
+
+[sub_resource type="Animation" id="Animation_34uin"]
+resource_name = "Appear"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PaperAppearLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0jmhh"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PaperAppearLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0cehj"]
+_data = {
+"Appear": SubResource("Animation_34uin"),
+"RESET": SubResource("Animation_0jmhh")
+}
 
 [node name="GuestRoom1" type="Node2D"]
 script = ExtResource("1_3f4aq")
@@ -14,12 +52,30 @@ metadata/Room_Number = "05"
 
 [node name="Early_UI" parent="." instance=ExtResource("1_2npwd")]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(917, 469)
 offset_right = 917.0
 offset_bottom = 469.0
 texture = ExtResource("2_3v4m4")
 expand_mode = 1
+
+[node name="PaperAppearLayer" type="CanvasLayer" parent="."]
+
+[node name="BGPaper" type="TextureRect" parent="PaperAppearLayer"]
+clip_contents = true
+offset_right = 917.0
+offset_bottom = 469.0
+texture = ExtResource("4_5odxk")
+expand_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PaperAppearLayer"]
+root_node = NodePath("../../Background")
+libraries = {
+"": SubResource("AnimationLibrary_0cehj")
+}
+
+[node name="CanvasModulate" type="CanvasModulate" parent="PaperAppearLayer"]
+color = Color(1, 1, 1, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
@@ -42,16 +98,19 @@ However, while Connors is visiting, Theodora is there working on the automaton. 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 2
 
-[node name="Ghost" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("3_lmorj")]
-modulate = Color(1, 1, 1, 0.568627)
-position = Vector2(265, 99)
-CharacterID = "01"
-
 [node name="back" parent="CanvasLayer2" instance=ExtResource("4_o0kcn")]
 traverse_path = "res://Scenes/RoomsHallway.tscn"
 
 [node name="Paper" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("6_d5430")]
 position = Vector2(105, 378)
 CharacterID = "02"
+
+[node name="Ghost" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("3_lmorj")]
+modulate = Color(1, 1, 1, 0.568627)
+z_index = 1000
+position = Vector2(265, 99)
+CharacterID = "01"
+
+[connection signal="animation_finished" from="PaperAppearLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="Early_UI"]
