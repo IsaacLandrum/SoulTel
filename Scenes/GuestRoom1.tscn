@@ -22,7 +22,6 @@ texture = ExtResource("2_3v4m4")
 expand_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
 offset_left = 265.0
