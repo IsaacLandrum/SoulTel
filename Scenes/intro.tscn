@@ -1,0 +1,71 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0s74cccb4ld6"]
+
+[ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="1_cgupp"]
+[ext_resource type="Script" path="res://Scripts/Transition.gd" id="1_hhcna"]
+
+[sub_resource type="Animation" id="Animation_1gicq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_transition/CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nrs37"]
+resource_name = "Dissolve"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Scene_transition/CanvasLayer/CanvasModulate:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gp75u"]
+_data = {
+"Dissolve": SubResource("Animation_nrs37"),
+"RESET": SubResource("Animation_1gicq")
+}
+
+[node name="Intro" type="Node2D"]
+
+[node name="Scene_transition" type="CanvasLayer" parent="."]
+script = ExtResource("1_hhcna")
+
+[node name="ColorRect" type="ColorRect" parent="Scene_transition"]
+offset_right = 1152.0
+offset_bottom = 647.0
+color = Color(0.0509804, 0.0156863, 0.0509804, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Scene_transition"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Scene_transition/CanvasLayer"]
+color = Color(1, 1, 1, 0)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Scene_transition/CanvasLayer/CanvasModulate"]
+offset_left = 118.0
+offset_top = 106.0
+offset_right = 988.0
+offset_bottom = 556.0
+theme_override_fonts/normal_font = ExtResource("1_cgupp")
+theme_override_fonts/bold_font = ExtResource("1_cgupp")
+theme_override_font_sizes/normal_font_size = 35
+text = "In Soultel you take on the role of a hitman (Arthur) who has met his untimely demise. It’s not over for him however. You find yourself in a hotel for those who are having trouble moving on to the after life. You Have been summoned here by the operator of the hotel to help these souls move on in exchange to return to your old life. In this demo you are helping one ghost named Vincent."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gp75u")
+}
