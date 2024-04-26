@@ -9,6 +9,7 @@ var unlock_sound = AudioStreamPlayer.new()
 var door_jiggle = AudioStreamPlayer.new()
 var key_pickup = AudioStreamPlayer.new()
 var generic_pickup = AudioStreamPlayer.new()
+var footsteps= AudioStreamPlayer.new()
 
 func _ready():
 	add_child(click_sound_player)
@@ -27,6 +28,9 @@ func _ready():
 	key_pickup.stream = preload("res://Assets/Sound/key_pickup.mp3")
 	add_child(generic_pickup)
 	generic_pickup.stream = preload("res://Assets/Sound/generic_item_pickup.mp3")
+	add_child(footsteps)
+	footsteps.stream = preload("res://Assets/Sound/generic_item_pickup.mp3")
+	
 	
 func play_click_sound():
 	click_sound_player.play()
