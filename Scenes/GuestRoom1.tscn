@@ -22,8 +22,10 @@ texture = ExtResource("2_3v4m4")
 expand_mode = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
 offset_left = 265.0
 offset_top = 19.0
 offset_right = 768.0
@@ -41,7 +43,8 @@ However, while Connors is visiting, Theodora is there working on the automaton. 
 layer = 2
 
 [node name="Ghost" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("3_lmorj")]
-position = Vector2(56, 173)
+modulate = Color(1, 1, 1, 0.568627)
+position = Vector2(265, 99)
 CharacterID = "01"
 
 [node name="back" parent="CanvasLayer2" instance=ExtResource("4_o0kcn")]
