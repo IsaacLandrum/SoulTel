@@ -19,8 +19,9 @@ func interact():
 		SoundManager.play_error_sfx() # USE
 	elif (currentAction == "TRAVERSE"):
 		if(GameManager.puzzle3.conditions.clothesWorn):
-			DialogOut.emit(CharacterID, "04")
 			print("Traversing to Closet")
 			SceneTransition.changeGameScene("res://Scenes/Closet.tscn")
 		else:
 			print("EMPLOYEES ONLY YOU CANNOT PASS")
+			DialogOut.emit(CharacterID, "04")
+			
