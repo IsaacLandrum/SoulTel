@@ -10,7 +10,7 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameManager.initLaundry()
-	Next_label.visible =false
+	#Next_label.visible =false
 	Traverse.connect("action", GameManager._on_laundry_action)
 	Talk.connect("action", GameManager._on_laundry_action)
 	Use.connect("action", GameManager._on_laundry_action)

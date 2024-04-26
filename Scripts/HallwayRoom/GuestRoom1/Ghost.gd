@@ -1,7 +1,7 @@
 extends "res://Scripts/interactable.gd"
 
 @onready var UI = $"../../Early_UI"
-@onready var Next_label = $"../Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
+@onready var Next_label = $"../../Early_UI/TextBox/TextBoxBackground/RichTextLabel/NextButton"
 
 signal ghost_talked
 signal paper_returned

@@ -40,9 +40,6 @@ shape = SubResource("RectangleShape2D_3d8nb")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("6_4tgyy")]
-position = Vector2(41, 587)
-rotation = -1.5708
-scale = Vector2(0.59, 0.59)
 traverse_path = "res://Scenes/Lobby.tscn"
 
 [connection signal="mouse_entered" from="Automaton/TextureRect" to="Automaton" method="_on_object_mouse_entered"]

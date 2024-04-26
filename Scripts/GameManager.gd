@@ -46,7 +46,7 @@ func initRoom2DeskZoom():
 		"clerk" : get_node("/root/Room2-deskZoom/Clerk"),
 		"bell" : get_node("/root/Room2-deskZoom/Bell"),
 		"key" : get_node("/root/Room2-deskZoom/Key"),
-		"back" : get_node("/root/Room2-deskZoom/Back")
+		"back" : get_node("/root/Room2-deskZoom/CanvasLayer/Back")
 	}
 
 func initLobby():
@@ -54,13 +54,13 @@ func initLobby():
 		"door_to_hallway" : get_node("/root/Room3/DoorToHallway"),
 		"door_to_laundry" : get_node("/root/Room3/DoorToOffice"),
 		"door_to_office" : get_node("/root/Room3/DoorToLaundry"),
-		"back" : get_node("/root/Room3/back")
+		"back" : get_node("/root/Room3/CanvasLayer/back")
 	}
 
 func initOffice():
 	puzzle3["nodes"] = {
 		"automaton" : get_node("/root/Office/Automaton"),
-		"back" : get_node("/root/Office/back")
+		"back" : get_node("/root/Office/CanvasLayer/back")
 	}
 	
 	
@@ -69,7 +69,7 @@ func initHallway():
 		"room1" : get_node("/root/RoomsHallway/GuestRoom1"),
 		"room2" : get_node("/root/RoomsHallway/GuestRoom2"),
 		"room3" : get_node("/root/RoomsHallway/GuestRoom3"),
-		"back" : get_node("/root/RoomsHallway/back")
+		"back" : get_node("/root/RoomsHallway/CanvasLayer/back")
 	}
 	
 func initGuestRoom1():
@@ -81,14 +81,14 @@ func initGuestRoom1():
 func initLaundry():
 	puzzle3["nodes"] = {
 		"bellhop" : get_node("/root/LaundryRoom/BellhopTemp"),
-		"back" : get_node("/root/LaundryRoom/back")
+		"back" : get_node("/root/LaundryRoom/CanvasLayer/back")
 	}
 	print("Init Laundry")
 
 func initCloset():
 	puzzle3["nodes"] = {
 		"inkwell" : get_node("/root/Closet/Inkwell"),
-		"back" : get_node("/root/Closet/back")
+		"back" : get_node("/root/Closet/CanvasLayer/back")
 	}
 	
 '''

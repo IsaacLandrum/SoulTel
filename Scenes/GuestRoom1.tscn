@@ -46,11 +46,10 @@ position = Vector2(56, 173)
 CharacterID = "01"
 
 [node name="back" parent="CanvasLayer2" instance=ExtResource("4_o0kcn")]
-position = Vector2(41, 587)
-rotation = -1.5708
-scale = Vector2(0.59, 0.59)
 traverse_path = "res://Scenes/RoomsHallway.tscn"
 
 [node name="Paper" parent="CanvasLayer2" groups=["Interactable"] instance=ExtResource("6_d5430")]
 position = Vector2(105, 378)
 CharacterID = "02"
+
+[editable path="Early_UI"]

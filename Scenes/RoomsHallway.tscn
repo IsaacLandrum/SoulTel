@@ -75,9 +75,6 @@ polygon = PackedVector2Array(-580.153, 861.148, -580.153, -1059.51, 997.582, -11
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("4_0ksxc")]
-position = Vector2(41, 587)
-rotation = -1.5708
-scale = Vector2(0.59, 0.59)
 traverse_path = "res://Scenes/Lobby.tscn"
 
 [connection signal="mouse_entered" from="GuestRoom1/ColorRect" to="GuestRoom1" method="_on_object_mouse_entered"]

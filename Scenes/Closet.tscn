@@ -35,6 +35,8 @@ polygon = PackedVector2Array(24, 5, 19, 8, 20, 12, 16, 14, 16, 17, 11, 20, 10, 3
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("5_jeg7j")]
+position = Vector2(69, 554)
+rotation = -3.14159
 traverse_path = "res://Scenes/Room2.tscn"
 
 [connection signal="mouse_entered" from="Inkwell/ColorRect" to="Inkwell" method="_on_object_mouse_entered"]

@@ -64,9 +64,6 @@ CharacterID = "04"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Back" parent="CanvasLayer" instance=ExtResource("7_w1243")]
-position = Vector2(41, 587)
-rotation = -1.5708
-scale = Vector2(0.59, 0.59)
 CharacterID = "05"
 canTraverse = true
 traverse_path = "res://Scenes/Room2.tscn"
