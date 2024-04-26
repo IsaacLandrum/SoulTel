@@ -5,7 +5,7 @@ extends "res://Scripts/interactable.gd"
 
 var bellhop_info = {
 	"name": "Bellhop",
-	"icon_path": "res://Assets/Laundry/temp_shirt.png"
+	"icon_path": "res://Assets/Laundry/uniform icon final.png"
 }
 	
 func interact():
