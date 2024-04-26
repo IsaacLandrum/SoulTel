@@ -38,7 +38,8 @@ func initRoom2():
 	puzzle2["nodes"] = {
 		"door_to_lobby" : get_node("/root/Node2D/Door_To_Lobby"),
 		"zoom" : get_node("/root/Node2D/Desk_Zoom"),
-		"closet" : get_node("/root/Node2D/Door_To_Closet")
+		"closet" : get_node("/root/Node2D/Door_To_Closet"),
+		"sofa" : get_node("/root/Node2D/Sofa")
 	}
 	
 func initRoom2DeskZoom():
@@ -108,6 +109,7 @@ func _on_room2_action(action):
 	puzzle2.nodes.door_to_lobby.setCurrentAction(action)
 	puzzle2.nodes.zoom.setCurrentAction(action)
 	puzzle2.nodes.closet.setCurrentAction(action)
+	puzzle2.nodes.sofa.setCurrentAction(action)
 
 func _on_room2_deskzoom_action(action):
 	puzzle2.nodes.clerk.setCurrentAction(action)
