@@ -80,6 +80,7 @@ func talkUpper():
 		outputStr = str(OutputCalc)
 	
 	if talkOff>3:
+	#talkoff upper limit is 18
 		waiting = false
 	else:
 		await DialogOut.emit(CharacterID, outputStr)

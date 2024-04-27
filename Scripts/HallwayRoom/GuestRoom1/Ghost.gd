@@ -31,3 +31,19 @@ func interact():
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		DialogOut.emit(CharacterID,"04")
 		pass
+func talkUpper():
+	print(talkOff)
+	talkOff+=1
+	var OutputCalc = talkOff*5+1
+	print(OutputCalc)
+	var outputStr
+	
+	if(OutputCalc < 10):
+		outputStr = "0"+str(OutputCalc)
+	else:
+		outputStr = str(OutputCalc)
+	
+	if talkOff>8:
+		waiting = false
+	else:
+		await DialogOut.emit(CharacterID, outputStr)
