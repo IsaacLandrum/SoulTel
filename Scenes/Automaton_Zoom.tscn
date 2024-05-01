@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://vh7jtf8cxwqv"]
+
+[ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_7j3gg"]
+[ext_resource type="Texture2D" uid="uid://cfatojh213hxe" path="res://Assets/Office/automaton_zoom/automaton plain.png" id="2_qa804"]
+[ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="3_kn7oe"]
+
+[node name="AutomatonZoom" type="Node2D"]
+
+[node name="Early_UI" parent="." instance=ExtResource("1_7j3gg")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 917.0
+offset_bottom = 469.0
+texture = ExtResource("2_qa804")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="back" parent="CanvasLayer" instance=ExtResource("3_kn7oe")]
+traverse_path = "res://Scenes/Office.tscn"

@@ -25,6 +25,7 @@ expand_mode = 1
 position = Vector2(733, 173)
 script = ExtResource("3_dyi5t")
 CharacterID = "01"
+canTraverse = true
 
 [node name="TextureRect" type="ColorRect" parent="Automaton"]
 offset_left = -204.0

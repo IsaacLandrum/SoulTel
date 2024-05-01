@@ -33,4 +33,4 @@ func interact():
 			UI.update_inventory_ui()
 	elif (currentAction == "TRAVERSE" && canTraverse):
 		DialogOut.emit(CharacterID,"04")
-		pass
+		SceneTransition.changeGameScene("res://Scenes/Automaton_Zoom.tscn")
