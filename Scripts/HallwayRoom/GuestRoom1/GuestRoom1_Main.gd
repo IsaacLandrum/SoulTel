@@ -41,7 +41,7 @@ func paper_pickup():
 	Inventory.add_item(paper_info)
 	UI.update_inventory_ui()
 	Paper.queue_free()
-	Background.texture = load("res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png")
+	$Background.texture = load("res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png")
 	GameManager._on_puzzle3_paperPickup()
 
 func ghost_talked():
