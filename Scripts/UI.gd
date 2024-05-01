@@ -35,3 +35,11 @@ func _on_bellhop_worn():
 	update_inventory_ui()
 
 
+
+
+func _on_examine_mouse_entered():
+	$"Action Wheel/Examine/ExamineHover".show() # Replace with function body.
+
+
+func _on_examine_mouse_exited():
+	$"Action Wheel/Examine/ExamineHover".hide() # Replace with function body.
