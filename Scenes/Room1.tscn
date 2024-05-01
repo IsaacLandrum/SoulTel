@@ -27,11 +27,6 @@ offset_bottom = 467.0
 texture = ExtResource("2_1814g")
 expand_mode = 1
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 122.0
-offset_bottom = 40.0
-text = "Outside Hotel"
-
 [node name="Doorman" parent="." groups=["Interactable"] instance=ExtResource("3_rhsla")]
 script = ExtResource("3_kud8m")
 CharacterID = "01"

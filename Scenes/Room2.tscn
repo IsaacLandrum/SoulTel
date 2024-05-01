@@ -27,11 +27,6 @@ offset_bottom = 476.0
 texture = ExtResource("2_w6cvb")
 expand_mode = 1
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 65.0
-offset_bottom = 38.0
-text = "Lobby"
-
 [node name="Early_UI" parent="." instance=ExtResource("2_omolg")]
 offset_top = -1.0
 offset_bottom = -1.0
