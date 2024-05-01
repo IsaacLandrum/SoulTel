@@ -24,11 +24,6 @@ texture = ExtResource("1_qsiau")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_right = 503.0
-offset_bottom = 50.0
-text = "ROOM 3"
-
 [node name="Early_UI" parent="." instance=ExtResource("2_yolvg")]
 offset_left = -10.0
 offset_top = -277.0
