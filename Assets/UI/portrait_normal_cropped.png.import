@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvvcd2p43aju"
-path="res://.godot/imported/temp_shirt.png-c60e034ad64fbc8dddf83fd586992eaa.ctex"
+uid="uid://dwy6vr11qpvpi"
+path="res://.godot/imported/portrait_normal_cropped.png-9745be6f7ea1850d477dc6e025a69ba2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Laundry/temp_shirt.png"
-dest_files=["res://.godot/imported/temp_shirt.png-c60e034ad64fbc8dddf83fd586992eaa.ctex"]
+source_file="res://Assets/UI/portrait_normal_cropped.png"
+dest_files=["res://.godot/imported/portrait_normal_cropped.png-9745be6f7ea1850d477dc6e025a69ba2.ctex"]
 
 [params]
 

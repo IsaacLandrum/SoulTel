@@ -13,7 +13,7 @@ var inventory_slots = []
 func _ready():
 	# Assuming you have three TextureRect nodes as slots
 	if(GameManager.puzzle3.conditions.clothesWorn == true):
-		portrait.texture = load("res://Assets/Laundry/temp_shirt.png")
+		portrait.texture = load("res://Assets/UI/portrait_disguise_cropped.png")
 	Inventory.connect("bellhop_worn", _on_bellhop_worn)
 	inventory_slots.append(Slot1)
 	inventory_slots.append(Slot2)
@@ -27,10 +27,10 @@ func update_inventory_ui():
 		else:
 			inventory_slots[i].texture = null
 	if(GameManager.puzzle3.conditions.clothesWorn == true):
-		portrait.texture = load("res://Assets/Laundry/temp_shirt.png")
+		portrait.texture = load("res://Assets/UI/portrait_disguise_cropped.png")
 
 func _on_bellhop_worn():
-	portrait.texture = load("res://Assets/Laundry/temp_shirt.png")
+	portrait.texture = load("res://Assets/UI/portrait_disguise_cropped.png")
 	Inventory.remove_item(Inventory.get_selected_item())
 	update_inventory_ui()
 

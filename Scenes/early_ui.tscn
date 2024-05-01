@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bnthdd172ijpy" path="res://Assets/UI/items box.png" id="4_4yrhr"]
 [ext_resource type="Texture2D" uid="uid://xtk52t6s7xfr" path="res://Assets/UI/textbox.png" id="4_nj16y"]
 [ext_resource type="Texture2D" uid="uid://b5w32aaa437ji" path="res://Assets/UI/detailleft.png" id="5_l6mn0"]
-[ext_resource type="Texture2D" uid="uid://d25bbhiv67s7p" path="res://Assets/UI/pfp temp.jpg" id="5_yo2sw"]
 [ext_resource type="Texture2D" uid="uid://c8hve0be40eae" path="res://Assets/sculpting/UI_design.png" id="5_yp6hw"]
 [ext_resource type="Texture2D" uid="uid://d02xbgkh3g677" path="res://Assets/UI/detailright.png" id="6_151yf"]
 [ext_resource type="FontFile" uid="uid://dalfk1r16ptq3" path="res://Fonts/Apple Chancery.ttf" id="6_cg0sd"]
@@ -27,6 +26,7 @@
 [ext_resource type="Script" path="res://Scripts/Actions/Use.gd" id="15_717pr"]
 [ext_resource type="Texture2D" uid="uid://75fjxjokldpm" path="res://Assets/UI/wheel Icons/icontalk.png" id="16_mox0v"]
 [ext_resource type="Script" path="res://Scripts/Actions/Take.gd" id="16_utkvd"]
+[ext_resource type="Texture2D" uid="uid://dwy6vr11qpvpi" path="res://Assets/UI/portrait_normal_cropped.png" id="17_2jpc0"]
 [ext_resource type="Script" path="res://Scripts/Actions/Examine.gd" id="17_a4vhy"]
 [ext_resource type="Texture2D" uid="uid://b5t6uyrlm6vre" path="res://Assets/UI/wheel Icons/Icontraverse.png" id="17_a8g1c"]
 
@@ -327,7 +327,7 @@ scale = Vector2(1.02, 0.998891)
 [node name="Sprite2D" type="Sprite2D" parent="Inventory/portrait container"]
 position = Vector2(120.588, 137.152)
 scale = Vector2(0.42647, 0.420466)
-texture = ExtResource("5_yo2sw")
+texture = ExtResource("17_2jpc0")
 
 [node name="TextureRect" type="TextureRect" parent="Inventory/portrait container"]
 layout_mode = 2
