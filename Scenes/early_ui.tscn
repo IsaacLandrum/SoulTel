@@ -362,8 +362,20 @@ script = ExtResource("13_paq7k")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Traverse"]
 polygon = PackedVector2Array(1105, 392, 1053, 439, 1002, 425, 1001, 360, 1061, 364)
 
+[node name="TraverseHover" type="Polygon2D" parent="Action Wheel/Traverse"]
+visible = false
+position = Vector2(1053, 440)
+color = Color(1, 1, 0.270588, 0.12549)
+polygon = PackedVector2Array(0, -1, 52, -48, 8, -76, -52, -80, -51, -16)
+
 [node name="Talk" type="Area2D" parent="Action Wheel"]
 script = ExtResource("14_8xvhn")
+
+[node name="TalkHover" type="Polygon2D" parent="Action Wheel/Talk"]
+visible = false
+position = Vector2(995, 419)
+color = Color(1, 1, 0.270588, 0.12549)
+polygon = PackedVector2Array(0, -1, -3, -59, -54, -48, -93, -21, -44, 31)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Talk"]
 polygon = PackedVector2Array(992, 361, 995, 420, 951, 450, 901, 397, 942, 371)
@@ -371,11 +383,23 @@ polygon = PackedVector2Array(992, 361, 995, 420, 951, 450, 901, 397, 942, 371)
 [node name="Use" type="Area2D" parent="Action Wheel"]
 script = ExtResource("15_717pr")
 
+[node name="UseHover" type="Polygon2D" parent="Action Wheel/Use"]
+visible = false
+position = Vector2(950, 468)
+color = Color(1, 1, 0.270588, 0.12549)
+polygon = PackedVector2Array(0, 0, -6, -14, -54, -57, -83, -13, -86, 40, -15, 40)
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Use"]
 polygon = PackedVector2Array(896, 411, 944, 454, 950, 468, 936, 508, 864, 508, 867, 454)
 
 [node name="Take" type="Area2D" parent="Action Wheel"]
 script = ExtResource("16_utkvd")
+
+[node name="TakeHover" type="Polygon2D" parent="Action Wheel/Take"]
+visible = false
+position = Vector2(932, 515)
+color = Color(1, 1, 0.270588, 0.12549)
+polygon = PackedVector2Array(0, 0, -69, 1, -59, 61, -30, 96, 22, 44)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Take"]
 polygon = PackedVector2Array(932, 515, 866, 516, 874, 575, 902, 606, 954, 554)
@@ -386,6 +410,12 @@ script = ExtResource("17_a4vhy")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Action Wheel/Examine"]
 polygon = PackedVector2Array(957, 561, 912, 613, 931, 629, 998, 646, 1016, 639, 1009, 578)
 
+[node name="ExamineHover" type="Polygon2D" parent="Action Wheel/Examine"]
+visible = false
+position = Vector2(958, 562)
+color = Color(1, 1, 0.270588, 0.12549)
+polygon = PackedVector2Array(0, 0, -49, 50, -29, 67, 40, 84, 58, 77, 51, 16)
+
 [connection signal="pressed" from="TextBox/TextBoxBackground/RichTextLabel/NextButton/CollisionShape2D/Button" to="TextBox/TextBoxBackground/RichTextLabel/NextButton" method="_on_button_pressed"]
 [connection signal="mouse_entered" from="Inventory/InventoryContainer" to="Inventory/InventoryContainer" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Inventory/InventoryContainer" to="Inventory/InventoryContainer" method="_on_object_mouse_exited"]
@@ -394,7 +424,17 @@ polygon = PackedVector2Array(957, 561, 912, 613, 931, 629, 998, 646, 1016, 639, 
 [connection signal="mouse_entered" from="Inventory/InventoryContainer3" to="Inventory/InventoryContainer3" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Inventory/InventoryContainer3" to="Inventory/InventoryContainer3" method="_on_object_mouse_exited"]
 [connection signal="input_event" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_traverse_clicked"]
+[connection signal="mouse_entered" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Action Wheel/Traverse" to="Action Wheel/Traverse" method="_on_mouse_exited"]
 [connection signal="input_event" from="Action Wheel/Talk" to="Action Wheel/Talk" method="_on_talk_clicked"]
+[connection signal="mouse_entered" from="Action Wheel/Talk" to="Action Wheel/Talk" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Action Wheel/Talk" to="Action Wheel/Talk" method="_on_mouse_exited"]
 [connection signal="input_event" from="Action Wheel/Use" to="Action Wheel/Use" method="_on_use_clicked"]
+[connection signal="mouse_entered" from="Action Wheel/Use" to="Action Wheel/Use" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Action Wheel/Use" to="Action Wheel/Use" method="_on_mouse_exited"]
 [connection signal="input_event" from="Action Wheel/Take" to="Action Wheel/Take" method="_on_take_clicked"]
+[connection signal="mouse_entered" from="Action Wheel/Take" to="Action Wheel/Take" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Action Wheel/Take" to="Action Wheel/Take" method="_on_mouse_exited"]
 [connection signal="input_event" from="Action Wheel/Examine" to="Action Wheel/Examine" method="_on_examine_clicked"]
+[connection signal="mouse_entered" from="Action Wheel/Examine" to="." method="_on_examine_mouse_entered"]
+[connection signal="mouse_exited" from="Action Wheel/Examine" to="." method="_on_examine_mouse_exited"]
