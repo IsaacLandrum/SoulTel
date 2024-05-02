@@ -23,7 +23,8 @@ var puzzle3 = {
 		"clothesTaken" : false,
 		"clothesWorn" : false,
 		"inkwellTaken" : false,
-		"inkwellUsed" : false
+		"inkwellUsed" : false,
+		"writtenPaperPickedUp" : false
 	}
 }
 
@@ -63,7 +64,12 @@ func initOffice():
 		"automaton" : get_node("/root/Office/Automaton"),
 		"back" : get_node("/root/Office/CanvasLayer/back")
 	}
-	
+
+func initOfficeZoomed():
+	puzzle3["nodes"] = {
+		"automaton" : get_node("/root/AutomatonZoom/CanvasLayer2/Automaton"),
+		"back" : get_node("/root/AutomatonZoom/CanvasLayer/back")
+	}
 	
 func initHallway():
 	puzzle2["nodes"] = {
@@ -143,7 +149,7 @@ Puzzle 3
 '''
 
 func _on_guestroom1_action(action):
-	if (!puzzle3.conditions.ghostTalked || puzzle3Complete()):
+	if (!puzzle3.conditions.ghostTalked || getPuzzle3Status() == 0):
 		puzzle3.nodes.ghost.setCurrentAction(action)
 	if (!puzzle3.conditions.paperPickedUp):
 		puzzle3.nodes.paper.setCurrentAction(action)
@@ -160,7 +166,14 @@ func _on_puzzle3_paper_used():
 func _on_puzzle3_inkwell_used():
 	puzzle3.conditions.inkwellUsed = true
 
+func _on_puzzle3_written_paper_picked_up():
+	puzzle3.conditions.writtenPaperPickedUp = true
+
 func _on_office_action(action):
+	puzzle3.nodes.automaton.setCurrentAction(action)
+	puzzle3.nodes.back.setCurrentAction(action)
+	
+func _on_office_zoomed_action(action):
 	puzzle3.nodes.automaton.setCurrentAction(action)
 	puzzle3.nodes.back.setCurrentAction(action)
 
@@ -175,5 +188,14 @@ func _on_closet_action(action):
 	puzzle3.nodes.inkwell.setCurrentAction(action)
 	puzzle3.nodes.back.setCurrentAction(action)
 
-func puzzle3Complete():
-	return puzzle3.conditions.paperUsed && puzzle3.conditions.inkwellUsed
+func getPuzzle3Status():
+	if puzzle3.conditions.paperUsed && puzzle3.conditions.inkwellUsed && puzzle3.conditions.writtenPaperPickedUp:
+		return 0
+	if puzzle3.conditions.paperUsed && puzzle3.conditions.inkwellUsed && !puzzle3.conditions.writtenPaperPickedUp:
+		return 1
+	if puzzle3.conditions.paperUsed && !puzzle3.conditions.inkwellUsed:
+		return 2
+	if !puzzle3.conditions.paperUsed && puzzle3.conditions.inkwellUsed:
+		return 3
+	if !puzzle3.conditions.paperUsed && !puzzle3.conditions.inkwellUsed:
+		return 4
