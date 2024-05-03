@@ -61,7 +61,6 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Note_1/Note1"]
 position = Vector2(34.3019, 14.5202)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_87pbi")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

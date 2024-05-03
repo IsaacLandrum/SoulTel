@@ -105,7 +105,6 @@ color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Portrait/ColorRect"]
 position = Vector2(1370.66, 670.814)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_a7sm5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

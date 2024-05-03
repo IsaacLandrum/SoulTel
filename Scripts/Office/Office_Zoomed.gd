@@ -19,6 +19,7 @@ var paper_writing_info = {
 var paperWritten = false
 
 func _ready():
+	Next_label.visible = false
 	GameManager.initOfficeZoomed()
 	updateBackground()
 	Traverse.connect("action", onAnyAction)
