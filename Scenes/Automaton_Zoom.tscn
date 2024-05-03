@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://vh7jtf8cxwqv"]
+[gd_scene load_steps=11 format=3 uid="uid://dmq78af56r808"]
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_7j3gg"]
 [ext_resource type="Script" path="res://Scripts/Office/Office_Zoomed.gd" id="1_7si31"]

@@ -54,6 +54,7 @@ func updateBackground():
 func automatonWrite():
 	$"AutomatonWriteLayer/BGWritten".visible = true
 	$"AutomatonWriteLayer/AnimationPlayer".play("new_animation")
+	SoundManager.play_automaton()
 	await get_tree().create_timer(4.0).timeout
 	Background.texture = load("res://Assets/Office/automaton_zoom/automaton with paper and inkwell and writing.png")
 	$"AutomatonWriteLayer/BGWritten".visible = false

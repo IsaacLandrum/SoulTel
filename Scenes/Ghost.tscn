@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0c2bo"]
 size = Vector2(347, 394)
 
-[node name="Interactable" type="Node2D"]
+[node name="Interactable2" type="Node2D"]
 script = ExtResource("1_x0hsd")
 
 [node name="TextureRect" type="TextureRect" parent="."]
