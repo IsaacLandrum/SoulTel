@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cx5uef2gxhuli"]
+[gd_scene load_steps=11 format=3 uid="uid://cx5uef2gxhuli"]
 
 [ext_resource type="PackedScene" uid="uid://cdywgqgu0ed41" path="res://Scenes/interactable.tscn" id="1_h5xoy"]
 [ext_resource type="Script" path="res://Scripts/FrontDoor/main.gd" id="1_mggkj"]
@@ -7,7 +7,11 @@
 [ext_resource type="Script" path="res://Scripts/FrontDoor/doorman.gd" id="3_kud8m"]
 [ext_resource type="PackedScene" uid="uid://cx1m7wtquih6e" path="res://Scenes/doorman.tscn" id="3_rhsla"]
 [ext_resource type="Script" path="res://Scripts/FrontDoor/FrontDoor.gd" id="6_fnusd"]
+[ext_resource type="Script" path="res://Scripts/FrontDoor/Wall_Lamp.gd" id="7_6fyq6"]
 [ext_resource type="AudioStream" uid="uid://bmpv86wl510es" path="res://Assets/FrontDoor/Soultel_Intro.mp3" id="8_ygpdk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t00t6"]
+size = Vector2(41, 66)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_mggkj")
@@ -52,10 +56,28 @@ traverse_path = "res://Scenes/Room2.tscn"
 [node name="ColorRect" parent="Interactable" index="0"]
 offset_left = 1.0
 offset_right = 39.0
+scale = Vector2(1.03, 1.04066)
 color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" parent="Interactable/ColorRect" index="0"]
-position = Vector2(18, 18)
+position = Vector2(17.9612, 18.7382)
+scale = Vector2(0.869064, 0.746093)
+
+[node name="Wall_Lamp" type="Node2D" parent="." groups=["Interactable"]]
+position = Vector2(560, 103)
+script = ExtResource("7_6fyq6")
+CharacterID = "03"
+
+[node name="ColorRect" type="ColorRect" parent="Wall_Lamp"]
+offset_left = -14.0
+offset_top = -6.0
+offset_right = 26.0
+offset_bottom = 60.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall_Lamp/ColorRect"]
+position = Vector2(19.5, 32)
+shape = SubResource("RectangleShape2D_t00t6")
 
 [node name="Early_UI" parent="." instance=ExtResource("2_gj1gp")]
 offset_top = -1.0
@@ -77,6 +99,8 @@ autoplay = true
 
 [connection signal="mouse_entered" from="Doorman/ColorRect" to="Doorman" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Doorman/ColorRect" to="Doorman" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Wall_Lamp/ColorRect" to="Wall_Lamp" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Wall_Lamp/ColorRect" to="Wall_Lamp" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="Early_UI/Action Wheel/Examine" to="Early_UI/Action Wheel/Examine" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Early_UI/Action Wheel/Examine" to="Early_UI/Action Wheel/Examine" method="_on_mouse_exited"]
 

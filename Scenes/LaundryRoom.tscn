@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://o741tsp07klt"]
+[gd_scene load_steps=8 format=3 uid="uid://o741tsp07klt"]
 
 [ext_resource type="Script" path="res://Scripts/Laundry/laundry_Main.gd" id="1_nu54p"]
 [ext_resource type="Texture2D" uid="uid://c6cbiaaxuwb8t" path="res://Assets/Laundry/laundryroomClothes with uniform.png" id="2_et51d"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_yiald"]
 [ext_resource type="Script" path="res://Scripts/Laundry/BellhopTemp.gd" id="3_8a8cg"]
+[ext_resource type="Script" path="res://Scripts/Laundry/Washbin_Table.gd" id="5_nff46"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="5_rj2hn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmwi7"]
+size = Vector2(506, 210)
 
 [node name="LaundryRoom" type="Node2D"]
 script = ExtResource("1_nu54p")
-metadata/Room_number = "07"
+metadata/Room_Number = "07"
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 917.0
@@ -32,6 +36,22 @@ color = Color(1, 1, 1, 0)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="BellhopTemp/ColorRect"]
 polygon = PackedVector2Array(42, 17, 124, 18, 123, 38, 114, 80, 99, 148, 90, 148, 91, 130, 73, 141, 69, 124, 65, 127, 63, 161, 35, 164, 27, 116, 20, 97, 24, 78, 23, 50, 17, 46, 19, 36, 33, 37)
 
+[node name="Washbin_Table" type="Node2D" parent="." groups=["Interactable"]]
+position = Vector2(253, 169)
+script = ExtResource("5_nff46")
+CharacterID = "02"
+
+[node name="ColorRect" type="ColorRect" parent="Washbin_Table"]
+offset_left = -143.0
+offset_top = -28.0
+offset_right = 364.0
+offset_bottom = 183.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Washbin_Table/ColorRect"]
+position = Vector2(253, 105)
+shape = SubResource("RectangleShape2D_jmwi7")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("5_rj2hn")]
@@ -39,3 +59,5 @@ traverse_path = "res://Scenes/Lobby.tscn"
 
 [connection signal="mouse_entered" from="BellhopTemp/ColorRect" to="BellhopTemp" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="BellhopTemp/ColorRect" to="BellhopTemp" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Washbin_Table/ColorRect" to="Washbin_Table" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Washbin_Table/ColorRect" to="Washbin_Table" method="_on_object_mouse_exited"]

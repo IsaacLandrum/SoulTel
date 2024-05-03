@@ -25,3 +25,7 @@ func _ready():
 		
 func _on_inkwell_taken():
 	Background.texture = load("res://Assets/Closet/backofficetransparent no ink.png")
+
+
+func _on_object_mouse_entered():
+	pass # Replace with function body.

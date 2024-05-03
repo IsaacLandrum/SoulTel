@@ -20,11 +20,11 @@
 01-02-08 The Doorman has opened the door.
 
 #Wall lamp
-01-03-00 I should probley leave this alone.
-01-03-01 I don't think it will talk back.
+01-03-00 I should probably leave this alone.
+01-03-01 "Lights out"... [wouldn't it be great if we could turn lamps off by talking to them]?
 01-03-02 An old metal oil lamp, it's small but somehow gives off plenty of light.
 01-03-03 I don't think I need to mess with this.
-01-03-04 Why am I wasteing time? I cant do that.
+01-03-04 Why am I wasting time? I can't do that.
 
 #Reception room (room id 02)
 
@@ -74,10 +74,10 @@
 
 #Sofa
 02-07-00 It might be to big to put in my pockets.
-02-07-01 I can't talk to a sofa.
-02-07-02 It looks comfortbal but I don't need to sit at this time.
-02-07-03  I can't do anything here
-02-07-04 I don't need to sit right now.
+02-07-01 I don’t think it can say anything back... [The sofa will remember that].
+02-07-02 It looks comfortable but I don't need to sit at this time. 
+02-07-03 I can't do anything with this.
+02-07-04 It’s impolite to put shoes on furniture...[you somehow sense relief coming from the sofa]
 
 #Closet Door
 02-08-00 I have no reason to take a door.
@@ -110,11 +110,12 @@
 03-03-04 You Traverse into the laundry room.
 
 #Fireplace
-03-04-00 I don't want to burn myself.
+03-04-00 [you attempt to grab the fire barehanded, as the fire crackles back you give up on your foolish attemp of harnessing it]
 03-04-01 I wonder what it would say if it could talk back?
-03-04-02 A big fireplace in the center of the room. It's strange but I don't seem to feel any heat coming from it.----------------------------------------------------------------------------------------------------------
-03-04-03 There's nothing to do here.
-03-04-04 I would burn myself if I went in there.
+03-04-02 A big fireplace in the center of the room. It's strange… I don't seem to feel any heat coming from it.
+03-04-03 The temperature is perfectly fine right now.
+03-04-04 I don't want to burn myself.
+
 
 #Hallway (room id 4)
 
@@ -151,10 +152,10 @@
 
 #Portrait
 04-05-00 I looks nice but I don't think I should take it.
-04-05-01 They say pictures have many words but I don't think they are talking.				----------------------------------------------------------------------------------------------------------------------
-04-05-02 They seem to be stairing right into my soul.
+04-05-01 They say pictures can say a thousand words but I don't think is particularly talkative.
+04-05-02 Their eyes seem to be staring right into my soul....[you find yourself staring back for minutes]
 04-05-03 I can't seem to do anything here.
-04-05-04 I should stop wasting time.
+04-05-04 It would be a little cramped.
 
 #Guest room 1 (room id 5)
 
@@ -177,14 +178,14 @@
 #Blank paper
 05-02-00 Put the paper into your pocket.
 05-02-01 I can't talk to that.
-05-02-02 A blank piece of paper, this may come I may need this later.
+05-02-02 An empty ripped-out page from a journal. In the corner, the letters “TH” are embossed, in addition in light ink, a vine of little flowers details the bottom edge of the paper.
 05-02-03 I don't think I can do that.
 05-02-04 Nope
 
 #Office-6
 
-#Automatron
-06-01-00 I think I should leave this here.
+#Automatron Zoomed out
+06-01-00 I dont think i can take it 
 06-01-01 It has a mouth but it won't talk back.
 06-01-02 It somesort of automatic writing machine but its looks to be missing paper and ink.
 06-01-03 
@@ -196,6 +197,13 @@
 06-02-02		-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 06-02-03
 06-02-04
+#Automatrom Zoomed in
+
+06-03-00 I think I should leave this here.
+06-03-01 It has a mouth but it won't talk back.
+06-03-02 It somesort of automatic writing machine but its looks to be missing paper and ink.
+06-03-03 
+06-03-04 I'm not sure what I'm trying to do.
 
 #Laundy Room-7
 
@@ -208,10 +216,11 @@
 
 #Washbin area(pretty much the whole room)
 07-02-00 There's nothing there I need.
-07-02-01 No one to talk to.
-07-02-02 This place may have been state of the art at one time.			------------------------------------------------------------------------------------------------------------------
-07-02-03 No need, my cloths are clean. 
-07-02-04 I don't need to go there.
+07-02-01 It’s just me in here. (at least I hope so)
+07-02-02 This place may have been state of the art at one time, before I was born that is.
+07-02-03 No need, my clothes are clean. 
+07-02-04 I dont think I should step over the Housekeeper's hard work.
+
 
 #Closet-8
 
@@ -225,8 +234,9 @@
 #Desk and chairs
 08-02-00 There's no reason to do that.
 08-02-01 No one's there to talk to.
-08-02-02 These desk have not been used in a long time.			----------------------------------------------------------------------------------------------------------------------------
-08-02-03 There's nothing there to use.
-08-02-04 I don't need to go there.
+08-02-02 So much dust… These desks have not been used in a long time. I guess they will stay that way for much longer. 
+08-02-03 [You consider moving the chairs down and sitting. You quickly reconsider after realizing you'd be covered in cobweds after you're done ]
+08-02-04 I don't need to go there... too many spiders.
+
 
 

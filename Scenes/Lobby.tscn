@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bf7bryyno0cxu"]
+[gd_scene load_steps=11 format=3 uid="uid://bf7bryyno0cxu"]
 
 [ext_resource type="Script" path="res://Scripts/Lobby/Lobby_Main.gd" id="1_p655h"]
 [ext_resource type="Texture2D" uid="uid://bfws00kfvh1ll" path="res://Assets/Lobby/lobbycolors.png" id="1_qsiau"]
@@ -7,9 +7,13 @@
 [ext_resource type="Script" path="res://Scripts/Lobby/DoorToOffice.gd" id="4_8ens5"]
 [ext_resource type="Script" path="res://Scripts/Lobby/DoorToLaundry.gd" id="5_up15s"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_2x6hw"]
+[ext_resource type="Script" path="res://Scripts/Lobby/Fireplace.gd" id="7_u76uf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckc5j"]
 size = Vector2(199, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymdte"]
+size = Vector2(44.6859, 51.5181)
 
 [node name="Room3" type="Node2D"]
 script = ExtResource("1_p655h")
@@ -90,6 +94,20 @@ visibility_layer = 1023
 position = Vector2(98.5, 77.5)
 shape = SubResource("RectangleShape2D_ckc5j")
 
+[node name="Fireplace" type="Node2D" parent="." groups=["Interactable"]]
+position = Vector2(394, 371)
+script = ExtResource("7_u76uf")
+CharacterID = "04"
+
+[node name="ColorRect" type="ColorRect" parent="Fireplace"]
+offset_right = 66.0
+offset_bottom = 40.0
+color = Color(0.823529, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fireplace/ColorRect"]
+position = Vector2(32.984, 20.5001)
+shape = SubResource("RectangleShape2D_ymdte")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("7_2x6hw")]
@@ -102,3 +120,5 @@ traverse_path = "res://Scenes/Room2.tscn"
 [connection signal="mouse_exited" from="DoorToOffice/ColorRect" to="DoorToOffice" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="DoorToLaundry/ColorRect" to="DoorToLaundry" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="DoorToLaundry/ColorRect" to="DoorToLaundry" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Fireplace/ColorRect" to="Fireplace" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Fireplace/ColorRect" to="Fireplace" method="_on_object_mouse_exited"]

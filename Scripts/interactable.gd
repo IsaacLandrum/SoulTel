@@ -52,7 +52,6 @@ func interact():
 		if(!done):
 			waiting = true
 		pass#TALK 
-		pass#TALK 
 	elif (currentAction == "EXAMINE"):
 		DialogOut.emit(CharacterID, "02")
 		pass

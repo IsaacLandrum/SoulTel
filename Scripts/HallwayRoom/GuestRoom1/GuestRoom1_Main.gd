@@ -42,7 +42,7 @@ func paper_pickup():
 	UI.update_inventory_ui()
 	Paper.queue_free()
 	GameManager._on_puzzle3_paperPickup()
-	PaperAppear("res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png")
+	PaperDissAppear("res://Assets/RoomsHallway/GuestRoom1/guest_room_lines color.png")
 
 func ghost_talked():
 	#Ghost.queue_free()
@@ -52,7 +52,7 @@ func paper_returned():
 	SceneTransition.changeMenuScene("Scenes/final_text_scroll.tscn")
 	
 	
-func PaperAppear(target:String)-> void:
+func PaperDissAppear(target:String)-> void:
 	$"PaperAppearLayer/BGPaper".set_size(Vector2(917,469))
 	$"PaperAppearLayer/AnimationPlayer".play("Appear")
 	await get_tree().create_timer(1.0).timeout

@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cmtnr3ljq3nlm"]
+[gd_scene load_steps=8 format=3 uid="uid://cmtnr3ljq3nlm"]
 
 [ext_resource type="Script" path="res://Scripts/Closet/Closet.gd" id="1_r88ct"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="2_je1lx"]
 [ext_resource type="Texture2D" uid="uid://btrrpdesr42f1" path="res://Assets/Closet/backofficetransparent colors.png" id="2_mkhjh"]
 [ext_resource type="Script" path="res://Scripts/Closet/Inkwell.gd" id="3_oogre"]
+[ext_resource type="Script" path="res://Scripts/Closet/DeskChair.gd" id="5_g3ae6"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="5_jeg7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s41aj"]
+size = Vector2(230, 167)
 
 [node name="Closet" type="Node2D"]
 script = ExtResource("1_r88ct")
@@ -32,6 +36,22 @@ color = Color(1, 1, 1, 0)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Inkwell/ColorRect"]
 polygon = PackedVector2Array(24, 5, 19, 8, 20, 12, 16, 14, 16, 17, 11, 20, 10, 33, 13, 35, 30, 39, 45, 32, 42, 18, 33, 11, 33, 6, 27, 4)
 
+[node name="DeskChair" type="Node2D" parent="." groups=["Interactable"]]
+position = Vector2(6, 367)
+script = ExtResource("5_g3ae6")
+CharacterID = "02"
+
+[node name="ColorRect" type="ColorRect" parent="DeskChair"]
+offset_left = -7.0
+offset_top = -69.0
+offset_right = 220.0
+offset_bottom = 94.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskChair/ColorRect"]
+position = Vector2(115, 80.5)
+shape = SubResource("RectangleShape2D_s41aj")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("5_jeg7j")]
@@ -40,3 +60,5 @@ traverse_path = "res://Scenes/Room2.tscn"
 
 [connection signal="mouse_entered" from="Inkwell/ColorRect" to="Inkwell" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Inkwell/ColorRect" to="Inkwell" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="DeskChair/ColorRect" to="DeskChair" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="DeskChair/ColorRect" to="DeskChair" method="_on_object_mouse_exited"]

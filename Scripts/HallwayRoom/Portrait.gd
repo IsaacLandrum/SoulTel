@@ -9,7 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
+	
 func interact():
 	if (currentAction == "TAKE"):
 		SoundManager.play_error_sfx()
@@ -31,3 +31,6 @@ func interact():
 		SoundManager.play_error_sfx()
 		DialogOut.emit(CharacterID, "04")
 		pass
+
+
+ # Replace with function body.

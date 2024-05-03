@@ -28,7 +28,6 @@ func interact():
 		await get_tree().create_timer(1.8).timeout
 
 		emit_signal("bell_rung")
-		
 		pass # USE
 	elif (currentAction == "TRAVERSE"):
 		DialogOut.emit(CharacterID, "04")

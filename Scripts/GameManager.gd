@@ -32,7 +32,8 @@ var puzzle3 = {
 func initRoom1():
 	puzzle1["nodes"] = {
 		"doorman" : get_node("/root/Node2D/Doorman"),
-		"door" : get_node("/root/Node2D/Interactable")
+		"door" : get_node("/root/Node2D/Interactable"),
+		"Wall_Lamp": get_node("/root/Node2D/Wall_Lamp")
 	}
 
 func initRoom2():
@@ -56,7 +57,8 @@ func initLobby():
 		"door_to_hallway" : get_node("/root/Room3/DoorToHallway"),
 		"door_to_laundry" : get_node("/root/Room3/DoorToOffice"),
 		"door_to_office" : get_node("/root/Room3/DoorToLaundry"),
-		"back" : get_node("/root/Room3/CanvasLayer/back")
+		"back" : get_node("/root/Room3/CanvasLayer/back"),
+		"Fireplace": get_node("/root/Room3/Fireplace")
 	}
 
 func initOffice():
@@ -76,6 +78,7 @@ func initHallway():
 		"room1" : get_node("/root/RoomsHallway/GuestRoom1"),
 		"room2" : get_node("/root/RoomsHallway/GuestRoom2"),
 		"room3" : get_node("/root/RoomsHallway/GuestRoom3"),
+		"Portrait": get_node("/root/RoomsHallway/Portrait"),
 		"back" : get_node("/root/RoomsHallway/CanvasLayer/back")
 	}
 	
@@ -88,14 +91,16 @@ func initGuestRoom1():
 func initLaundry():
 	puzzle3["nodes"] = {
 		"bellhop" : get_node("/root/LaundryRoom/BellhopTemp"),
-		"back" : get_node("/root/LaundryRoom/CanvasLayer/back")
+		"back" : get_node("/root/LaundryRoom/CanvasLayer/back"),
+		"Washbin_Table": get_node("/root/LaundryRoom/Washbin_Table")
 	}
 	print("Init Laundry")
 
 func initCloset():
 	puzzle3["nodes"] = {
 		"inkwell" : get_node("/root/Closet/Inkwell"),
-		"back" : get_node("/root/Closet/CanvasLayer/back")
+		"back" : get_node("/root/Closet/CanvasLayer/back"),
+		"DeskChair": get_node("/root/Closet/DeskChair")
 	}
 	
 '''
@@ -104,6 +109,7 @@ Puzzle 1
 func _on_room1_action(action):
 	puzzle1.nodes.door.setCurrentAction(action)
 	puzzle1.nodes.doorman.setCurrentAction(action)
+	puzzle1.nodes.Wall_Lamp.setCurrentAction(action)
 
 func _on_puzzle1_doormanComplete():
 	puzzle1.conditions.doormanComplete = true
@@ -136,12 +142,14 @@ func _on_lobby_action(action):
 	puzzle2.nodes.door_to_laundry.setCurrentAction(action)
 	puzzle2.nodes.door_to_office.setCurrentAction(action)
 	puzzle2.nodes.back.setCurrentAction(action)
+	puzzle2.nodes.Fireplace.setCurrentAction(action)
 
 func _on_hallway_action(action):
 	puzzle2.nodes.room1.setCurrentAction(action)
 	puzzle2.nodes.room2.setCurrentAction(action)
 	puzzle2.nodes.room3.setCurrentAction(action)
 	puzzle2.nodes.back.setCurrentAction(action)
+	puzzle2.nodes.Portrait.setCurrentAction(action)
 	
 	
 '''
@@ -180,6 +188,7 @@ func _on_office_zoomed_action(action):
 func _on_laundry_action(action):
 	puzzle3.nodes.bellhop.setCurrentAction(action)
 	puzzle3.nodes.back.setCurrentAction(action)
+	puzzle3.nodes.Washbin_Table.setCurrentAction(action)
 
 func _on_clothes_taken():
 	puzzle3.conditions.clothesTaken = true
@@ -187,6 +196,7 @@ func _on_clothes_taken():
 func _on_closet_action(action):
 	puzzle3.nodes.inkwell.setCurrentAction(action)
 	puzzle3.nodes.back.setCurrentAction(action)
+	puzzle3.nodes.DeskChair.setCurrentAction(action)
 
 func getPuzzle3Status():
 	if puzzle3.conditions.paperUsed && puzzle3.conditions.inkwellUsed && puzzle3.conditions.writtenPaperPickedUp:

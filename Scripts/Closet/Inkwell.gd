@@ -29,9 +29,9 @@ func interact():
 	elif (currentAction == "USE"):
 		DialogOut.emit(CharacterID, "03")
 		SoundManager.play_error_sfx()
+		pass
 		
-	elif (currentAction == "TRAVERSE" && canTraverse):
+	elif (currentAction == "TRAVERSE"):
 		DialogOut.emit(CharacterID, "04")
 		print("Traversing")
-		SoundManager.play_lobby_music()
-		SceneTransition.changeGameScene(traverse_path)
+		pass
