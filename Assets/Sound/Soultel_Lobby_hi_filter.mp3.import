@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Soultel_Lobby_hi_filter.mp3-fddf1d3169a63a16c
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
