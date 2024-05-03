@@ -13,10 +13,12 @@ func _process(delta):
 	await get_tree().create_timer(10).timeout
 	$"CanvasLayer/skipInstructions".visible= true
 	if Input.is_anything_pressed():
-		SceneTransition.changeMenuScene("res://Scenes/Main Menu.tscn")
+		SceneTransition.changeMenuScene("res://Scenes/Room1.tscn")
+		SoundManager.stop_title_music()
 
 
 func _on_animation_player_animation_finished():
 	print("animation finished")
 func _on_timer_timeout():
-	SceneTransition.changeMenuScene("res://Scenes/Main Menu.tscn")
+	SceneTransition.changeMenuScene("res://Scenes/Room1.tscn")
+	SoundManager.stop_title_music()

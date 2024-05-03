@@ -229,7 +229,7 @@ scroll_active = false
 [node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 25.0
+wait_time = 28.0
 one_shot = true
 
 [connection signal="animation_finished" from="CanvasLayer/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

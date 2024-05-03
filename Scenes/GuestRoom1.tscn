@@ -15,14 +15,14 @@ length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../PaperAppearLayer/CanvasModulate:color")
+tracks/0/path = NodePath("../PaperAppearLayer/BGPaper:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 1.1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_0jmhh"]
@@ -30,14 +30,14 @@ resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../PaperAppearLayer/CanvasModulate:color")
+tracks/0/path = NodePath("../PaperAppearLayer/BGPaper:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0cehj"]
@@ -73,9 +73,6 @@ root_node = NodePath("../../Background")
 libraries = {
 "": SubResource("AnimationLibrary_0cehj")
 }
-
-[node name="CanvasModulate" type="CanvasModulate" parent="PaperAppearLayer"]
-color = Color(1, 1, 1, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 visible = false
