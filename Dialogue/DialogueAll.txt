@@ -21,7 +21,7 @@
 
 #Wall lamp
 01-03-00 I should probably leave this alone.
-01-03-01 "Lights out"... [wouldn't it be great if we could turn lamps off by talking to them]?
+01-03-01 "Lights out"... [wouldn't it be great if we could turn lamps off by talking to them?]
 01-03-02 An old metal oil lamp, it's small but somehow gives off plenty of light.
 01-03-03 I don't think I need to mess with this.
 01-03-04 Why am I wasting time? I can't do that.
@@ -32,16 +32,15 @@
 02-01-00 Its a door you can't take it with you.
 02-01-01 It's a door, I don't need to talk to it.
 02-01-02 It looks like this door leads to the main lobby.
-02-01-03 
-02-01-04 
-02-01-09 
+02-01-03 [You notice the door is already unlocked]
+02-01-04 [You traverse to the Lobby]
 
 #desk zoom
 02-02-00 I'm too far to grab anything from the desk.
 02-02-01 I'm too far from the dest to talk to anyone there, I should move closer.
 02-02-02 I should try to get closer.
 02-02-03 I seem to be wasting time.
-02-02-04 You move towards the desk.
+02-02-04 [You move towards the desk.]
 
 #bell
 02-03-00 I don't think I want this.
@@ -86,28 +85,35 @@
 02-08-03 I should not mess with this door at the moment, someone might get upset with me.
 02-08-04 I can't go in there, its for employees only.
 
+#GuestBook
+02-09-00 I dont think I want to carry this large book around.
+02-09-01 Talking to a guestbook would make me look insane.
+02-09-02 [A worn guestbook, the most recent entries are… “T. Harker… March 4… C. Connors … March 4… V. Harker…” No date.]									ARCHER: Wow… Harker Inventions Company and Connors Technology are two pretty big companies, I did a job for Connors a little while ago… He seemed a little shady, but that’s expected in my industry. I try to just do my hits without knowing the victim, but I wouldn’t be surprised if it had been that Harker CEO… I wonder if it was T. Harker or V. Harker?
+02-09-03 [As you flip some pages, you notice all other pages are illegible to you except for the one you are already on]
+02-09-04 I can read the contents of the Guestbook from here just fine
+
 #lobby (room id 3)
 
 #Lobby door To hallway
 03-01-00 The door refuses to be taken from its hinges.
 03-01-01 You try to talk to the door... The door seems unfazed by your words.
 03-01-02 A sturdy wooden door... You notice a sign that says "To Guest Bedrooms."
-03-01-03 You notice it being already open.
-03-01-04 You Traverse into the hallway.
+03-01-03 [You notice it being already open.]
+03-01-04 [You Traverse into the hallway.]
 
 #Lobby door to office
 03-02-00 I have no reason to take a door. 
 03-02-01 I can't talk to doors, I need to stop wasting time.
 03-02-02 A sturdy wooden door... you Notice a Small sign that says "Office."
-03-02-03 You notice it being already open.
-03-02-04 You Traverse the into the office.
+03-02-03 [You notice it being already open.]
+03-02-04 [You Traverse the into the office.]
 
 #Lobby To laundry door
 03-03-00 Why would I take a door?
 03-03-01 I can't talk to doors, I need to stop wasting time.
 03-03-02 A sturdy wooden door... You notice a sign that says "Laundry Room."
-03-03-03 You notice it being already open.
-03-03-04 You Traverse into the laundry room.
+03-03-03 [You notice it being already open.]
+03-03-04 [You Traverse into the laundry room.]
 
 #Fireplace
 03-04-00 [you attempt to grab the fire barehanded, as the fire crackles back you give up on your foolish attemp of harnessing it]
@@ -125,7 +131,7 @@
 04-01-02 A sturdy wooden door... You notice the number 1 above the door.
 04-01-03 I should try unlocking it first.
 04-01-04 I should try unlocking it first.
-04-01-09 Enters room
+04-01-09 [You enter room]
 04-01-08 The key unlocks the door
 
 
@@ -143,16 +149,11 @@
 04-03-03 As you attemp to Use the Door handle, you notice its locked
 04-03-04 I would need to unlock the door first.
 
-#Note 1
-04-04-00
-04-04-01												------------------------------------------------------------------------------------------------------------------------------
-04-04-02
-04-04-03
-04-04-04
+
 
 #Portrait
 04-05-00 I looks nice but I don't think I should take it.
-04-05-01 They say pictures can say a thousand words but I don't think is particularly talkative.
+04-05-01 They say pictures can say a thousand words but I don't think this one is particularly talkative.
 04-05-02 Their eyes seem to be staring right into my soul....[you find yourself staring back for minutes]
 04-05-03 I can't seem to do anything here.
 04-05-04 It would be a little cramped.
@@ -185,25 +186,33 @@
 #Office-6
 
 #Automatron Zoomed out
-06-01-00 I dont think i can take it 
-06-01-01 It has a mouth but it won't talk back.
-06-01-02 It somesort of automatic writing machine but its looks to be missing paper and ink.
-06-01-03 
-06-01-04 I'm not sure what I'm trying to do.
+06-01-00 I dont think I can take anything from this distance.
+06-01-01 "Hello?"...[The figure you notice in the desk seems unfaced by your words]
+06-01-02 It's a humanoid machine, I can't tell what I can use it for from this distance
+06-01-03 I don't think I can use objects from a distance, even if i tried my hardest.
+06-01-04 [You move torwards the desk]
 
-#Note 2
-06-02-00
-06-02-01
-06-02-02		-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-06-02-03
-06-02-04
+
+
+
+#Note 1
+06-02-00 [Although this paper may have revolutionary ideas, they do not seem to be important for you, nor anyone you have met so far]
+06-02-01 I dont think I should talk to a paper, even if the paper seems more educated than I am.
+06-02-02 [ A ripped-out page from a journal. In the corner, the letters “TH” are embossed, in addition in light ink, a vine of little flowers details the bottom edge of the paper. Not a lot of inventors keep their work on a personal stationery.																							 The page is covered with sketches, the biggest one in the center looks identical to the automaton sitting on the desk. Messily scribbled notes, arrows, and other symbols surround the drawing, explaining the intricate mechanics of the machine. I have no idea what any of it means, but it looks impressive.]
+06-02-03 I see no use for this paper beside being a nice short read.
+06-02-04 I don't think I should do that, that paper has already suffered nougn by being ripped from its stationery.
+
 #Automatrom Zoomed in
 
-06-03-00 I think I should leave this here.
+06-03-00 I think I should leave this machine here.
 06-03-01 It has a mouth but it won't talk back.
-06-03-02 It somesort of automatic writing machine but its looks to be missing paper and ink.
-06-03-03 
+06-03-02 It's some sort of automatic writing machine but its looks to be missing paper and ink.
+06-03-03 I don't think I can use this machine without the ink nor the paper
+06-03-08 [You place the paper down]
+06-03-13 [You place the inkwell down]
 06-03-04 I'm not sure what I'm trying to do.
+
+
 
 #Laundy Room-7
 
@@ -211,15 +220,22 @@
 07-01-00 This might be useful. If only I had some way to see myself in it. 
 07-01-01 In my line of work, it’s important to not like a complete fool.
 07-01-02 A worn bellhop uniform... The name tag reads "Pete".
-07-01-03
-07-01-04
+07-01-03 I should try grabbing it before trying to put it on
+07-01-04 I am not doing that, someone put quite a bit of effort cleaning it
 
 #Washbin area(pretty much the whole room)
 07-02-00 There's nothing there I need.
 07-02-01 It’s just me in here. (at least I hope so)
-07-02-02 This place may have been state of the art at one time, before I was born that is.
+07-02-02 This place may have been state of the art at one time. Years before I was born that is.
 07-02-03 No need, my clothes are clean. 
 07-02-04 I dont think I should step over the Housekeeper's hard work.
+
+#Note 2
+07-03-00 I dont need a page that contains a simple list
+07-03-01 [ you try to talk to the note... all you hear back is some water dripping from the hangin clothes nearby.]
+07-03-02 [ A ripped-out page from a journal. In the corner, the letters “TH” are embossed, in addition in light ink, a vine of little flowers details the bottom edge of the paper. It’s not often someone has personalized stationary, especially not for what follows on the page. In cursive handwriting, the paper reads “March 4th at dusk”. Under is a list, “Vincent does not need to work again, allowance for a comfortable living, full education for children”. ]
+07-03-03 Theres plenty of cleaning tools around, I don't think i should use this note for doing so.
+07-03-04 I Dont want to do that...
 
 
 #Closet-8

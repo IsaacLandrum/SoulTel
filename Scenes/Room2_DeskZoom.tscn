@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://rsfovv0gqe4v"]
+[gd_scene load_steps=16 format=3 uid="uid://rsfovv0gqe4v"]
 
 [ext_resource type="Script" path="res://Scripts/Reception/Room2_DeskZoom.gd" id="1_6gbbj"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_36hng"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://Scripts/Reception/Bell.gd" id="5_cd2f1"]
 [ext_resource type="AudioStream" uid="uid://neta2xhl6bea" path="res://Assets/Sound/bell_ding_SOUL.mp3" id="6_wbuwr"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="7_w1243"]
+[ext_resource type="Script" path="res://Scripts/Reception/Guestbook.gd" id="9_8o27o"]
 
 [sub_resource type="Animation" id="Animation_lo7m1"]
 resource_name = "Appear"
@@ -51,6 +52,9 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_haqat"]
 size = Vector2(92.5, 70.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rffft"]
+size = Vector2(261, 97)
+
 [node name="Room2-deskZoom" type="Node2D"]
 script = ExtResource("1_6gbbj")
 metadata/Room_Number = "02"
@@ -77,6 +81,7 @@ offset_right = 917.0
 offset_bottom = 469.0
 texture = ExtResource("2_j5m2p")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Early_UI" parent="." instance=ExtResource("1_36hng")]
 
@@ -117,6 +122,22 @@ position = Vector2(454, 402)
 scale = Vector2(0.53, 0.53)
 CharacterID = "04"
 
+[node name="Guestbook" type="Node2D" parent="." groups=["Interactable"]]
+position = Vector2(639, 301)
+script = ExtResource("9_8o27o")
+CharacterID = "09"
+
+[node name="ColorRect" type="ColorRect" parent="Guestbook"]
+offset_left = 15.0
+offset_top = -22.0
+offset_right = 277.0
+offset_bottom = 76.0
+color = Color(1, 1, 1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guestbook/ColorRect"]
+position = Vector2(130.5, 49.5)
+shape = SubResource("RectangleShape2D_rffft")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Back" parent="CanvasLayer" instance=ExtResource("7_w1243")]
@@ -129,5 +150,7 @@ traverse_path = "res://Scenes/Room2.tscn"
 [connection signal="mouse_exited" from="Clerk/ColorRect" to="Clerk" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="Bell/ColorRect" to="Bell" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Bell/ColorRect" to="Bell" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Guestbook/ColorRect" to="Guestbook" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Guestbook/ColorRect" to="Guestbook" method="_on_object_mouse_exited"]
 
 [editable path="Early_UI"]

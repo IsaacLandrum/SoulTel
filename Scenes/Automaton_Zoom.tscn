@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://vh7jtf8cxwqv"]
+[gd_scene load_steps=11 format=3 uid="uid://b68y32a1h5vi3"]
 
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_7j3gg"]
 [ext_resource type="Script" path="res://Scripts/Office/Office_Zoomed.gd" id="1_7si31"]
@@ -50,6 +50,7 @@ height = 428.0
 
 [node name="AutomatonZoom" type="Node2D"]
 script = ExtResource("1_7si31")
+metadata/Room_Number = "06"
 
 [node name="Early_UI" parent="." instance=ExtResource("1_7j3gg")]
 
@@ -85,8 +86,9 @@ color = Color(1, 1, 1, 0)
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 2
 
-[node name="Automaton" type="Node2D" parent="CanvasLayer2"]
+[node name="Automaton" type="Node2D" parent="CanvasLayer2" groups=["Interactable"]]
 script = ExtResource("5_dbaxq")
+CharacterID = "03"
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2/Automaton"]
 offset_left = 257.0

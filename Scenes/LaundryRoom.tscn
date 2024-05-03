@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://o741tsp07klt"]
+[gd_scene load_steps=11 format=3 uid="uid://o741tsp07klt"]
 
 [ext_resource type="Script" path="res://Scripts/Laundry/laundry_Main.gd" id="1_nu54p"]
 [ext_resource type="Texture2D" uid="uid://c6cbiaaxuwb8t" path="res://Assets/Laundry/laundryroomClothes with uniform.png" id="2_et51d"]
@@ -6,9 +6,14 @@
 [ext_resource type="Script" path="res://Scripts/Laundry/BellhopTemp.gd" id="3_8a8cg"]
 [ext_resource type="Script" path="res://Scripts/Laundry/Washbin_Table.gd" id="5_nff46"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="5_rj2hn"]
+[ext_resource type="Texture2D" uid="uid://c088qamd58lgc" path="res://Assets/sculpting/Note Template.png" id="6_5hv2q"]
+[ext_resource type="Script" path="res://Scripts/Laundry/Note_2.gd" id="6_gse7f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmwi7"]
-size = Vector2(506, 210)
+size = Vector2(506, 172)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj5j8"]
+size = Vector2(45, 34)
 
 [node name="LaundryRoom" type="Node2D"]
 script = ExtResource("1_nu54p")
@@ -45,12 +50,30 @@ CharacterID = "02"
 offset_left = -143.0
 offset_top = -28.0
 offset_right = 364.0
-offset_bottom = 183.0
+offset_bottom = 147.0
 color = Color(1, 1, 1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Washbin_Table/ColorRect"]
-position = Vector2(253, 105)
+position = Vector2(253, 86)
 shape = SubResource("RectangleShape2D_jmwi7")
+
+[node name="Note_2" type="Node2D" parent="." groups=["Interactable"]]
+position = Vector2(12, 444)
+script = ExtResource("6_gse7f")
+CharacterID = "03"
+
+[node name="TextureRect" type="TextureRect" parent="Note_2"]
+offset_left = -45.0
+offset_top = -14.0
+offset_right = 45.0
+offset_bottom = 38.0
+texture = ExtResource("6_5hv2q")
+expand_mode = 1
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Note_2/TextureRect"]
+position = Vector2(55.5, 21)
+shape = SubResource("RectangleShape2D_sj5j8")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -61,3 +84,5 @@ traverse_path = "res://Scenes/Lobby.tscn"
 [connection signal="mouse_exited" from="BellhopTemp/ColorRect" to="BellhopTemp" method="_on_object_mouse_exited"]
 [connection signal="mouse_entered" from="Washbin_Table/ColorRect" to="Washbin_Table" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Washbin_Table/ColorRect" to="Washbin_Table" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Note_2/TextureRect" to="Note_2" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Note_2/TextureRect" to="Note_2" method="_on_object_mouse_exited"]

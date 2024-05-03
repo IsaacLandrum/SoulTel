@@ -16,7 +16,7 @@ var footsteps1= AudioStreamPlayer.new()
 var footsteps2= AudioStreamPlayer.new()
 var footsteps3= AudioStreamPlayer.new()
 var longsteps= AudioStreamPlayer.new()
-
+var AutomatonWrite= AudioStreamPlayer.new()
 var footsArr=[footsteps1,footsteps2,footsteps3]
 
 func _ready():
@@ -46,6 +46,8 @@ func _ready():
 	footsteps3.stream = preload("res://Assets/Sound/footsteps/footsteps_3.mp3")
 	add_child(longsteps)
 	longsteps.stream = preload("res://Assets/Sound/footsteps/longfootstep.mp3")
+	add_child(AutomatonWrite)
+	AutomatonWrite.stream = preload("res://Assets/Sound/Automaton_SFX.mp3")
 	
 	
 func play_click_sound():
@@ -73,6 +75,7 @@ func play_rand_footstep():
 	curr_sound.play()
 func play_long_steps():
 	longsteps.play()
-	
+func play_automaton_write():
+	AutomatonWrite.play()
 	
 

@@ -10,10 +10,20 @@ offset_bottom = 654.0
 color = Color(0, 0, 0, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 297.0
-offset_top = 217.0
-offset_right = 832.0
-offset_bottom = 636.0
+offset_left = 298.0
+offset_top = 70.0
+offset_right = 833.0
+offset_bottom = 554.0
 theme_override_fonts/normal_font = ExtResource("1_ftpn2")
-text = "My dearest Vincent,
-I am truly sorry that you became involved in this whole ordeal. I never meant for you to get hurt. It should have been me who was killed on that fateful day. I hope you somehow get this letter someday and you have it in you to forgive me. I love you, my dear. Rest well."
+text = "[A ripped-out page from a journal. In the corner, the letters “TH” are embossed, in addition in light ink, a vine of little flowers details the bottom edge of the paper. Now, adorned with the mechanic writing of the automaton, it reads,
+
+“My dearest Vincent,
+I know you will be upset about what I have arranged, but lying about the true inventor of our products has created a rift between us that I fear could tear us apart. I have attempted to orchestrate a comfortable life for us without the stress of the company, where we and our children can live without these limitations.
+
+I apologize for going behind your back and working with Charles, I know you detest him so, but there was no other solution. 
+
+Even if this betrayal should separate us forever, you must allow me to tell you how ardently I admire and love you.
+
+Yours forever,
+Theodora”]
+"

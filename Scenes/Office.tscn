@@ -1,13 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://ds1gy1abobmvi"]
+[gd_scene load_steps=10 format=3 uid="uid://ds1gy1abobmvi"]
 
 [ext_resource type="Script" path="res://Scripts/Office/Office_Main.gd" id="1_fu2s6"]
 [ext_resource type="PackedScene" uid="uid://iyb0x4jsmjmq" path="res://Scenes/early_ui.tscn" id="1_gfyh2"]
 [ext_resource type="Texture2D" uid="uid://d1hsiiir8w6ur" path="res://Assets/Lobby/Office/endroom color.png" id="3_1modm"]
 [ext_resource type="Script" path="res://Scripts/Office/Automaton.gd" id="3_dyi5t"]
 [ext_resource type="PackedScene" uid="uid://cds0flqbt07x5" path="res://Scenes/back.tscn" id="6_4tgyy"]
+[ext_resource type="Script" path="res://Scripts/Office/Note_1.gd" id="6_57nul"]
+[ext_resource type="Texture2D" uid="uid://c088qamd58lgc" path="res://Assets/sculpting/Note Template.png" id="7_g3x7v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d8nb"]
 size = Vector2(94, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_87pbi"]
+size = Vector2(56.2355, 19.4997)
 
 [node name="Office" type="Node2D"]
 script = ExtResource("1_fu2s6")
@@ -16,10 +21,12 @@ metadata/Room_Number = "06"
 [node name="Early_UI" parent="." instance=ExtResource("1_gfyh2")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 917.0
+offset_left = 2.0
+offset_right = 919.0
 offset_bottom = 469.0
 texture = ExtResource("3_1modm")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Automaton" type="Node2D" parent="." groups=["Interactable"]]
 position = Vector2(733, 173)
@@ -38,6 +45,25 @@ color = Color(1, 1, 1, 0)
 position = Vector2(58, 65.5)
 shape = SubResource("RectangleShape2D_3d8nb")
 
+[node name="Note_1" type="Node2D" parent="." groups=["Interactable"]]
+script = ExtResource("6_57nul")
+CharacterID = "02"
+
+[node name="Note1" type="TextureRect" parent="Note_1"]
+offset_left = 341.0
+offset_top = 278.0
+offset_right = 412.0
+offset_bottom = 305.0
+rotation = 0.172788
+texture = ExtResource("7_g3x7v")
+expand_mode = 1
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Note_1/Note1"]
+position = Vector2(34.3019, 14.5202)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_87pbi")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="back" parent="CanvasLayer" instance=ExtResource("6_4tgyy")]
@@ -45,3 +71,5 @@ traverse_path = "res://Scenes/Lobby.tscn"
 
 [connection signal="mouse_entered" from="Automaton/TextureRect" to="Automaton" method="_on_object_mouse_entered"]
 [connection signal="mouse_exited" from="Automaton/TextureRect" to="Automaton" method="_on_object_mouse_exited"]
+[connection signal="mouse_entered" from="Note_1/Note1" to="Note_1" method="_on_object_mouse_entered"]
+[connection signal="mouse_exited" from="Note_1/Note1" to="Note_1" method="_on_object_mouse_exited"]

@@ -49,7 +49,8 @@ func initRoom2DeskZoom():
 		"clerk" : get_node("/root/Room2-deskZoom/Clerk"),
 		"bell" : get_node("/root/Room2-deskZoom/Bell"),
 		"key" : get_node("/root/Room2-deskZoom/Key"),
-		"back" : get_node("/root/Room2-deskZoom/CanvasLayer/Back")
+		"back" : get_node("/root/Room2-deskZoom/CanvasLayer/Back"),
+		"Guestbook": get_node("/root/Room2-deskZoom/Guestbook")
 	}
 
 func initLobby():
@@ -64,7 +65,8 @@ func initLobby():
 func initOffice():
 	puzzle3["nodes"] = {
 		"automaton" : get_node("/root/Office/Automaton"),
-		"back" : get_node("/root/Office/CanvasLayer/back")
+		"back" : get_node("/root/Office/CanvasLayer/back"),
+		"Note_1": get_node("/root/Office/Note_1")
 	}
 
 func initOfficeZoomed():
@@ -92,7 +94,8 @@ func initLaundry():
 	puzzle3["nodes"] = {
 		"bellhop" : get_node("/root/LaundryRoom/BellhopTemp"),
 		"back" : get_node("/root/LaundryRoom/CanvasLayer/back"),
-		"Washbin_Table": get_node("/root/LaundryRoom/Washbin_Table")
+		"Washbin_Table": get_node("/root/LaundryRoom/Washbin_Table"),
+		"Note_2": get_node("/root/LaundryRoom/Note_2")
 	}
 	print("Init Laundry")
 
@@ -127,6 +130,7 @@ func _on_room2_deskzoom_action(action):
 	puzzle2.nodes.clerk.setCurrentAction(action)
 	puzzle2.nodes.bell.setCurrentAction(action)
 	puzzle2.nodes.back.setCurrentAction(action)
+	puzzle2.nodes.Guestbook.setCurrentAction(action)
 	if !puzzle2.conditions.keyTaken:
 		puzzle2.nodes.key.setCurrentAction(action)
 
@@ -180,6 +184,7 @@ func _on_puzzle3_written_paper_picked_up():
 func _on_office_action(action):
 	puzzle3.nodes.automaton.setCurrentAction(action)
 	puzzle3.nodes.back.setCurrentAction(action)
+	puzzle3.nodes.Note_1.setCurrentAction(action)
 	
 func _on_office_zoomed_action(action):
 	puzzle3.nodes.automaton.setCurrentAction(action)
@@ -189,6 +194,7 @@ func _on_laundry_action(action):
 	puzzle3.nodes.bellhop.setCurrentAction(action)
 	puzzle3.nodes.back.setCurrentAction(action)
 	puzzle3.nodes.Washbin_Table.setCurrentAction(action)
+	puzzle3.nodes.Note_2.setCurrentAction(action)
 
 func _on_clothes_taken():
 	puzzle3.conditions.clothesTaken = true
